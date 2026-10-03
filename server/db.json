@@ -1,178 +1,148 @@
-﻿{
-    "users":  [
-
-              ],
-    "user-profiles":  [
-
-                      ],
-    "insurers":  [
-
-                 ],
-    "insurance-products":  [
-
-                           ],
-    "vehicles":  [
-                     {
-                         "id":  1,
-                         "userId":  1,
-                         "licensePlate":  "ABC-123",
-                         "brand":  "Toyota",
-                         "model":  "Corolla",
-                         "manufactureYear":  2022,
-                         "estimatedValue":  65000,
-                         "createdAt":  "2026-09-15T10:00:00Z",
-                         "updatedAt":  "2026-09-15T10:00:00Z"
-                     },
-                     {
-                         "id":  2,
-                         "userId":  1,
-                         "licensePlate":  "DEF-456",
-                         "brand":  "Hyundai",
-                         "model":  "Tucson",
-                         "manufactureYear":  2021,
-                         "estimatedValue":  78000,
-                         "createdAt":  "2026-09-18T10:00:00Z",
-                         "updatedAt":  "2026-09-18T10:00:00Z"
-                     },
-                     {
-                         "id":  3,
-                         "userId":  1,
-                         "licensePlate":  "GHI-789",
-                         "brand":  "Kia",
-                         "model":  "Rio",
-                         "manufactureYear":  2020,
-                         "estimatedValue":  48000,
-                         "createdAt":  "2026-09-20T10:00:00Z",
-                         "updatedAt":  "2026-09-20T10:00:00Z"
-                     }
-                 ],
-    "insurance-applications":  [
-
-                               ],
-    "vehicle-insurance-applications":  [
-
-                                       ],
-    "life-insurance-applications":  [
-
-                                    ],
-    "beneficiaries":  [
-
-                      ],
-    "policies":  [
-                     {
-                         "id":  1,
-                         "userId":  1,
-                         "applicationId":  1,
-                         "policyNumber":  "LIV-VEH-0001",
-                         "insuranceType":  "vehicle",
-                         "startDate":  "2026-01-15",
-                         "expirationDate":  "2027-01-14",
-                         "premiumAmount":  1200,
-                         "coverageAmount":  60000,
-                         "status":  "active",
-                         "createdAt":  "2026-01-15T10:00:00Z",
-                         "updatedAt":  "2026-01-15T10:00:00Z"
-                     },
-                     {
-                         "id":  2,
-                         "userId":  1,
-                         "applicationId":  2,
-                         "policyNumber":  "LIV-LIF-0002",
-                         "insuranceType":  "life",
-                         "startDate":  "2026-03-01",
-                         "expirationDate":  "2027-02-28",
-                         "premiumAmount":  960,
-                         "coverageAmount":  100000,
-                         "status":  "active",
-                         "createdAt":  "2026-03-01T10:00:00Z",
-                         "updatedAt":  "2026-03-01T10:00:00Z"
-                     },
-                     {
-                         "id":  3,
-                         "userId":  1,
-                         "applicationId":  3,
-                         "policyNumber":  "LIV-VEH-0003",
-                         "insuranceType":  "vehicle",
-                         "startDate":  "2025-08-01",
-                         "expirationDate":  "2026-07-31",
-                         "premiumAmount":  1080,
-                         "coverageAmount":  45000,
-                         "status":  "expired",
-                         "createdAt":  "2025-08-01T10:00:00Z",
-                         "updatedAt":  "2026-07-31T10:00:00Z"
-                     }
-                 ],
-    "policy-coverages":  [
-                             {
-                                 "id":  1,
-                                 "policyId":  1,
-                                 "name":  "Vehicle damage",
-                                 "description":  "Coverage for damage to the insured vehicle.",
-                                 "coverageLimit":  60000,
-                                 "createdAt":  "2026-01-15T10:00:00Z",
-                                 "updatedAt":  "2026-01-15T10:00:00Z"
-                             },
-                             {
-                                 "id":  2,
-                                 "policyId":  1,
-                                 "name":  "Third-party liability",
-                                 "description":  "Coverage for damage caused to third parties.",
-                                 "coverageLimit":  30000,
-                                 "createdAt":  "2026-01-15T10:00:00Z",
-                                 "updatedAt":  "2026-01-15T10:00:00Z"
-                             },
-                             {
-                                 "id":  3,
-                                 "policyId":  2,
-                                 "name":  "Life coverage",
-                                 "description":  "Financial protection for registered beneficiaries.",
-                                 "coverageLimit":  100000,
-                                 "createdAt":  "2026-03-01T10:00:00Z",
-                                 "updatedAt":  "2026-03-01T10:00:00Z"
-                             }
-                         ],
-    "policy-documents":  [
-                             {
-                                 "id":  1,
-                                 "policyId":  1,
-                                 "documentType":  "policy",
-                                 "name":  "Vehicle policy document",
-                                 "fileUrl":  "",
-                                 "createdAt":  "2026-01-15T10:00:00Z",
-                                 "updatedAt":  "2026-01-15T10:00:00Z"
-                             },
-                             {
-                                 "id":  2,
-                                 "policyId":  2,
-                                 "documentType":  "policy",
-                                 "name":  "Life policy document",
-                                 "fileUrl":  "",
-                                 "createdAt":  "2026-03-01T10:00:00Z",
-                                 "updatedAt":  "2026-03-01T10:00:00Z"
-                             }
-                         ],
-    "renewals":  [
-
-                 ],
-    "vehicle-claims":  [
-
-                       ],
-    "claim-status-histories":  [
-
-                               ],
-    "indemnity-requests":  [
-
-                           ],
-    "indemnity-status-histories":  [
-
-                                   ],
-    "subscription-plans":  [
-
-                           ],
-    "user-subscriptions":  [
-
-                           ],
-    "subscription-payments":  [
-
-                              ]
+{
+  "users": [
+    {
+      "id": 1,
+      "firstName": "Cliente",
+      "lastName": "Livva",
+      "email": "cliente@livva.pe",
+      "passwordHash": "development-only-hash",
+      "phone": "+51 999 999 999",
+      "role": "CUSTOMER",
+      "active": true,
+      "createdAt": "2026-09-01T10:00:00Z",
+      "updatedAt": "2026-09-01T10:00:00Z"
+    }
+  ],
+  "user-profiles": [],
+  "insurers": [],
+  "insurance-products": [],
+  "vehicles": [
+    {
+      "id": 1,
+      "userId": 1,
+      "licensePlate": "ABC-123",
+      "brand": "Toyota",
+      "model": "Corolla",
+      "manufactureYear": 2022,
+      "estimatedValue": 65000,
+      "createdAt": "2026-09-15T10:00:00Z",
+      "updatedAt": "2026-09-15T10:00:00Z"
+    },
+    {
+      "userId": 1,
+      "licensePlate": "67SIX-SE",
+      "brand": "Ferrari",
+      "model": "PuraSangre",
+      "manufactureYear": 2026,
+      "estimatedValue": 100000,
+      "createdAt": "2026-10-03T22:51:44.075Z",
+      "updatedAt": "2026-10-03T22:51:44.075Z",
+      "id": 2
+    }
+  ],
+  "insurance-applications": [],
+  "vehicle-insurance-applications": [],
+  "life-insurance-applications": [],
+  "beneficiaries": [],
+  "policies": [
+    {
+      "id": 1,
+      "userId": 1,
+      "applicationId": 1,
+      "policyNumber": "LIV-VEH-0001",
+      "insuranceType": "vehicle",
+      "startDate": "2026-01-15",
+      "expirationDate": "2027-01-14",
+      "premiumAmount": 1200,
+      "coverageAmount": 60000,
+      "status": "active",
+      "createdAt": "2026-01-15T10:00:00Z",
+      "updatedAt": "2026-01-15T10:00:00Z"
+    },
+    {
+      "id": 2,
+      "userId": 1,
+      "applicationId": 2,
+      "policyNumber": "LIV-LIF-0002",
+      "insuranceType": "life",
+      "startDate": "2026-03-01",
+      "expirationDate": "2027-02-28",
+      "premiumAmount": 960,
+      "coverageAmount": 100000,
+      "status": "active",
+      "createdAt": "2026-03-01T10:00:00Z",
+      "updatedAt": "2026-03-01T10:00:00Z"
+    },
+    {
+      "id": 3,
+      "userId": 1,
+      "applicationId": 3,
+      "policyNumber": "LIV-VEH-0003",
+      "insuranceType": "vehicle",
+      "startDate": "2025-08-01",
+      "expirationDate": "2026-07-31",
+      "premiumAmount": 1080,
+      "coverageAmount": 45000,
+      "status": "expired",
+      "createdAt": "2025-08-01T10:00:00Z",
+      "updatedAt": "2026-07-31T10:00:00Z"
+    }
+  ],
+  "policy-coverages": [
+    {
+      "id": 1,
+      "policyId": 1,
+      "name": "Vehicle damage",
+      "description": "Coverage for damage to the insured vehicle.",
+      "coverageLimit": 60000,
+      "createdAt": "2026-01-15T10:00:00Z",
+      "updatedAt": "2026-01-15T10:00:00Z"
+    },
+    {
+      "id": 2,
+      "policyId": 1,
+      "name": "Third-party liability",
+      "description": "Coverage for damage caused to third parties.",
+      "coverageLimit": 30000,
+      "createdAt": "2026-01-15T10:00:00Z",
+      "updatedAt": "2026-01-15T10:00:00Z"
+    },
+    {
+      "id": 3,
+      "policyId": 2,
+      "name": "Life coverage",
+      "description": "Financial protection for registered beneficiaries.",
+      "coverageLimit": 100000,
+      "createdAt": "2026-03-01T10:00:00Z",
+      "updatedAt": "2026-03-01T10:00:00Z"
+    }
+  ],
+  "policy-documents": [
+    {
+      "id": 1,
+      "policyId": 1,
+      "documentType": "policy",
+      "name": "Vehicle policy document",
+      "fileUrl": "",
+      "createdAt": "2026-01-15T10:00:00Z",
+      "updatedAt": "2026-01-15T10:00:00Z"
+    },
+    {
+      "id": 2,
+      "policyId": 2,
+      "documentType": "policy",
+      "name": "Life policy document",
+      "fileUrl": "",
+      "createdAt": "2026-03-01T10:00:00Z",
+      "updatedAt": "2026-03-01T10:00:00Z"
+    }
+  ],
+  "renewals": [],
+  "vehicle-claims": [],
+  "claim-status-histories": [],
+  "indemnity-requests": [],
+  "indemnity-status-histories": [],
+  "subscription-plans": [],
+  "user-subscriptions": [],
+  "subscription-payments": []
 }
