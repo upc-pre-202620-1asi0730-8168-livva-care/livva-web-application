@@ -70,6 +70,55 @@
       "delete": "No se pudo eliminar el vehículo."
     }
   },
+  "vehicleApplications": {
+    "pageTitle": "Solicitudes vehiculares",
+    "sectionLabel": "Seguro vehicular",
+    "title": "Solicitudes de seguro",
+    "description": "Registra una solicitud de seguro para uno de tus vehículos y consulta su estado.",
+    "empty": "No hay solicitudes de seguro vehicular registradas.",
+    "creationUnavailable": "Necesitas al menos un vehículo y un producto vehicular activo para registrar una solicitud.",
+    "fields": {
+      "number": "Solicitud",
+      "vehicle": "Vehículo",
+      "product": "Producto",
+      "maximumCoverage": "Cobertura máxima",
+      "premiumAmount": "Monto de la prima",
+      "requestedCoverage": "Cobertura solicitada",
+      "status": "Estado",
+      "createdAt": "Fecha de solicitud"
+    },
+    "actions": {
+      "create": "Nueva solicitud",
+      "cancel": "Cancelar",
+      "submit": "Enviar solicitud"
+    },
+    "form": {
+      "title": "Solicitar seguro vehicular",
+      "selectVehicle": "Selecciona un vehículo",
+      "selectProduct": "Selecciona un producto"
+    },
+    "statuses": {
+      "pending": "Pendiente",
+      "under_review": "En revisión",
+      "approved": "Aprobada",
+      "rejected": "Rechazada",
+      "cancelled": "Cancelada"
+    },
+    "validation": {
+      "vehicleRequired": "Selecciona un vehículo.",
+      "productRequired": "Selecciona un producto.",
+      "coverageRequired": "Ingresa una cobertura mayor que cero.",
+      "coverageMaximum": "La cobertura no puede superar {amount}."
+    },
+    "messages": {
+      "created": "Solicitud registrada correctamente."
+    },
+    "errors": {
+      "load": "No se pudieron cargar las solicitudes.",
+      "create": "No se pudo registrar la solicitud.",
+      "invalidData": "Los datos de la solicitud no son válidos."
+    }
+  },
   "policies": {
     "pageTitle": "Pólizas",
     "detailPageTitle": "Detalle de póliza",

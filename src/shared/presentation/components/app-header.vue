@@ -32,6 +32,10 @@ const { t } = useI18n();
         <router-link to="/about">
           {{ t('navigation.about') }}
         </router-link>
+
+        <router-link to="/vehicle-applications">
+          {{ t('navigation.applications') }}
+        </router-link>
       </nav>
 
       <language-switcher />

@@ -11,6 +11,7 @@ import Message from 'primevue/message';
 import ProgressSpinner from 'primevue/progressspinner';
 import Tag from 'primevue/tag';
 import ConfirmDialog from 'primevue/confirmdialog';
+import Select from 'primevue/select';
 
 import App from './app.vue';
 import router from './router.js';
@@ -55,5 +56,6 @@ app.component('pv-input-number', InputNumber);
 app.component('pv-input-text', InputText);
 app.component('pv-toast', Toast);
 app.component('pv-confirm-dialog', ConfirmDialog);
+app.component('pv-select', Select);
 
 app.mount('#app');
