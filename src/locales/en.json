@@ -6,7 +6,8 @@
     "home": "Home",
     "about": "About",
     "vehicles": "Vehicles",
-    "policies": "Policies"
+    "policies": "Policies",
+    "applications": "Applications"
   },
   "home": {
     "pageTitle": "Home",
@@ -68,6 +69,104 @@
       "create": "The vehicle could not be registered.",
       "update": "The vehicle could not be updated.",
       "delete": "The vehicle could not be deleted."
+    }
+  },
+  "vehicleApplications": {
+    "pageTitle": "Vehicle applications",
+    "sectionLabel": "Vehicle insurance",
+    "title": "Insurance applications",
+    "description": "Submit an insurance application for one of your vehicles and review its status.",
+    "empty": "There are no vehicle insurance applications.",
+    "creationUnavailable": "You need at least one vehicle and one active vehicle product to submit an application.",
+    "fields": {
+      "number": "Application",
+      "vehicle": "Vehicle",
+      "product": "Product",
+      "maximumCoverage": "Maximum coverage",
+      "premiumAmount": "Premium amount",
+      "requestedCoverage": "Requested coverage",
+      "status": "Status",
+      "createdAt": "Application date"
+    },
+    "actions": {
+      "create": "New application",
+      "cancel": "Cancel",
+      "submit": "Submit application"
+    },
+    "form": {
+      "title": "Apply for vehicle insurance",
+      "selectVehicle": "Select a vehicle",
+      "selectProduct": "Select a product"
+    },
+    "statuses": {
+      "pending": "Pending",
+      "under_review": "Under review",
+      "approved": "Approved",
+      "rejected": "Rejected",
+      "cancelled": "Cancelled"
+    },
+    "validation": {
+      "vehicleRequired": "Select a vehicle.",
+      "productRequired": "Select a product.",
+      "coverageRequired": "Enter coverage greater than zero.",
+      "coverageMaximum": "Coverage cannot exceed {amount}."
+    },
+    "messages": {
+      "created": "Application submitted successfully."
+    },
+    "errors": {
+      "load": "Applications could not be loaded.",
+      "create": "The application could not be submitted.",
+      "invalidData": "The application data is invalid."
+    }
+  },
+  "vehicleApplications": {
+    "pageTitle": "Vehicle applications",
+    "sectionLabel": "Vehicle insurance",
+    "title": "Insurance applications",
+    "description": "Submit an insurance application for one of your vehicles and review its status.",
+    "empty": "There are no vehicle insurance applications.",
+    "creationUnavailable": "You need at least one vehicle and one active vehicle product to submit an application.",
+    "fields": {
+      "number": "Application",
+      "vehicle": "Vehicle",
+      "product": "Product",
+      "maximumCoverage": "Maximum coverage",
+      "premiumAmount": "Premium amount",
+      "requestedCoverage": "Requested coverage",
+      "status": "Status",
+      "createdAt": "Application date"
+    },
+    "actions": {
+      "create": "New application",
+      "cancel": "Cancel",
+      "submit": "Submit application"
+    },
+    "form": {
+      "title": "Apply for vehicle insurance",
+      "selectVehicle": "Select a vehicle",
+      "selectProduct": "Select a product"
+    },
+    "statuses": {
+      "pending": "Pending",
+      "under_review": "Under review",
+      "approved": "Approved",
+      "rejected": "Rejected",
+      "cancelled": "Cancelled"
+    },
+    "validation": {
+      "vehicleRequired": "Select a vehicle.",
+      "productRequired": "Select a product.",
+      "coverageRequired": "Enter coverage greater than zero.",
+      "coverageMaximum": "Coverage cannot exceed {amount}."
+    },
+    "messages": {
+      "created": "Application submitted successfully."
+    },
+    "errors": {
+      "load": "Applications could not be loaded.",
+      "create": "The application could not be submitted.",
+      "invalidData": "The application data is invalid."
     }
   },
   "policies": {
