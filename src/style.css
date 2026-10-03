@@ -474,3 +474,74 @@ p {
     padding-block: 2rem;
   }
 }
+.vehicles-page__heading {
+  display: flex;
+  margin-bottom: 2.5rem;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 2rem;
+}
+
+.vehicles-page__heading .vehicles-page__header {
+  margin-bottom: 0;
+}
+
+.vehicle-dialog {
+  width: min(calc(100vw - 2rem), 620px);
+}
+
+.vehicle-form {
+  display: grid;
+  padding-top: 0.5rem;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1.25rem;
+}
+
+.vehicle-form__field {
+  display: flex;
+  min-width: 0;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.vehicle-form__field--full {
+  grid-column: 1 / -1;
+}
+
+.vehicle-form__field label {
+  color: #081b3a;
+  font-weight: 600;
+}
+
+.vehicle-form__field .p-inputtext,
+.vehicle-form__field .p-inputnumber {
+  width: 100%;
+}
+
+.vehicle-form__error {
+  color: #dc2626;
+}
+
+.vehicle-form__actions {
+  display: flex;
+  padding-top: 0.5rem;
+  grid-column: 1 / -1;
+  justify-content: flex-end;
+  gap: 0.75rem;
+}
+
+@media (max-width: 640px) {
+  .vehicles-page__heading {
+    align-items: stretch;
+    flex-direction: column;
+  }
+
+  .vehicle-form {
+    grid-template-columns: 1fr;
+  }
+
+  .vehicle-form__field--full,
+  .vehicle-form__actions {
+    grid-column: auto;
+  }
+}

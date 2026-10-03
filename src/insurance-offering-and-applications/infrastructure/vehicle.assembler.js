@@ -26,7 +26,9 @@ export class VehicleAssembler {
             brand: vehicle.brand,
             model: vehicle.model,
             manufactureYear: vehicle.manufactureYear,
-            estimatedValue: vehicle.estimatedValue
+            estimatedValue: vehicle.estimatedValue,
+            createdAt: vehicle.createdAt,
+            updatedAt: vehicle.updatedAt
         };
     }
 }

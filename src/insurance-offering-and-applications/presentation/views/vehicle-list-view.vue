@@ -1,21 +1,62 @@
 <script setup>
-import { onMounted } from 'vue';
+import { onMounted, ref } from 'vue';
 import { storeToRefs } from 'pinia';
 import { useI18n } from 'vue-i18n';
+import { useToast } from 'primevue/usetoast';
 import { useVehicleStore } from '../../application/vehicle.store.js';
+import VehicleFormDialog from '../components/vehicle-form-dialog.vue';
 
 const { t, locale } = useI18n();
+const toast = useToast();
 const vehicleStore = useVehicleStore();
 
-const { vehicles, loading, error } = storeToRefs(vehicleStore);
+const { vehicles, loading, saving, error } = storeToRefs(vehicleStore);
+const formVisible = ref(false);
 
 const formatAmount = (amount) =>
     new Intl.NumberFormat(
         locale.value === 'es' ? 'es-PE' : 'en-US',
         {
+          style: 'currency',
+          currency: 'PEN',
           maximumFractionDigits: 2
         }
     ).format(amount);
+
+const openCreateForm = () => {
+  vehicleStore.clearError();
+  formVisible.value = true;
+};
+
+const createVehicle = async (vehicle) => {
+  const timestamp = new Date().toISOString();
+
+  const createdVehicle = await vehicleStore.createVehicle({
+    ...vehicle,
+    userId: 1,
+    createdAt: timestamp,
+    updatedAt: timestamp
+  });
+
+  if (!createdVehicle) {
+    toast.add({
+      severity: 'error',
+      summary: t('vehicles.errors.create'),
+      life: 3000
+    });
+
+    vehicleStore.clearError();
+    return;
+  }
+
+  formVisible.value = false;
+
+  toast.add({
+    severity: 'success',
+    summary: t('vehicles.messages.created'),
+    life: 3000
+  });
+};
 
 onMounted(() => {
   vehicleStore.fetchVehicles();
@@ -24,14 +65,24 @@ onMounted(() => {
 
 <template>
   <main class="vehicles-page">
-    <header class="vehicles-page__header">
-      <span class="section-label">
-        {{ t('vehicles.sectionLabel') }}
-      </span>
+    <pv-toast />
 
-      <h1>{{ t('vehicles.title') }}</h1>
+    <header class="vehicles-page__heading">
+      <div class="vehicles-page__header">
+        <span class="section-label">
+          {{ t('vehicles.sectionLabel') }}
+        </span>
 
-      <p>{{ t('vehicles.description') }}</p>
+        <h1>{{ t('vehicles.title') }}</h1>
+
+        <p>{{ t('vehicles.description') }}</p>
+      </div>
+
+      <pv-button
+          icon="pi pi-plus"
+          :label="t('vehicles.actions.add')"
+          @click="openCreateForm"
+      />
     </header>
 
     <div v-if="loading" class="vehicles-state">
@@ -85,13 +136,17 @@ onMounted(() => {
           :header="t('vehicles.fields.manufactureYear')"
       />
 
-      <pv-column
-          :header="t('vehicles.fields.estimatedValue')"
-      >
+      <pv-column :header="t('vehicles.fields.estimatedValue')">
         <template #body="{ data }">
           {{ formatAmount(data.estimatedValue) }}
         </template>
       </pv-column>
     </pv-data-table>
+
+    <vehicle-form-dialog
+        v-model:visible="formVisible"
+        :saving="saving"
+        @save="createVehicle"
+    />
   </main>
 </template>

@@ -37,6 +37,22 @@
       "manufactureYear": "Manufacture year",
       "estimatedValue": "Estimated value"
     },
+    "actions": {
+      "add": "Add vehicle",
+      "cancel": "Cancel",
+      "save": "Save"
+    },
+    "form": {
+      "createTitle": "Register vehicle"
+    },
+    "validation": {
+      "required": "This field is required.",
+      "year": "Enter a year between 1900 and {year}.",
+      "value": "Enter a value greater than zero."
+    },
+    "messages": {
+      "created": "Vehicle registered successfully."
+    },
     "errors": {
       "load": "Vehicles could not be loaded.",
       "create": "The vehicle could not be registered.",
@@ -64,6 +80,7 @@
       "premiumAmount": "Premium amount",
       "coverageAmount": "Coverage amount"
     },
+
     "actions": {
       "viewDetails": "View details",
       "backToPolicies": "Back to policies",
@@ -85,4 +102,5 @@
   "footer": {
     "copyright": "© {year} Livva Care. All rights reserved."
   }
+
 }

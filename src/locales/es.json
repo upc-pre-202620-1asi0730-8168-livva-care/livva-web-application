@@ -37,6 +37,22 @@
       "manufactureYear": "Año de fabricación",
       "estimatedValue": "Valor estimado"
     },
+    "actions": {
+      "add": "Agregar vehículo",
+      "cancel": "Cancelar",
+      "save": "Guardar"
+    },
+    "form": {
+      "createTitle": "Registrar vehículo"
+    },
+    "validation": {
+      "required": "Este campo es obligatorio.",
+      "year": "Ingresa un año entre 1900 y {year}.",
+      "value": "Ingresa un valor mayor que cero."
+    },
+    "messages": {
+      "created": "Vehículo registrado correctamente."
+    },
     "errors": {
       "load": "No se pudieron cargar los vehículos.",
       "create": "No se pudo registrar el vehículo.",

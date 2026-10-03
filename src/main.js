@@ -20,6 +20,11 @@ import 'primeicons/primeicons.css';
 import 'primeflex/primeflex.css';
 import './style.css';
 
+import Dialog from 'primevue/dialog';
+import InputNumber from 'primevue/inputnumber';
+import InputText from 'primevue/inputtext';
+import Toast from 'primevue/toast';
+
 const app = createApp(App);
 
 app.use(PrimeVue, {
@@ -44,5 +49,10 @@ app.component('pv-data-table', DataTable);
 app.component('pv-message', Message);
 app.component('pv-progress-spinner', ProgressSpinner);
 app.component('pv-tag', Tag);
+app.component('pv-dialog', Dialog);
+app.component('pv-input-number', InputNumber);
+app.component('pv-input-text', InputText);
+app.component('pv-toast', Toast);
+
 
 app.mount('#app');
