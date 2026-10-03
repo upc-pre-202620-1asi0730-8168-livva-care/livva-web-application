@@ -11,7 +11,9 @@ const toast = useToast();
 const vehicleStore = useVehicleStore();
 
 const { vehicles, loading, saving, error } = storeToRefs(vehicleStore);
+
 const formVisible = ref(false);
+const selectedVehicle = ref(null);
 
 const formatAmount = (amount) =>
     new Intl.NumberFormat(
@@ -23,25 +25,62 @@ const formatAmount = (amount) =>
         }
     ).format(amount);
 
+const setFormVisibility = (visible) => {
+  formVisible.value = visible;
+
+  if (!visible) {
+    selectedVehicle.value = null;
+  }
+};
+
 const openCreateForm = () => {
   vehicleStore.clearError();
+  selectedVehicle.value = null;
   formVisible.value = true;
 };
 
-const createVehicle = async (vehicle) => {
+const openEditForm = (vehicle) => {
+  vehicleStore.clearError();
+  selectedVehicle.value = vehicle;
+  formVisible.value = true;
+};
+
+const saveVehicle = async (vehicleData) => {
   const timestamp = new Date().toISOString();
+  let savedVehicle = null;
+  let successMessage = '';
 
-  const createdVehicle = await vehicleStore.createVehicle({
-    ...vehicle,
-    userId: 1,
-    createdAt: timestamp,
-    updatedAt: timestamp
-  });
+  if (selectedVehicle.value) {
+    savedVehicle = await vehicleStore.updateVehicle(
+        selectedVehicle.value.id,
+        {
+          ...vehicleData,
+          userId: selectedVehicle.value.userId,
+          createdAt: selectedVehicle.value.createdAt,
+          updatedAt: timestamp
+        }
+    );
 
-  if (!createdVehicle) {
+    successMessage = 'vehicles.messages.updated';
+  } else {
+    savedVehicle = await vehicleStore.createVehicle({
+      ...vehicleData,
+      userId: 1,
+      createdAt: timestamp,
+      updatedAt: timestamp
+    });
+
+    successMessage = 'vehicles.messages.created';
+  }
+
+  if (!savedVehicle) {
     toast.add({
       severity: 'error',
-      summary: t('vehicles.errors.create'),
+      summary: t(
+          selectedVehicle.value
+              ? 'vehicles.errors.update'
+              : 'vehicles.errors.create'
+      ),
       life: 3000
     });
 
@@ -49,11 +88,11 @@ const createVehicle = async (vehicle) => {
     return;
   }
 
-  formVisible.value = false;
+  setFormVisibility(false);
 
   toast.add({
     severity: 'success',
-    summary: t('vehicles.messages.created'),
+    summary: t(successMessage),
     life: 3000
   });
 };
@@ -141,12 +180,28 @@ onMounted(() => {
           {{ formatAmount(data.estimatedValue) }}
         </template>
       </pv-column>
+
+      <pv-column :header="t('vehicles.actions.column')">
+        <template #body="{ data }">
+          <div class="vehicles-table__actions">
+            <pv-button
+                icon="pi pi-pencil"
+                severity="secondary"
+                text
+                :label="t('vehicles.actions.edit')"
+                @click="openEditForm(data)"
+            />
+          </div>
+        </template>
+      </pv-column>
     </pv-data-table>
 
     <vehicle-form-dialog
-        v-model:visible="formVisible"
+        :visible="formVisible"
         :saving="saving"
-        @save="createVehicle"
+        :vehicle="selectedVehicle"
+        @update:visible="setFormVisibility"
+        @save="saveVehicle"
     />
   </main>
 </template>

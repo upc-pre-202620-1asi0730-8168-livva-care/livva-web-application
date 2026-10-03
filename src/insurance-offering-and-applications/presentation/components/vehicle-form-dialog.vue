@@ -1,5 +1,5 @@
 <script setup>
-import { reactive, watch } from 'vue';
+import { computed, reactive, watch } from 'vue';
 import { useI18n } from 'vue-i18n';
 
 const props = defineProps({
@@ -10,6 +10,10 @@ const props = defineProps({
   saving: {
     type: Boolean,
     default: false
+  },
+  vehicle: {
+    type: Object,
+    default: null
   }
 });
 
@@ -34,23 +38,33 @@ const errors = reactive({
   estimatedValue: ''
 });
 
-const resetForm = () => {
-  form.licensePlate = '';
-  form.brand = '';
-  form.model = '';
-  form.manufactureYear = null;
-  form.estimatedValue = null;
+const dialogTitle = computed(() =>
+    props.vehicle
+        ? t('vehicles.form.editTitle')
+        : t('vehicles.form.createTitle')
+);
 
+const clearErrors = () => {
   Object.keys(errors).forEach((field) => {
     errors[field] = '';
   });
 };
 
+const prepareForm = () => {
+  clearErrors();
+
+  form.licensePlate = props.vehicle?.licensePlate ?? '';
+  form.brand = props.vehicle?.brand ?? '';
+  form.model = props.vehicle?.model ?? '';
+  form.manufactureYear = props.vehicle?.manufactureYear ?? null;
+  form.estimatedValue = props.vehicle?.estimatedValue ?? null;
+};
+
 watch(
-    () => props.visible,
-    (isVisible) => {
+    [() => props.visible, () => props.vehicle],
+    ([isVisible]) => {
       if (isVisible) {
-        resetForm();
+        prepareForm();
       }
     }
 );
@@ -62,9 +76,7 @@ const closeDialog = () => {
 };
 
 const validateForm = () => {
-  Object.keys(errors).forEach((field) => {
-    errors[field] = '';
-  });
+  clearErrors();
 
   if (!form.licensePlate.trim()) {
     errors.licensePlate = t('vehicles.validation.required');
@@ -116,7 +128,7 @@ const submitForm = () => {
       modal
       :closable="!saving"
       :dismissable-mask="!saving"
-      :header="t('vehicles.form.createTitle')"
+      :header="dialogTitle"
       class="vehicle-dialog"
       @update:visible="emit('update:visible', $event)"
   >

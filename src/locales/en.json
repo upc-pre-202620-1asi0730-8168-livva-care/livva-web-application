@@ -39,11 +39,14 @@
     },
     "actions": {
       "add": "Add vehicle",
+      "edit": "Edit",
       "cancel": "Cancel",
-      "save": "Save"
+      "save": "Save",
+      "column": "Actions"
     },
     "form": {
-      "createTitle": "Register vehicle"
+      "createTitle": "Register vehicle",
+      "editTitle": "Edit vehicle"
     },
     "validation": {
       "required": "This field is required.",
@@ -51,7 +54,8 @@
       "value": "Enter a value greater than zero."
     },
     "messages": {
-      "created": "Vehicle registered successfully."
+      "created": "Vehicle registered successfully.",
+      "updated": "Vehicle updated successfully."
     },
     "errors": {
       "load": "Vehicles could not be loaded.",

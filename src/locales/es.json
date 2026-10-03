@@ -39,11 +39,14 @@
     },
     "actions": {
       "add": "Agregar vehículo",
+      "edit": "Editar",
       "cancel": "Cancelar",
-      "save": "Guardar"
+      "save": "Guardar",
+      "column": "Acciones"
     },
     "form": {
-      "createTitle": "Registrar vehículo"
+      "createTitle": "Registrar vehículo",
+      "editTitle": "Editar vehículo"
     },
     "validation": {
       "required": "Este campo es obligatorio.",
@@ -51,7 +54,8 @@
       "value": "Ingresa un valor mayor que cero."
     },
     "messages": {
-      "created": "Vehículo registrado correctamente."
+      "created": "Vehículo registrado correctamente.",
+      "updated": "Vehículo actualizado correctamente."
     },
     "errors": {
       "load": "No se pudieron cargar los vehículos.",
