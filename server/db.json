@@ -130,10 +130,37 @@
       "createdAt": "2026-10-03T22:51:44.075Z",
       "updatedAt": "2026-10-03T22:51:44.075Z",
       "id": 2
+    },
+    {
+      "userId": 1,
+      "licensePlate": "SIXSEVEN",
+      "brand": "Mitsubishi",
+      "model": "Eclipse",
+      "manufactureYear": 1999,
+      "estimatedValue": 500,
+      "createdAt": "2026-10-03T23:25:40.891Z",
+      "updatedAt": "2026-10-03T23:25:40.891Z",
+      "id": 3
     }
   ],
-  "insurance-applications": [],
-  "vehicle-insurance-applications": [],
+  "insurance-applications": [
+    {
+      "userId": 1,
+      "productId": 3,
+      "requestedCoverage": 100000,
+      "status": "pending",
+      "createdAt": "2026-10-03T23:46:08.672Z",
+      "updatedAt": "2026-10-03T23:46:08.672Z",
+      "id": 1
+    }
+  ],
+  "vehicle-insurance-applications": [
+    {
+      "applicationId": 1,
+      "vehicleId": 3,
+      "id": 1
+    }
+  ],
   "life-insurance-applications": [],
   "beneficiaries": [],
   "policies": [
