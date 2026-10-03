@@ -4,7 +4,8 @@
   },
   "navigation": {
     "home": "Home",
-    "about": "About"
+    "about": "About",
+    "policies": "Policies"
   },
   "home": {
     "pageTitle": "Home",
@@ -21,6 +22,45 @@
     "title": "Page not found",
     "description": "The page you requested does not exist.",
     "action": "Return home"
+  },
+  "policies": {
+    "pageTitle": "Policies",
+    "detailPageTitle": "Policy details",
+    "sectionLabel": "Policy management",
+    "title": "My policies",
+    "description": "Review the insurance policies associated with your account.",
+    "empty": "There are no policies available.",
+    "types": {
+      "vehicle": "Vehicle insurance",
+      "life": "Life insurance"
+    },
+    "statuses": {
+      "active": "Active",
+      "expired": "Expired"
+    },
+    "fields": {
+      "startDate": "Start date",
+      "expirationDate": "Expiration date",
+      "premiumAmount": "Premium amount",
+      "coverageAmount": "Coverage amount"
+    },
+    "actions": {
+      "viewDetails": "View details",
+      "backToPolicies": "Back to policies",
+      "openDocument": "Open document"
+    },
+    "detail": {
+      "generalInformation": "General information",
+      "coverages": "Coverages",
+      "documents": "Documents",
+      "noCoverages": "No coverages are registered for this policy.",
+      "noDocuments": "No documents are registered for this policy.",
+      "documentUnavailable": "Document unavailable"
+    },
+    "errors": {
+      "loadList": "Policies could not be loaded.",
+      "loadDetail": "Policy details could not be loaded."
+    }
   },
   "footer": {
     "copyright": "© {year} Livva Care. All rights reserved."

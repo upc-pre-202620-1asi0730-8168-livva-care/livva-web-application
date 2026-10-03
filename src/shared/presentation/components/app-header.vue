@@ -21,6 +21,10 @@ const { t } = useI18n();
           {{ t('navigation.home') }}
         </router-link>
 
+        <router-link to="/policies">
+          {{ t('navigation.policies') }}
+        </router-link>
+
         <router-link to="/about">
           {{ t('navigation.about') }}
         </router-link>

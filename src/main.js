@@ -5,6 +5,9 @@ import ConfirmationService from 'primevue/confirmationservice';
 import ToastService from 'primevue/toastservice';
 import Button from 'primevue/button';
 import Card from 'primevue/card';
+import Message from 'primevue/message';
+import ProgressSpinner from 'primevue/progressspinner';
+import Tag from 'primevue/tag';
 
 import App from './app.vue';
 import router from './router.js';
@@ -34,5 +37,8 @@ app.use(i18n);
 
 app.component('pv-button', Button);
 app.component('pv-card', Card);
+app.component('pv-message', Message);
+app.component('pv-progress-spinner', ProgressSpinner);
+app.component('pv-tag', Tag);
 
 app.mount('#app');

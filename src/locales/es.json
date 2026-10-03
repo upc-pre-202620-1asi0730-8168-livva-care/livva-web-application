@@ -4,7 +4,8 @@
   },
   "navigation": {
     "home": "Inicio",
-    "about": "Nosotros"
+    "about": "Nosotros",
+    "policies": "Pólizas"
   },
   "home": {
     "pageTitle": "Inicio",
@@ -21,6 +22,45 @@
     "title": "Página no encontrada",
     "description": "La página solicitada no existe.",
     "action": "Volver al inicio"
+  },
+  "policies": {
+    "pageTitle": "Pólizas",
+    "detailPageTitle": "Detalle de póliza",
+    "sectionLabel": "Gestión de pólizas",
+    "title": "Mis pólizas",
+    "description": "Consulta las pólizas de seguro asociadas a tu cuenta.",
+    "empty": "No hay pólizas disponibles.",
+    "types": {
+      "vehicle": "Seguro vehicular",
+      "life": "Seguro de vida"
+    },
+    "statuses": {
+      "active": "Activa",
+      "expired": "Vencida"
+    },
+    "fields": {
+      "startDate": "Fecha de inicio",
+      "expirationDate": "Fecha de vencimiento",
+      "premiumAmount": "Monto de la prima",
+      "coverageAmount": "Monto de cobertura"
+    },
+    "actions": {
+      "viewDetails": "Ver detalle",
+      "backToPolicies": "Volver a pólizas",
+      "openDocument": "Abrir documento"
+    },
+    "detail": {
+      "generalInformation": "Información general",
+      "coverages": "Coberturas",
+      "documents": "Documentos",
+      "noCoverages": "Esta póliza no tiene coberturas registradas.",
+      "noDocuments": "Esta póliza no tiene documentos registrados.",
+      "documentUnavailable": "Documento no disponible"
+    },
+    "errors": {
+      "loadList": "No se pudieron cargar las pólizas.",
+      "loadDetail": "No se pudo cargar el detalle de la póliza."
+    }
   },
   "footer": {
     "copyright": "© {year} Livva Care. Todos los derechos reservados."
