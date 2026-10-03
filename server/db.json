@@ -1,9 +1,45 @@
 {
-  "users": [],
+  "users": [
+    {
+      "id": 1,
+      "firstName": "Cliente",
+      "lastName": "Livva",
+      "email": "cliente@livva.pe",
+      "passwordHash": "development-only-hash",
+      "phone": "+51 999 999 999",
+      "role": "CUSTOMER",
+      "active": true,
+      "createdAt": "2026-09-01T10:00:00Z",
+      "updatedAt": "2026-09-01T10:00:00Z"
+    }
+  ],
   "user-profiles": [],
   "insurers": [],
   "insurance-products": [],
-  "vehicles": [],
+  "vehicles": [
+    {
+      "id": 1,
+      "userId": 1,
+      "licensePlate": "ABC-123",
+      "brand": "Toyota",
+      "model": "Corolla",
+      "manufactureYear": 2022,
+      "estimatedValue": 65000,
+      "createdAt": "2026-09-15T10:00:00Z",
+      "updatedAt": "2026-09-15T10:00:00Z"
+    },
+    {
+      "userId": 1,
+      "licensePlate": "67SIX-SE",
+      "brand": "Ferrari",
+      "model": "PuraSangre",
+      "manufactureYear": 2026,
+      "estimatedValue": 100000,
+      "createdAt": "2026-10-03T22:51:44.075Z",
+      "updatedAt": "2026-10-03T22:51:44.075Z",
+      "id": 2
+    }
+  ],
   "insurance-applications": [],
   "vehicle-insurance-applications": [],
   "life-insurance-applications": [],

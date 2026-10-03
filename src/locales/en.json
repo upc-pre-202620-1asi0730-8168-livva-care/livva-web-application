@@ -5,6 +5,7 @@
   "navigation": {
     "home": "Home",
     "about": "About",
+    "vehicles": "Vehicles",
     "policies": "Policies"
   },
   "home": {
@@ -22,6 +23,52 @@
     "title": "Page not found",
     "description": "The page you requested does not exist.",
     "action": "Return home"
+  },
+  "vehicles": {
+    "pageTitle": "Vehicles",
+    "sectionLabel": "Vehicle management",
+    "title": "My vehicles",
+    "description": "Review the vehicles registered in your account.",
+    "empty": "There are no registered vehicles.",
+    "fields": {
+      "licensePlate": "License plate",
+      "brand": "Brand",
+      "model": "Model",
+      "manufactureYear": "Manufacture year",
+      "estimatedValue": "Estimated value"
+    },
+    "actions": {
+      "add": "Add vehicle",
+      "edit": "Edit",
+      "cancel": "Cancel",
+      "save": "Save",
+      "column": "Actions",
+      "delete": "Delete"
+    },
+    "form": {
+      "createTitle": "Register vehicle",
+      "editTitle": "Edit vehicle"
+    },
+    "confirmation": {
+      "deleteTitle": "Delete vehicle",
+      "deleteMessage": "Do you want to delete the vehicle with license plate {licensePlate}?"
+    },
+    "validation": {
+      "required": "This field is required.",
+      "year": "Enter a year between 1900 and {year}.",
+      "value": "Enter a value greater than zero."
+    },
+    "messages": {
+      "created": "Vehicle registered successfully.",
+      "updated": "Vehicle updated successfully.",
+      "deleted": "Vehicle deleted successfully."
+    },
+    "errors": {
+      "load": "Vehicles could not be loaded.",
+      "create": "The vehicle could not be registered.",
+      "update": "The vehicle could not be updated.",
+      "delete": "The vehicle could not be deleted."
+    }
   },
   "policies": {
     "pageTitle": "Policies",
@@ -44,6 +91,7 @@
       "premiumAmount": "Premium amount",
       "coverageAmount": "Coverage amount"
     },
+
     "actions": {
       "viewDetails": "View details",
       "backToPolicies": "Back to policies",
@@ -65,4 +113,5 @@
   "footer": {
     "copyright": "© {year} Livva Care. All rights reserved."
   }
+
 }
