@@ -25,6 +25,7 @@
   },
   "policies": {
     "pageTitle": "Policies",
+    "detailPageTitle": "Policy details",
     "sectionLabel": "Policy management",
     "title": "My policies",
     "description": "Review the insurance policies associated with your account.",
@@ -42,6 +43,19 @@
       "expirationDate": "Expiration date",
       "premiumAmount": "Premium amount",
       "coverageAmount": "Coverage amount"
+    },
+    "actions": {
+      "viewDetails": "View details",
+      "backToPolicies": "Back to policies",
+      "openDocument": "Open document"
+    },
+    "detail": {
+      "generalInformation": "General information",
+      "coverages": "Coverages",
+      "documents": "Documents",
+      "noCoverages": "No coverages are registered for this policy.",
+      "noDocuments": "No documents are registered for this policy.",
+      "documentUnavailable": "Document unavailable"
     },
     "errors": {
       "loadList": "Policies could not be loaded.",

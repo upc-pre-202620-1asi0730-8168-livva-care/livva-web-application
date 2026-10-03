@@ -72,5 +72,17 @@ const statusSeverity = computed(() => {
         </div>
       </dl>
     </template>
+
+    <template #footer>
+      <router-link
+          class="primary-link"
+          :to="{
+          name: 'policy-detail',
+          params: { id: policy.id }
+        }"
+      >
+        {{ t('policies.actions.viewDetails') }}
+      </router-link>
+    </template>
   </pv-card>
 </template>

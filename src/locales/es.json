@@ -25,6 +25,7 @@
   },
   "policies": {
     "pageTitle": "Pólizas",
+    "detailPageTitle": "Detalle de póliza",
     "sectionLabel": "Gestión de pólizas",
     "title": "Mis pólizas",
     "description": "Consulta las pólizas de seguro asociadas a tu cuenta.",
@@ -42,6 +43,19 @@
       "expirationDate": "Fecha de vencimiento",
       "premiumAmount": "Monto de la prima",
       "coverageAmount": "Monto de cobertura"
+    },
+    "actions": {
+      "viewDetails": "Ver detalle",
+      "backToPolicies": "Volver a pólizas",
+      "openDocument": "Abrir documento"
+    },
+    "detail": {
+      "generalInformation": "Información general",
+      "coverages": "Coberturas",
+      "documents": "Documentos",
+      "noCoverages": "Esta póliza no tiene coberturas registradas.",
+      "noDocuments": "Esta póliza no tiene documentos registrados.",
+      "documentUnavailable": "Documento no disponible"
     },
     "errors": {
       "loadList": "No se pudieron cargar las pólizas.",
