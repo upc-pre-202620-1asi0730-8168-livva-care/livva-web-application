@@ -1,6 +1,6 @@
 import { createApp } from 'vue';
 import PrimeVue from 'primevue/config';
-import Material from '@primeuix/themes/material';
+import Material from '@primevue/themes/material';
 import ConfirmationService from 'primevue/confirmationservice';
 import ToastService from 'primevue/toastservice';
 import Button from 'primevue/button';
