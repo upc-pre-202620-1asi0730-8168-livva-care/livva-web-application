@@ -5,6 +5,7 @@
   "navigation": {
     "home": "Inicio",
     "about": "Nosotros",
+    "vehicles": "Vehículos",
     "policies": "Pólizas"
   },
   "home": {
@@ -22,6 +23,25 @@
     "title": "Página no encontrada",
     "description": "La página solicitada no existe.",
     "action": "Volver al inicio"
+  },
+  "vehicles": {
+    "pageTitle": "Vehículos",
+    "sectionLabel": "Gestión de vehículos",
+    "title": "Mis vehículos",
+    "description": "Consulta los vehículos registrados en tu cuenta.",
+    "empty": "No hay vehículos registrados.",
+    "fields": {
+      "licensePlate": "Placa",
+      "brand": "Marca",
+      "model": "Modelo",
+      "manufactureYear": "Año de fabricación",
+      "estimatedValue": "Valor estimado"
+    },
+    "errors": {
+      "load": "No se pudieron cargar los vehículos.",
+      "create": "No se pudo registrar el vehículo.",
+      "update": "No se pudo actualizar el vehículo."
+    }
   },
   "policies": {
     "pageTitle": "Pólizas",

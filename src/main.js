@@ -5,6 +5,8 @@ import ConfirmationService from 'primevue/confirmationservice';
 import ToastService from 'primevue/toastservice';
 import Button from 'primevue/button';
 import Card from 'primevue/card';
+import Column from 'primevue/column';
+import DataTable from 'primevue/datatable';
 import Message from 'primevue/message';
 import ProgressSpinner from 'primevue/progressspinner';
 import Tag from 'primevue/tag';
@@ -37,6 +39,8 @@ app.use(i18n);
 
 app.component('pv-button', Button);
 app.component('pv-card', Card);
+app.component('pv-column', Column);
+app.component('pv-data-table', DataTable);
 app.component('pv-message', Message);
 app.component('pv-progress-spinner', ProgressSpinner);
 app.component('pv-tag', Tag);

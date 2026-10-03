@@ -423,3 +423,54 @@ p {
     padding: 1.25rem;
   }
 }
+.vehicles-page {
+  width: min(100% - 2rem, 1200px);
+  min-height: calc(100vh - 152px);
+  margin-inline: auto;
+  padding-block: 4rem;
+}
+
+.vehicles-page__header {
+  max-width: 720px;
+  margin-bottom: 2.5rem;
+}
+
+.vehicles-page__header h1 {
+  margin-top: 0.5rem;
+  font-size: clamp(2rem, 5vw, 3.5rem);
+}
+
+.vehicles-page__header p {
+  margin: 1rem 0 0;
+}
+
+.vehicles-table {
+  overflow: hidden;
+  border: 1px solid #e4e9f2;
+  border-radius: 18px;
+  box-shadow: 0 12px 32px rgb(8 27 58 / 8%);
+}
+
+.vehicles-state {
+  display: grid;
+  min-height: 220px;
+  place-items: center;
+  align-content: center;
+  color: #52627a;
+  text-align: center;
+}
+
+.vehicles-state .pi {
+  color: #2563eb;
+  font-size: 2.5rem;
+}
+
+.vehicles-state p {
+  margin-bottom: 0;
+}
+
+@media (max-width: 640px) {
+  .vehicles-page {
+    padding-block: 2rem;
+  }
+}

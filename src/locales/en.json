@@ -5,6 +5,7 @@
   "navigation": {
     "home": "Home",
     "about": "About",
+    "vehicles": "Vehicles",
     "policies": "Policies"
   },
   "home": {
@@ -22,6 +23,25 @@
     "title": "Page not found",
     "description": "The page you requested does not exist.",
     "action": "Return home"
+  },
+  "vehicles": {
+    "pageTitle": "Vehicles",
+    "sectionLabel": "Vehicle management",
+    "title": "My vehicles",
+    "description": "Review the vehicles registered in your account.",
+    "empty": "There are no registered vehicles.",
+    "fields": {
+      "licensePlate": "License plate",
+      "brand": "Brand",
+      "model": "Model",
+      "manufactureYear": "Manufacture year",
+      "estimatedValue": "Estimated value"
+    },
+    "errors": {
+      "load": "Vehicles could not be loaded.",
+      "create": "The vehicle could not be registered.",
+      "update": "The vehicle could not be updated."
+    }
   },
   "policies": {
     "pageTitle": "Policies",
