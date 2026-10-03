@@ -1,0 +1,22 @@
+{
+  "users": [],
+  "user-profiles": [],
+  "insurers": [],
+  "insurance-products": [],
+  "vehicles": [],
+  "insurance-applications": [],
+  "vehicle-insurance-applications": [],
+  "life-insurance-applications": [],
+  "beneficiaries": [],
+  "policies": [],
+  "policy-coverages": [],
+  "policy-documents": [],
+  "renewals": [],
+  "vehicle-claims": [],
+  "claim-status-histories": [],
+  "indemnity-requests": [],
+  "indemnity-status-histories": [],
+  "subscription-plans": [],
+  "user-subscriptions": [],
+  "subscription-payments": []
+}

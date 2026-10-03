@@ -1,0 +1,28 @@
+{
+  "app": {
+    "name": "Livva"
+  },
+  "navigation": {
+    "home": "Inicio",
+    "about": "Nosotros"
+  },
+  "home": {
+    "pageTitle": "Inicio",
+    "title": "Seguros simples para ti",
+    "description": "Accede, solicita y gestiona seguros vehiculares y seguros de vida mediante una sola plataforma digital."
+  },
+  "about": {
+    "pageTitle": "Nosotros",
+    "title": "Acerca de Livva",
+    "description": "Livva facilita la intermediación y gestión digital de seguros vehiculares y seguros de vida sin asumir las responsabilidades de una compañía aseguradora."
+  },
+  "notFound": {
+    "pageTitle": "Página no encontrada",
+    "title": "Página no encontrada",
+    "description": "La página solicitada no existe.",
+    "action": "Volver al inicio"
+  },
+  "footer": {
+    "copyright": "© {year} Livva Care. Todos los derechos reservados."
+  }
+}
