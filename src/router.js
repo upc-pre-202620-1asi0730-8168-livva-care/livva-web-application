@@ -3,6 +3,7 @@ import i18n from './i18n.js';
 import HomeView from './shared/presentation/views/home-view.vue';
 import AboutView from './shared/presentation/views/about-view.vue';
 import PageNotFoundView from './shared/presentation/views/page-not-found-view.vue';
+import { policyRoutes } from './policy-management/presentation/policy.routes.js';
 
 const routes = [
     {
@@ -21,6 +22,7 @@ const routes = [
             titleKey: 'about.pageTitle'
         }
     },
+    ...policyRoutes,
     {
         path: '/:pathMatch(.*)*',
         name: 'page-not-found',

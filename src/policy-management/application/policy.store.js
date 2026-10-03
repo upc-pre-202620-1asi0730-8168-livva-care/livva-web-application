@@ -19,7 +19,7 @@ export const usePolicyStore = defineStore('policy-management', () => {
             const response = await policiesApi.getAll();
             policies.value = PolicyAssembler.toEntities(response.data);
         } catch {
-            error.value = 'Unable to load policies.';
+            error.value = 'policies.errors.loadList';
         } finally {
             loading.value = false;
         }
@@ -44,7 +44,7 @@ export const usePolicyStore = defineStore('policy-management', () => {
             coverages.value = coveragesResponse.data;
             documents.value = documentsResponse.data;
         } catch {
-            error.value = 'Unable to load policy details.';
+            error.value = 'policies.errors.loadDetail';
         } finally {
             loading.value = false;
         }
