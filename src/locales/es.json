@@ -42,11 +42,16 @@
       "edit": "Editar",
       "cancel": "Cancelar",
       "save": "Guardar",
-      "column": "Acciones"
+      "column": "Acciones",
+      "delete": "Eliminar"
     },
     "form": {
       "createTitle": "Registrar vehículo",
       "editTitle": "Editar vehículo"
+    },
+    "confirmation": {
+      "deleteTitle": "Eliminar vehículo",
+      "deleteMessage": "¿Deseas eliminar el vehículo con placa {licensePlate}?"
     },
     "validation": {
       "required": "Este campo es obligatorio.",
@@ -55,12 +60,14 @@
     },
     "messages": {
       "created": "Vehículo registrado correctamente.",
-      "updated": "Vehículo actualizado correctamente."
+      "updated": "Vehículo actualizado correctamente.",
+      "deleted": "Vehículo eliminado correctamente."
     },
     "errors": {
       "load": "No se pudieron cargar los vehículos.",
       "create": "No se pudo registrar el vehículo.",
-      "update": "No se pudo actualizar el vehículo."
+      "update": "No se pudo actualizar el vehículo.",
+      "delete": "No se pudo eliminar el vehículo."
     }
   },
   "policies": {

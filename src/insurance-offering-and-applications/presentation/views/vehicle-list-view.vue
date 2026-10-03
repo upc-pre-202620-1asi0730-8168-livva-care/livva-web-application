@@ -5,12 +5,21 @@ import { useI18n } from 'vue-i18n';
 import { useToast } from 'primevue/usetoast';
 import { useVehicleStore } from '../../application/vehicle.store.js';
 import VehicleFormDialog from '../components/vehicle-form-dialog.vue';
+import { useConfirm } from 'primevue/useconfirm';
+
 
 const { t, locale } = useI18n();
 const toast = useToast();
+const confirm = useConfirm();
 const vehicleStore = useVehicleStore();
 
-const { vehicles, loading, saving, error } = storeToRefs(vehicleStore);
+const {
+  vehicles,
+  loading,
+  saving,
+  deletingId,
+  error
+} = storeToRefs(vehicleStore);
 
 const formVisible = ref(false);
 const selectedVehicle = ref(null);
@@ -96,6 +105,50 @@ const saveVehicle = async (vehicleData) => {
     life: 3000
   });
 };
+const deleteVehicle = async (vehicle) => {
+  const deleted = await vehicleStore.deleteVehicle(vehicle.id);
+
+  if (!deleted) {
+    toast.add({
+      severity: 'error',
+      summary: t('vehicles.errors.delete'),
+      life: 3000
+    });
+
+    vehicleStore.clearError();
+    return;
+  }
+
+  toast.add({
+    severity: 'success',
+    summary: t('vehicles.messages.deleted'),
+    life: 3000
+  });
+};
+
+const confirmDelete = (vehicle) => {
+  if (deletingId.value !== null) {
+    return;
+  }
+
+  confirm.require({
+    header: t('vehicles.confirmation.deleteTitle'),
+    message: t('vehicles.confirmation.deleteMessage', {
+      licensePlate: vehicle.licensePlate
+    }),
+    icon: 'pi pi-exclamation-triangle',
+    rejectProps: {
+      label: t('vehicles.actions.cancel'),
+      severity: 'secondary',
+      outlined: true
+    },
+    acceptProps: {
+      label: t('vehicles.actions.delete'),
+      severity: 'danger'
+    },
+    accept: () => deleteVehicle(vehicle)
+  });
+};
 
 onMounted(() => {
   vehicleStore.fetchVehicles();
@@ -105,7 +158,7 @@ onMounted(() => {
 <template>
   <main class="vehicles-page">
     <pv-toast />
-
+    <pv-confirm-dialog />
     <header class="vehicles-page__heading">
       <div class="vehicles-page__header">
         <span class="section-label">
@@ -190,6 +243,15 @@ onMounted(() => {
                 text
                 :label="t('vehicles.actions.edit')"
                 @click="openEditForm(data)"
+            />
+            <pv-button
+                icon="pi pi-trash"
+                severity="danger"
+                text
+                :label="t('vehicles.actions.delete')"
+                :loading="deletingId === data.id"
+                :disabled="deletingId !== null"
+                @click.stop="confirmDelete(data)"
             />
           </div>
         </template>

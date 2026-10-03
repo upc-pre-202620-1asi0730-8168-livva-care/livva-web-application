@@ -7,6 +7,7 @@ export const useVehicleStore = defineStore('vehicle-management', () => {
     const vehicles = ref([]);
     const loading = ref(false);
     const saving = ref(false);
+    const deletingId = ref(null);
     const error = ref(null);
 
     const fetchVehicles = async () => {
@@ -33,7 +34,6 @@ export const useVehicleStore = defineStore('vehicle-management', () => {
             const createdVehicle = VehicleAssembler.toEntity(response.data);
 
             vehicles.value.push(createdVehicle);
-
             return createdVehicle;
         } catch {
             error.value = 'vehicles.errors.create';
@@ -69,6 +69,26 @@ export const useVehicleStore = defineStore('vehicle-management', () => {
         }
     };
 
+    const deleteVehicle = async (vehicleId) => {
+        if (deletingId.value !== null) {
+            return false;
+        }
+
+        deletingId.value = vehicleId;
+        error.value = null;
+
+        try {
+            await vehiclesApi.delete(vehicleId);
+            await fetchVehicles();
+
+            return true;
+        } catch {
+            error.value = 'vehicles.errors.delete';
+            return false;
+        } finally {
+            deletingId.value = null;
+        }
+    };
     const clearError = () => {
         error.value = null;
     };
@@ -77,10 +97,12 @@ export const useVehicleStore = defineStore('vehicle-management', () => {
         vehicles,
         loading,
         saving,
+        deletingId,
         error,
         fetchVehicles,
         createVehicle,
         updateVehicle,
+        deleteVehicle,
         clearError
     };
 });
