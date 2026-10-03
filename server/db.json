@@ -14,8 +14,100 @@
     }
   ],
   "user-profiles": [],
-  "insurers": [],
-  "insurance-products": [],
+  "insurers": [
+    {
+      "id": 1,
+      "externalReference": "INS-ANDINA",
+      "name": "Protección Andina",
+      "active": true,
+      "createdAt": "2026-09-01T10:00:00Z",
+      "updatedAt": "2026-09-01T10:00:00Z"
+    },
+    {
+      "id": 2,
+      "externalReference": "INS-HORIZONTE",
+      "name": "Horizonte Seguros",
+      "active": true,
+      "createdAt": "2026-09-01T10:00:00Z",
+      "updatedAt": "2026-09-01T10:00:00Z"
+    },
+    {
+      "id": 3,
+      "externalReference": "INS-CONFIANZA",
+      "name": "Confianza Vida",
+      "active": true,
+      "createdAt": "2026-09-01T10:00:00Z",
+      "updatedAt": "2026-09-01T10:00:00Z"
+    }
+  ],
+  "insurance-products": [
+    {
+      "id": 1,
+      "insurerId": 1,
+      "name": "Auto Esencial",
+      "insuranceType": "vehicle",
+      "coverageAmount": 35000,
+      "premiumAmount": 650,
+      "active": true,
+      "createdAt": "2026-09-01T10:00:00Z",
+      "updatedAt": "2026-09-01T10:00:00Z"
+    },
+    {
+      "id": 2,
+      "insurerId": 1,
+      "name": "Auto Integral",
+      "insuranceType": "vehicle",
+      "coverageAmount": 70000,
+      "premiumAmount": 1100,
+      "active": true,
+      "createdAt": "2026-09-01T10:00:00Z",
+      "updatedAt": "2026-09-01T10:00:00Z"
+    },
+    {
+      "id": 3,
+      "insurerId": 2,
+      "name": "Vehículo Total",
+      "insuranceType": "vehicle",
+      "coverageAmount": 100000,
+      "premiumAmount": 1450,
+      "active": true,
+      "createdAt": "2026-09-01T10:00:00Z",
+      "updatedAt": "2026-09-01T10:00:00Z"
+    },
+    {
+      "id": 4,
+      "insurerId": 2,
+      "name": "Vida Familiar",
+      "insuranceType": "life",
+      "coverageAmount": 80000,
+      "premiumAmount": 780,
+      "active": true,
+      "createdAt": "2026-09-01T10:00:00Z",
+      "updatedAt": "2026-09-01T10:00:00Z"
+    },
+    {
+      "id": 5,
+      "insurerId": 3,
+      "name": "Vida Protección",
+      "insuranceType": "life",
+      "coverageAmount": 120000,
+      "premiumAmount": 1050,
+      "active": true,
+      "createdAt": "2026-09-01T10:00:00Z",
+      "updatedAt": "2026-09-01T10:00:00Z"
+    },
+    {
+      "id": 6,
+      "insurerId": 3,
+      "name": "Vida Plus",
+      "insuranceType": "life",
+      "coverageAmount": 200000,
+      "premiumAmount": 1600,
+      "active": true,
+      "createdAt": "2026-09-01T10:00:00Z",
+      "updatedAt": "2026-09-01T10:00:00Z"
+    }
+  ],
   "vehicles": [
     {
       "id": 1,
