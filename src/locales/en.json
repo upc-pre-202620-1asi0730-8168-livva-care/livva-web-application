@@ -1,0 +1,28 @@
+{
+  "app": {
+    "name": "Livva"
+  },
+  "navigation": {
+    "home": "Home",
+    "about": "About"
+  },
+  "home": {
+    "pageTitle": "Home",
+    "title": "Insurance made simple",
+    "description": "Access, apply for, and manage vehicle and life insurance through one digital platform."
+  },
+  "about": {
+    "pageTitle": "About",
+    "title": "About Livva",
+    "description": "Livva facilitates the digital intermediation and management of vehicle and life insurance without assuming the responsibilities of an insurance company."
+  },
+  "notFound": {
+    "pageTitle": "Page not found",
+    "title": "Page not found",
+    "description": "The page you requested does not exist.",
+    "action": "Return home"
+  },
+  "footer": {
+    "copyright": "© {year} Livva Care. All rights reserved."
+  }
+}
