@@ -152,6 +152,24 @@
       "createdAt": "2026-10-03T23:46:08.672Z",
       "updatedAt": "2026-10-03T23:46:08.672Z",
       "id": 1
+    },
+    {
+      "userId": 1,
+      "productId": 6,
+      "requestedCoverage": 10000,
+      "status": "pending",
+      "createdAt": "2026-10-04T00:28:34.493Z",
+      "updatedAt": "2026-10-04T00:28:34.493Z",
+      "id": 2
+    },
+    {
+      "userId": 1,
+      "productId": 4,
+      "requestedCoverage": 80000,
+      "status": "pending",
+      "createdAt": "2026-10-04T00:32:24.414Z",
+      "updatedAt": "2026-10-04T00:32:24.414Z",
+      "id": 3
     }
   ],
   "vehicle-insurance-applications": [
@@ -161,7 +179,16 @@
       "id": 1
     }
   ],
-  "life-insurance-applications": [],
+  "life-insurance-applications": [
+    {
+      "applicationId": 2,
+      "id": 1
+    },
+    {
+      "applicationId": 3,
+      "id": 2
+    }
+  ],
   "beneficiaries": [],
   "policies": [
     {
