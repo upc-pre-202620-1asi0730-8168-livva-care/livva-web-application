@@ -7,7 +7,8 @@
     "about": "About",
     "vehicles": "Vehicles",
     "policies": "Policies",
-    "applications": "Applications"
+    "applications": "Applications",
+    "lifeApplications": "Life insurance"
   },
   "home": {
     "pageTitle": "Home",
@@ -166,6 +167,52 @@
     "errors": {
       "load": "Applications could not be loaded.",
       "create": "The application could not be submitted.",
+      "invalidData": "The application data is invalid."
+    }
+  },
+  "lifeApplications": {
+    "pageTitle": "Life applications",
+    "sectionLabel": "Life insurance",
+    "title": "Life insurance applications",
+    "description": "Apply for financial protection and review the status of your applications.",
+    "empty": "There are no life insurance applications.",
+    "creationUnavailable": "There are no active life insurance products available.",
+    "fields": {
+      "number": "Application",
+      "product": "Product",
+      "maximumCoverage": "Maximum coverage",
+      "premiumAmount": "Premium amount",
+      "requestedCoverage": "Requested coverage",
+      "status": "Status",
+      "createdAt": "Application date"
+    },
+    "actions": {
+      "create": "New application",
+      "cancel": "Cancel",
+      "submit": "Submit application"
+    },
+    "form": {
+      "title": "Apply for life insurance",
+      "selectProduct": "Select a product"
+    },
+    "statuses": {
+      "pending": "Pending",
+      "under_review": "Under review",
+      "approved": "Approved",
+      "rejected": "Rejected",
+      "cancelled": "Cancelled"
+    },
+    "validation": {
+      "productRequired": "Select a product.",
+      "coverageRequired": "Enter coverage greater than zero.",
+      "coverageMaximum": "Coverage cannot exceed {amount}."
+    },
+    "messages": {
+      "created": "Life insurance application submitted successfully."
+    },
+    "errors": {
+      "load": "Life insurance applications could not be loaded.",
+      "create": "The life insurance application could not be submitted.",
       "invalidData": "The application data is invalid."
     }
   },

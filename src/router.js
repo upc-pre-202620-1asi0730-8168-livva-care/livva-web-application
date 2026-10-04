@@ -5,6 +5,7 @@ import AboutView from './shared/presentation/views/about-view.vue';
 import PageNotFoundView from './shared/presentation/views/page-not-found-view.vue';
 import { policyRoutes } from './policy-management/presentation/policy.routes.js';
 import { vehicleRoutes } from './insurance-offering-and-applications/presentation/vehicle.routes.js';
+import { lifeRoutes } from './insurance-offering-and-applications/presentation/life.routes.js';
 
 const routes = [
     {
@@ -24,6 +25,7 @@ const routes = [
         }
     },
     ...vehicleRoutes,
+    ...lifeRoutes,
     ...policyRoutes,
     {
         path: '/:pathMatch(.*)*',

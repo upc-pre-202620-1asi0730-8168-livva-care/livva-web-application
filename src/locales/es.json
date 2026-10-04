@@ -6,7 +6,8 @@
     "home": "Inicio",
     "about": "Nosotros",
     "vehicles": "Vehículos",
-    "policies": "Pólizas"
+    "policies": "Pólizas",
+    "lifeApplications": "Seguro de vida"
   },
   "home": {
     "pageTitle": "Inicio",
@@ -116,6 +117,52 @@
     "errors": {
       "load": "No se pudieron cargar las solicitudes.",
       "create": "No se pudo registrar la solicitud.",
+      "invalidData": "Los datos de la solicitud no son válidos."
+    }
+  },
+  "lifeApplications": {
+    "pageTitle": "Solicitudes de vida",
+    "sectionLabel": "Seguro de vida",
+    "title": "Solicitudes de seguro de vida",
+    "description": "Solicita protección financiera y consulta el estado de tus solicitudes.",
+    "empty": "No hay solicitudes de seguro de vida registradas.",
+    "creationUnavailable": "No hay productos de seguro de vida activos disponibles.",
+    "fields": {
+      "number": "Solicitud",
+      "product": "Producto",
+      "maximumCoverage": "Cobertura máxima",
+      "premiumAmount": "Monto de la prima",
+      "requestedCoverage": "Cobertura solicitada",
+      "status": "Estado",
+      "createdAt": "Fecha de solicitud"
+    },
+    "actions": {
+      "create": "Nueva solicitud",
+      "cancel": "Cancelar",
+      "submit": "Enviar solicitud"
+    },
+    "form": {
+      "title": "Solicitar seguro de vida",
+      "selectProduct": "Selecciona un producto"
+    },
+    "statuses": {
+      "pending": "Pendiente",
+      "under_review": "En revisión",
+      "approved": "Aprobada",
+      "rejected": "Rechazada",
+      "cancelled": "Cancelada"
+    },
+    "validation": {
+      "productRequired": "Selecciona un producto.",
+      "coverageRequired": "Ingresa una cobertura mayor que cero.",
+      "coverageMaximum": "La cobertura no puede superar {amount}."
+    },
+    "messages": {
+      "created": "Solicitud de vida registrada correctamente."
+    },
+    "errors": {
+      "load": "No se pudieron cargar las solicitudes de vida.",
+      "create": "No se pudo registrar la solicitud de vida.",
       "invalidData": "Los datos de la solicitud no son válidos."
     }
   },
