@@ -328,6 +328,14 @@
       "status": "rejected",
       "createdAt": "2026-07-15T10:00:00Z",
       "updatedAt": "2026-07-18T15:30:00Z"
+    },
+    {
+      "policyId": 3,
+      "requestedAt": "2026-10-05T19:56:14.796Z",
+      "status": "pending",
+      "createdAt": "2026-10-05T19:56:14.796Z",
+      "updatedAt": "2026-10-05T19:56:14.796Z",
+      "id": 2
     }
   ],
   "vehicle-claims": [],
