@@ -3,12 +3,15 @@
     "name": "Livva"
   },
   "navigation": {
+    "main": "Navegación principal",
     "home": "Inicio",
     "about": "Nosotros",
-    "vehicles": "Vehículos",
     "policies": "Pólizas",
-    "applications": "Solicitudes vehiculares",
-    "lifeApplications": "Seguro de vida",
+    "vehicleInsurance": "Vehicular",
+    "vehicles": "Mis vehículos",
+    "applications": "Solicitudes",
+    "lifeInsurance": "Vida",
+    "lifeApplications": "Solicitudes",
     "beneficiaries": "Beneficiarios"
   },
   "home": {
