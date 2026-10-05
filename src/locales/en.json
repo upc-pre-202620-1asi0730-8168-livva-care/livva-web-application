@@ -272,6 +272,40 @@
       "loadDetail": "Policy details could not be loaded."
     }
   },
+  "renewals": {
+    "title": "Policy renewal",
+    "description": "Request a renewal to maintain the continuity of your coverage.",
+    "empty": "There are no renewal requests for this policy yet.",
+    "fields": {
+      "requestedAt": "Request date",
+      "status": "Status"
+    },
+    "statuses": {
+      "pending": "Pending",
+      "under_review": "Under review",
+      "approved": "Approved",
+      "rejected": "Rejected",
+      "cancelled": "Cancelled"
+    },
+    "actions": {
+      "request": "Request renewal",
+      "pending": "Renewal pending",
+      "cancel": "Cancel",
+      "confirm": "Confirm request"
+    },
+    "confirmation": {
+      "title": "Request renewal",
+      "message": "Do you want to request the renewal of policy {policyNumber}?"
+    },
+    "messages": {
+      "created": "Renewal request submitted successfully."
+    },
+    "errors": {
+      "load": "Renewals could not be loaded.",
+      "create": "The renewal request could not be submitted.",
+      "duplicate": "This policy already has a pending renewal."
+    }
+  },
   "footer": {
     "copyright": "© {year} Livva Care. All rights reserved."
   }

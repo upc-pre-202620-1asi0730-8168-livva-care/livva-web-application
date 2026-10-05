@@ -106,9 +106,68 @@ p {
   font-weight: 700;
 }
 
+.policy-renewal__heading {
+  display: flex;
+  margin-bottom: 1.5rem;
+  align-items: center;
+  justify-content: space-between;
+  gap: 2rem;
+}
+
+.policy-renewal__heading h2 {
+  margin: 0 0 0.35rem;
+}
+
+.policy-renewal__heading p {
+  margin: 0;
+  color: #52627a;
+}
+
+.policy-renewal {
+  display: grid;
+  padding: 1.25rem;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1.5rem;
+  background: #f7f9fc;
+  border: 1px solid #e4e9f2;
+  border-radius: 14px;
+}
+
+.policy-renewal div {
+  display: flex;
+  align-items: flex-start;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.policy-renewal span {
+  color: #718096;
+  font-size: 0.85rem;
+}
+
+.policy-renewal strong {
+  color: #081b3a;
+}
+
+.policy-renewal__state {
+  min-height: 120px;
+}
+
 @media (max-width: 640px) {
   .page-container {
     padding: 1rem;
+    .policy-renewal__heading {
+      align-items: stretch;
+      flex-direction: column;
+    }
+
+    .policy-renewal__heading .p-button {
+      width: 100%;
+    }
+
+    .policy-renewal {
+      grid-template-columns: 1fr;
+    }
   }
 
   .hero-section,
