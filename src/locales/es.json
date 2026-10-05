@@ -10,6 +10,7 @@
     "vehicleInsurance": "Vehicular",
     "vehicles": "Mis vehículos",
     "applications": "Solicitudes",
+    "vehicleClaims": "Siniestros",
     "lifeInsurance": "Vida",
     "lifeApplications": "Solicitudes",
     "beneficiaries": "Beneficiarios"
@@ -303,6 +304,65 @@
       "load": "No se pudieron cargar las renovaciones.",
       "create": "No se pudo registrar la renovación.",
       "duplicate": "Esta póliza ya tiene una renovación pendiente."
+    }
+  },
+  "vehicleClaims": {
+    "pageTitle": "Siniestros vehiculares",
+    "sectionLabel": "Gestión de siniestros",
+    "title": "Mis siniestros",
+    "description": "Registra un siniestro vehicular y consulta el estado de su evaluación.",
+    "empty": "No hay siniestros vehiculares registrados.",
+    "noActivePolicies": "Necesitas una póliza vehicular activa para registrar un nuevo siniestro.",
+    "fields": {
+      "number": "Número",
+      "claim": "Siniestro",
+      "policy": "Póliza vehicular",
+      "incidentDate": "Fecha del incidente",
+      "location": "Lugar del incidente",
+      "description": "Descripción del incidente",
+      "estimatedDamageAmount": "Daño estimado",
+      "status": "Estado"
+    },
+    "statuses": {
+      "reported": "Reportado",
+      "under_review": "En revisión",
+      "information_required": "Información requerida",
+      "approved": "Aprobado",
+      "rejected": "Rechazado",
+      "closed": "Cerrado"
+    },
+    "form": {
+      "createTitle": "Registrar siniestro vehicular",
+      "selectPolicy": "Selecciona una póliza activa"
+    },
+    "actions": {
+      "add": "Registrar siniestro",
+      "column": "Acciones",
+      "viewStatus": "Consultar estado",
+      "cancel": "Cancelar",
+      "save": "Registrar",
+      "close": "Cerrar"
+    },
+    "history": {
+      "title": "Historial del siniestro",
+      "empty": "No hay cambios de estado registrados.",
+      "changedAt": "Fecha de actualización",
+      "comment": "Observación"
+    },
+    "validation": {
+      "required": "Este campo es obligatorio.",
+      "incidentDate": "Ingresa una fecha válida que no sea posterior a hoy.",
+      "location": "Ingresa un lugar válido de al menos 3 caracteres.",
+      "description": "Describe el incidente utilizando al menos 10 caracteres.",
+      "damageAmount": "Ingresa un monto estimado mayor que cero."
+    },
+    "messages": {
+      "created": "Siniestro vehicular registrado correctamente."
+    },
+    "errors": {
+      "load": "No se pudieron cargar los siniestros vehiculares.",
+      "historyLoad": "No se pudo cargar el historial del siniestro.",
+      "create": "No se pudo registrar el siniestro vehicular."
     }
   },
   "footer": {

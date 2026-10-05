@@ -10,6 +10,7 @@
     "vehicleInsurance": "Vehicle",
     "vehicles": "My vehicles",
     "applications": "Applications",
+    "vehicleClaims": "Claims",
     "lifeInsurance": "Life",
     "lifeApplications": "Applications",
     "beneficiaries": "Beneficiaries"
@@ -304,6 +305,65 @@
       "load": "Renewals could not be loaded.",
       "create": "The renewal request could not be submitted.",
       "duplicate": "This policy already has a pending renewal."
+    }
+  },
+  "vehicleClaims": {
+    "pageTitle": "Vehicle claims",
+    "sectionLabel": "Claim management",
+    "title": "My vehicle claims",
+    "description": "Report a vehicle incident and review the progress of its evaluation.",
+    "empty": "There are no vehicle claims registered.",
+    "noActivePolicies": "You need an active vehicle policy to report a new claim.",
+    "fields": {
+      "number": "Number",
+      "claim": "Claim",
+      "policy": "Vehicle policy",
+      "incidentDate": "Incident date",
+      "location": "Incident location",
+      "description": "Incident description",
+      "estimatedDamageAmount": "Estimated damage",
+      "status": "Status"
+    },
+    "statuses": {
+      "reported": "Reported",
+      "under_review": "Under review",
+      "information_required": "Information required",
+      "approved": "Approved",
+      "rejected": "Rejected",
+      "closed": "Closed"
+    },
+    "form": {
+      "createTitle": "Report vehicle claim",
+      "selectPolicy": "Select an active policy"
+    },
+    "actions": {
+      "add": "Report claim",
+      "column": "Actions",
+      "viewStatus": "View status",
+      "cancel": "Cancel",
+      "save": "Submit",
+      "close": "Close"
+    },
+    "history": {
+      "title": "Claim history",
+      "empty": "There are no status changes registered.",
+      "changedAt": "Update date",
+      "comment": "Comment"
+    },
+    "validation": {
+      "required": "This field is required.",
+      "incidentDate": "Enter a valid date that is not later than today.",
+      "location": "Enter a valid location containing at least 3 characters.",
+      "description": "Describe the incident using at least 10 characters.",
+      "damageAmount": "Enter an estimated amount greater than zero."
+    },
+    "messages": {
+      "created": "Vehicle claim reported successfully."
+    },
+    "errors": {
+      "load": "Vehicle claims could not be loaded.",
+      "historyLoad": "The claim history could not be loaded.",
+      "create": "The vehicle claim could not be reported."
     }
   },
   "footer": {
