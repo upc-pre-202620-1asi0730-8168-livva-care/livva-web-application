@@ -41,6 +41,10 @@ const { t } = useI18n();
           {{ t('navigation.lifeApplications') }}
         </router-link>
 
+        <router-link to="/beneficiaries">
+          {{ t('navigation.beneficiaries') }}
+        </router-link>
+
       </nav>
 
       <language-switcher />
