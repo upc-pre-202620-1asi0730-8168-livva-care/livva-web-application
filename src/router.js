@@ -6,6 +6,7 @@ import PageNotFoundView from './shared/presentation/views/page-not-found-view.vu
 import { policyRoutes } from './policy-management/presentation/policy.routes.js';
 import { vehicleRoutes } from './insurance-offering-and-applications/presentation/vehicle.routes.js';
 import { lifeRoutes } from './insurance-offering-and-applications/presentation/life.routes.js';
+import { beneficiaryRoutes } from './insurance-offering-and-applications/presentation/beneficiary.routes.js';
 
 const routes = [
     {
@@ -24,9 +25,12 @@ const routes = [
             titleKey: 'about.pageTitle'
         }
     },
+
     ...vehicleRoutes,
     ...lifeRoutes,
+    ...beneficiaryRoutes,
     ...policyRoutes,
+
     {
         path: '/:pathMatch(.*)*',
         name: 'page-not-found',
