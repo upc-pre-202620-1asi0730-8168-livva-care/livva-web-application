@@ -1,11 +1,22 @@
 <script setup>
 import { computed, ref } from 'vue';
-import { useRoute } from 'vue-router';
+import { useRoute, useRouter } from 'vue-router';
 import { useI18n } from 'vue-i18n';
 import LanguageSwitcher from './language-switcher.vue';
+import { useUserStore } from '../../../identity-and-profile-management/application/user.store.js';
+
 
 const { t } = useI18n();
 const route = useRoute();
+const router = useRouter();
+const userStore = useUserStore();
+
+userStore.restoreSession();
+
+const logout = async () => {
+  userStore.logout();
+  await router.push('/login');
+};
 
 const vehicleMenu = ref(null);
 const lifeMenu = ref(null);
@@ -152,8 +163,56 @@ const closeOtherMenu = (menu) => {
           </div>
         </details>
       </nav>
+      <div class="app-auth">
+        <template v-if="!userStore.currentUser">
+          <router-link
+              to="/login"
+              @click="closeMenus"
+          >
+            {{ t('navigation.login') }}
+          </router-link>
 
+          <router-link
+              to="/register"
+              @click="closeMenus"
+          >
+            {{ t('navigation.register') }}
+          </router-link>
+        </template>
+
+        <template v-else>
+          <router-link
+              to="/profile"
+              @click="closeMenus"
+          >
+            {{ t('navigation.profile') }}
+          </router-link>
+
+          <button
+              type="button"
+              class="logout-button"
+              @click="logout"
+          >
+            {{ t('navigation.logout') }}
+          </button>
+        </template>
+      </div>
       <language-switcher />
     </div>
   </header>
 </template>
+
+<style scoped>
+.app-auth {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.logout-button {
+  border: none;
+  background: transparent;
+  cursor: pointer;
+  font: inherit;
+}
+</style>

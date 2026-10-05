@@ -13,7 +13,11 @@
     "vehicleClaims": "Claims",
     "lifeInsurance": "Life",
     "lifeApplications": "Applications",
-    "beneficiaries": "Beneficiaries"
+    "beneficiaries": "Beneficiaries",
+    "login": "Sign in",
+    "register": "Create account",
+    "profile": "My profile",
+    "logout": "Sign out"
   },
   "home": {
     "pageTitle": "Home",
@@ -368,6 +372,63 @@
   },
   "footer": {
     "copyright": "© {year} Livva Care. All rights reserved."
-  }
+  },
+  "auth": {
+    "register": {
+      "pageTitle": "Create account",
+      "title": "Create your Livva account",
+      "firstName": "First name",
+      "lastName": "Last name",
+      "email": "Email",
+      "password": "Password",
+      "phone": "Phone",
+      "submit": "Create account",
+      "creating": "Creating account...",
+      "alreadyHaveAccount": "Already have an account?",
+      "signIn": "Sign in"
+    },
+    "login": {
+      "pageTitle": "Sign in",
+      "title": "Sign in to Livva",
+      "email": "Email",
+      "password": "Password",
+      "submit": "Sign in",
+      "signingIn": "Signing in...",
+      "noAccount": "Don't have an account?",
+      "createAccount": "Create account"
+    },
+    "errors": {
+      "emailAlreadyExists": "An account with this email already exists.",
+      "invalidCredentials": "Invalid email or password.",
+      "register": "The account could not be created.",
+      "login": "Unable to sign in."
+    }
+  },
 
+  "profile": {
+    "pageTitle": "My profile",
+    "title": "My profile",
+    "fields": {
+      "name": "Name",
+      "email": "Email",
+      "phone": "Phone",
+      "documentType": "Document type",
+      "documentNumber": "Document number",
+      "birthDate": "Birth date",
+      "address": "Address",
+      "district": "District",
+      "province": "Province",
+      "department": "Department",
+      "country": "Country"
+    },
+    "actions": {
+      "edit": "Edit profile",
+      "save": "Save changes",
+      "saving": "Saving..."
+    },
+    "errors": {
+      "load": "The profile could not be loaded.",
+      "update": "The profile could not be updated."
+    }
+  }
 }

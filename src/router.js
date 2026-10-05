@@ -8,6 +8,9 @@ import { vehicleRoutes } from './insurance-offering-and-applications/presentatio
 import { lifeRoutes } from './insurance-offering-and-applications/presentation/life.routes.js';
 import { beneficiaryRoutes } from './insurance-offering-and-applications/presentation/beneficiary.routes.js';
 import { vehicleClaimRoutes } from './claims-and-indemnities/presentation/vehicle-claim.routes.js';
+import { identityRoutes } from './identity-and-profile-management/presentation/identity.routes.js';
+import { authenticationGuard } from './identity-and-profile-management/presentation/auth.guard.js';
+
 
 const routes = [
     {
@@ -27,6 +30,7 @@ const routes = [
         }
     },
 
+    ...identityRoutes,
     ...vehicleRoutes,
     ...lifeRoutes,
     ...beneficiaryRoutes,
@@ -52,6 +56,8 @@ const router = createRouter({
         };
     }
 });
+
+router.beforeEach(authenticationGuard);
 
 router.afterEach((to) => {
     const titleKey = to.meta.titleKey ?? 'app.name';

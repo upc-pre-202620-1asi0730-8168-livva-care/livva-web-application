@@ -13,7 +13,11 @@
     "vehicleClaims": "Siniestros",
     "lifeInsurance": "Vida",
     "lifeApplications": "Solicitudes",
-    "beneficiaries": "Beneficiarios"
+    "beneficiaries": "Beneficiarios",
+    "login": "Iniciar sesión",
+    "register": "Crear cuenta",
+    "profile": "Mi perfil",
+    "logout": "Cerrar sesión"
   },
   "home": {
     "pageTitle": "Inicio",
@@ -367,5 +371,63 @@
   },
   "footer": {
     "copyright": "© {year} Livva Care. Todos los derechos reservados."
+  },
+  "auth": {
+    "register": {
+      "pageTitle": "Crear cuenta",
+      "title": "Crea tu cuenta en Livva",
+      "firstName": "Nombres",
+      "lastName": "Apellidos",
+      "email": "Correo electrónico",
+      "password": "Contraseña",
+      "phone": "Teléfono",
+      "submit": "Crear cuenta",
+      "creating": "Creando cuenta...",
+      "alreadyHaveAccount": "¿Ya tienes una cuenta?",
+      "signIn": "Iniciar sesión"
+    },
+    "login": {
+      "pageTitle": "Iniciar sesión",
+      "title": "Inicia sesión en Livva",
+      "email": "Correo electrónico",
+      "password": "Contraseña",
+      "submit": "Iniciar sesión",
+      "signingIn": "Iniciando sesión...",
+      "noAccount": "¿No tienes una cuenta?",
+      "createAccount": "Crear cuenta"
+    },
+    "errors": {
+      "emailAlreadyExists": "Ya existe una cuenta con este correo.",
+      "invalidCredentials": "Correo o contraseña incorrectos.",
+      "register": "No se pudo crear la cuenta.",
+      "login": "No se pudo iniciar sesión."
+    }
+  },
+
+  "profile": {
+    "pageTitle": "Mi perfil",
+    "title": "Mi perfil",
+    "fields": {
+      "name": "Nombre",
+      "email": "Correo electrónico",
+      "phone": "Teléfono",
+      "documentType": "Tipo de documento",
+      "documentNumber": "Número de documento",
+      "birthDate": "Fecha de nacimiento",
+      "address": "Dirección",
+      "district": "Distrito",
+      "province": "Provincia",
+      "department": "Departamento",
+      "country": "País"
+    },
+    "actions": {
+      "edit": "Editar perfil",
+      "save": "Guardar cambios",
+      "saving": "Guardando..."
+    },
+    "errors": {
+      "load": "No se pudo cargar el perfil.",
+      "update": "No se pudo actualizar el perfil."
+    }
   }
 }
