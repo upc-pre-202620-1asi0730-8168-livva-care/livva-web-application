@@ -8,7 +8,8 @@
     "vehicles": "Vehicles",
     "policies": "Policies",
     "applications": "Applications",
-    "lifeApplications": "Life insurance"
+    "lifeApplications": "Life insurance",
+    "beneficiaries": "Beneficiaries"
   },
   "home": {
     "pageTitle": "Home",
@@ -216,6 +217,67 @@
       "invalidData": "The application data is invalid."
     }
   },
+  "beneficiaries": {
+      "pageTitle": "Beneficiaries",
+      "sectionLabel": "Beneficiary management",
+      "title": "My beneficiaries",
+      "description": "Review and keep the beneficiary information of your life insurance policies up to date.",
+      "empty": "There are no beneficiaries registered.",
+      "noLifePolicies": "You need an active life insurance policy to register beneficiaries.",
+      "fields": {
+        "policy": "Life insurance policy",
+        "fullName": "Full name",
+        "documentType": "Document type",
+        "documentNumber": "Document number",
+        "document": "Document",
+        "relationship": "Relationship",
+        "birthDate": "Birth date",
+        "percentage": "Participation percentage"
+      },
+      "documentTypes": {
+        "dni": "National ID",
+        "foreignCard": "Foreigner identity card",
+        "passport": "Passport"
+      },
+      "relationships": {
+        "spouse": "Spouse",
+        "child": "Child",
+        "parent": "Parent",
+        "sibling": "Sibling",
+        "other": "Other"
+      },
+      "form": {
+        "createTitle": "Register beneficiary",
+        "editTitle": "Edit beneficiary",
+        "selectPolicy": "Select a policy",
+        "selectDocumentType": "Select a document",
+        "selectRelationship": "Select the relationship"
+      },
+      "actions": {
+        "add": "Add beneficiary",
+        "edit": "Edit",
+        "column": "Actions",
+        "cancel": "Cancel",
+        "save": "Save"
+      },
+      "validation": {
+        "required": "This field is required.",
+        "document": "Enter a valid document containing 8 to 12 characters.",
+        "birthDate": "Enter a valid birth date.",
+        "percentage": "The percentage must be between 1 and 100.",
+        "totalPercentage": "Only {available}% remains available for this policy."
+      },
+      "messages": {
+        "created": "Beneficiary registered successfully.",
+        "updated": "Beneficiary updated successfully."
+      },
+      "errors": {
+        "load": "Beneficiaries could not be loaded.",
+        "create": "The beneficiary could not be registered.",
+        "update": "The beneficiary could not be updated.",
+        "notFound": "The beneficiary could not be found."
+      }
+    },
   "policies": {
     "pageTitle": "Policies",
     "detailPageTitle": "Policy details",

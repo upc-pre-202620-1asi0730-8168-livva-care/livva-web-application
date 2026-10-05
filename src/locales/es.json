@@ -7,7 +7,9 @@
     "about": "Nosotros",
     "vehicles": "Vehículos",
     "policies": "Pólizas",
-    "lifeApplications": "Seguro de vida"
+    "applications": "Solicitudes vehiculares",
+    "lifeApplications": "Seguro de vida",
+    "beneficiaries": "Beneficiarios"
   },
   "home": {
     "pageTitle": "Inicio",
@@ -166,6 +168,67 @@
       "invalidData": "Los datos de la solicitud no son válidos."
     }
   },
+  "beneficiaries": {
+      "pageTitle": "Beneficiarios",
+      "sectionLabel": "Gestión de beneficiarios",
+      "title": "Mis beneficiarios",
+      "description": "Consulta y mantén actualizada la información de los beneficiarios de tus pólizas de vida.",
+      "empty": "No hay beneficiarios registrados.",
+      "noLifePolicies": "Necesitas una póliza de vida activa para registrar beneficiarios.",
+      "fields": {
+        "policy": "Póliza de vida",
+        "fullName": "Nombre completo",
+        "documentType": "Tipo de documento",
+        "documentNumber": "Número de documento",
+        "document": "Documento",
+        "relationship": "Parentesco",
+        "birthDate": "Fecha de nacimiento",
+        "percentage": "Porcentaje de participación"
+      },
+      "documentTypes": {
+        "dni": "DNI",
+        "foreignCard": "Carné de extranjería",
+        "passport": "Pasaporte"
+      },
+      "relationships": {
+        "spouse": "Cónyuge",
+        "child": "Hijo/a",
+        "parent": "Padre o madre",
+        "sibling": "Hermano/a",
+        "other": "Otro"
+      },
+      "form": {
+        "createTitle": "Registrar beneficiario",
+        "editTitle": "Editar beneficiario",
+        "selectPolicy": "Selecciona una póliza",
+        "selectDocumentType": "Selecciona un documento",
+        "selectRelationship": "Selecciona el parentesco"
+      },
+      "actions": {
+        "add": "Agregar beneficiario",
+        "edit": "Editar",
+        "column": "Acciones",
+        "cancel": "Cancelar",
+        "save": "Guardar"
+      },
+      "validation": {
+        "required": "Este campo es obligatorio.",
+        "document": "Ingresa un documento válido de 8 a 12 caracteres.",
+        "birthDate": "Ingresa una fecha de nacimiento válida.",
+        "percentage": "El porcentaje debe estar entre 1 y 100.",
+        "totalPercentage": "Solo queda disponible un {available}% para esta póliza."
+      },
+      "messages": {
+        "created": "Beneficiario registrado correctamente.",
+        "updated": "Beneficiario actualizado correctamente."
+      },
+      "errors": {
+        "load": "No se pudieron cargar los beneficiarios.",
+        "create": "No se pudo registrar el beneficiario.",
+        "update": "No se pudo actualizar el beneficiario.",
+        "notFound": "No se encontró el beneficiario."
+      }
+    },
   "policies": {
     "pageTitle": "Pólizas",
     "detailPageTitle": "Detalle de póliza",
