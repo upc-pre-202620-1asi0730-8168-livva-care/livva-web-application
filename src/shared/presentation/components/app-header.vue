@@ -12,7 +12,8 @@ const lifeMenu = ref(null);
 
 const vehicleSectionActive = computed(() =>
     route.path.startsWith('/vehicles') ||
-    route.path.startsWith('/vehicle-applications')
+    route.path.startsWith('/vehicle-applications') ||
+    route.path.startsWith('/vehicle-claims')
 );
 
 const lifeSectionActive = computed(() =>
@@ -98,6 +99,14 @@ const closeOtherMenu = (menu) => {
             >
               <i class="pi pi-car"></i>
               {{ t('navigation.vehicles') }}
+            </router-link>
+
+            <router-link
+                to="/vehicle-claims"
+                @click="closeMenus"
+            >
+              <i class="pi pi-exclamation-circle"></i>
+              {{ t('navigation.vehicleClaims') }}
             </router-link>
 
             <router-link
