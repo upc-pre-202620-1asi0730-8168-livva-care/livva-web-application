@@ -271,6 +271,40 @@
       "loadDetail": "No se pudo cargar el detalle de la póliza."
     }
   },
+  "renewals": {
+    "title": "Renovación de póliza",
+    "description": "Solicita la renovación para mantener la continuidad de tu cobertura.",
+    "empty": "Todavía no existen solicitudes de renovación para esta póliza.",
+    "fields": {
+      "requestedAt": "Fecha de solicitud",
+      "status": "Estado"
+    },
+    "statuses": {
+      "pending": "Pendiente",
+      "under_review": "En revisión",
+      "approved": "Aprobada",
+      "rejected": "Rechazada",
+      "cancelled": "Cancelada"
+    },
+    "actions": {
+      "request": "Solicitar renovación",
+      "pending": "Renovación pendiente",
+      "cancel": "Cancelar",
+      "confirm": "Confirmar solicitud"
+    },
+    "confirmation": {
+      "title": "Solicitar renovación",
+      "message": "¿Deseas solicitar la renovación de la póliza {policyNumber}?"
+    },
+    "messages": {
+      "created": "Solicitud de renovación registrada correctamente."
+    },
+    "errors": {
+      "load": "No se pudieron cargar las renovaciones.",
+      "create": "No se pudo registrar la renovación.",
+      "duplicate": "Esta póliza ya tiene una renovación pendiente."
+    }
+  },
   "footer": {
     "copyright": "© {year} Livva Care. Todos los derechos reservados."
   }
