@@ -338,8 +338,58 @@
       "id": 2
     }
   ],
-  "vehicle-claims": [],
-  "claim-status-histories": [],
+  "vehicle-claims": [
+    {
+      "id": 1,
+      "policyId": 1,
+      "incidentDate": "2026-09-28",
+      "incidentLocation": "Av. Javier Prado, San Isidro",
+      "description": "Colisión leve con otro vehículo durante el tránsito.",
+      "estimatedDamageAmount": 4800,
+      "status": "under_review",
+      "reportedAt": "2026-09-28T18:30:00Z",
+      "createdAt": "2026-09-28T18:30:00Z",
+      "updatedAt": "2026-09-29T14:00:00Z"
+    },
+    {
+      "policyId": 1,
+      "incidentDate": "2026-10-05",
+      "incidentLocation": "Av. Arequipa, Lima",
+      "description": "El vehículo sufrió un impacto leve en la parte posterior.",
+      "estimatedDamageAmount": 2500,
+      "status": "reported",
+      "reportedAt": "2026-10-05T20:42:33.291Z",
+      "createdAt": "2026-10-05T20:42:33.291Z",
+      "updatedAt": "2026-10-05T20:42:33.291Z",
+      "id": 2
+    }
+  ],
+  "claim-status-histories": [
+    {
+      "id": 1,
+      "claimId": 1,
+      "status": "reported",
+      "comment": "Siniestro registrado por el asegurado.",
+      "changedAt": "2026-09-28T18:30:00Z",
+      "createdAt": "2026-09-28T18:30:00Z"
+    },
+    {
+      "id": 2,
+      "claimId": 1,
+      "status": "under_review",
+      "comment": "La información fue enviada a la compañía aseguradora para su revisión.",
+      "changedAt": "2026-09-29T14:00:00Z",
+      "createdAt": "2026-09-29T14:00:00Z"
+    },
+    {
+      "claimId": 2,
+      "status": "reported",
+      "comment": "",
+      "changedAt": "2026-10-05T20:42:33.291Z",
+      "createdAt": "2026-10-05T20:42:33.291Z",
+      "id": 3
+    }
+  ],
   "indemnity-requests": [],
   "indemnity-status-histories": [],
   "subscription-plans": [],
