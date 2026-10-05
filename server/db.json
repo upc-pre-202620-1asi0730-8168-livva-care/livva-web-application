@@ -320,7 +320,16 @@
       "updatedAt": "2026-03-01T10:00:00Z"
     }
   ],
-  "renewals": [],
+  "renewals": [
+    {
+      "id": 1,
+      "policyId": 3,
+      "requestedAt": "2026-07-15T10:00:00Z",
+      "status": "rejected",
+      "createdAt": "2026-07-15T10:00:00Z",
+      "updatedAt": "2026-07-18T15:30:00Z"
+    }
+  ],
   "vehicle-claims": [],
   "claim-status-histories": [],
   "indemnity-requests": [],
