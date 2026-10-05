@@ -189,7 +189,32 @@
       "id": 2
     }
   ],
-  "beneficiaries": [],
+  "beneficiaries": [
+    {
+      "id": 1,
+      "policyId": 2,
+      "fullName": "María Fernanda López",
+      "documentType": "DNI",
+      "documentNumber": "45871236",
+      "relationship": "spouse",
+      "birthDate": "1988-06-15",
+      "participationPercentage": 60,
+      "createdAt": "2026-03-01T10:00:00Z",
+      "updatedAt": "2026-03-01T10:00:00Z"
+    },
+    {
+      "id": 2,
+      "policyId": 2,
+      "fullName": "Diego Ramírez López",
+      "documentType": "DNI",
+      "documentNumber": "73458129",
+      "relationship": "child",
+      "birthDate": "2012-09-20",
+      "participationPercentage": 40,
+      "createdAt": "2026-03-01T10:00:00Z",
+      "updatedAt": "2026-03-01T10:00:00Z"
+    }
+  ],
   "policies": [
     {
       "id": 1,
