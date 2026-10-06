@@ -23,8 +23,33 @@
   },
   "home": {
     "pageTitle": "Inicio",
-    "title": "Seguros simples para ti",
-    "description": "Accede, solicita y gestiona seguros vehiculares y seguros de vida mediante una sola plataforma digital."
+    "heroLabel": "Protección digital para ti",
+    "title": "Seguros simples para cada etapa de tu vida",
+    "description": "Gestiona tus seguros vehiculares y de vida desde una plataforma rápida, clara y diseñada para acompañarte.",
+    "protectedTitle": "Protección activa",
+    "protectedDescription": "Gestiona tus seguros desde un solo lugar.",
+    "actions": {
+      "policies": "Ver mis pólizas",
+      "about": "Conocer Livva"
+    },
+    "services": {
+      "label": "Nuestros servicios",
+      "title": "Todo lo que necesitas en un solo lugar",
+      "description": "Accede fácilmente a las principales herramientas para gestionar tu protección.",
+      "action": "Conocer más",
+      "vehicle": {
+        "title": "Seguro vehicular",
+        "description": "Gestiona tus vehículos, solicitudes y siniestros desde una experiencia digital."
+      },
+      "life": {
+        "title": "Seguro de vida",
+        "description": "Solicita protección para ti y administra fácilmente a tus beneficiarios."
+      },
+      "policies": {
+        "title": "Mis pólizas",
+        "description": "Consulta coberturas, vigencias, renovaciones y el estado de tus pólizas."
+      }
+    }
   },
   "about": {
     "pageTitle": "Nosotros",
