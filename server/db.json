@@ -13,7 +13,22 @@
       "updatedAt": "2026-09-01T10:00:00Z"
     }
   ],
-  "user-profiles": [],
+  "user-profiles": [
+    {
+      "id": 1,
+      "userId": 1,
+      "documentType": "DNI",
+      "documentNumber": "12345678",
+      "birthDate": "2002-05-15",
+      "address": "Av. Primavera 123",
+      "district": "Miraflores",
+      "province": "Lima",
+      "department": "Lima",
+      "country": "Peru",
+      "createdAt": "2026-09-01T10:00:00Z",
+      "updatedAt": "2026-10-05T21:43:34.447Z"
+    }
+  ],
   "insurers": [
     {
       "id": 1,

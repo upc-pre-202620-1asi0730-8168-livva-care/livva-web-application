@@ -13,7 +13,11 @@
     "vehicleClaims": "Claims",
     "lifeInsurance": "Life",
     "lifeApplications": "Applications",
-    "beneficiaries": "Beneficiaries"
+    "beneficiaries": "Beneficiaries",
+    "login": "Sign in",
+    "register": "Create account",
+    "profile": "My profile",
+    "logout": "Sign out"
   },
   "home": {
     "pageTitle": "Home",
@@ -368,6 +372,97 @@
   },
   "footer": {
     "copyright": "© {year} Livva Care. All rights reserved."
-  }
+  },
+  "auth": {
+    "register": {
+      "pageTitle": "Create account",
+      "sectionLabel": "Customer account",
+      "title": "Create your Livva account",
+      "description": "Register your details to manage your insurance in one place.",
+      "firstName": "First name",
+      "lastName": "Last name",
+      "email": "Email",
+      "password": "Password",
+      "passwordConfirmation": "Confirm password",
+      "phone": "Phone",
+      "submit": "Create account",
+      "creating": "Creating account...",
+      "alreadyHaveAccount": "Already have an account?",
+      "signIn": "Sign in"
+    },
+    "login": {
+      "pageTitle": "Sign in",
+      "sectionLabel": "Livva access",
+      "title": "Sign in to Livva",
+      "description": "Access your vehicles, applications, policies, and other services.",
+      "email": "Email",
+      "password": "Password",
+      "submit": "Sign in",
+      "signingIn": "Signing in...",
+      "noAccount": "Don't have an account?",
+      "createAccount": "Create account"
+    },
+    "errors": {
+      "emailAlreadyExists": "An account with this email already exists.",
+      "invalidCredentials": "Invalid email or password.",
+      "register": "The account could not be created.",
+      "login": "Unable to sign in."
+    },
+    "validation": {
+      "name": "Enter at least 2 characters.",
+      "email": "Enter a valid email address.",
+      "password": "The password must contain at least 6 characters.",
+      "passwordConfirmation": "The passwords do not match.",
+      "phone": "Enter a valid phone number."
+    },
+    "messages": {
+      "registered": "Account created successfully. You can now sign in."
+    }
+  },
 
+  "profile": {
+    "pageTitle": "My profile",
+    "sectionLabel": "Personal information",
+    "title": "My profile",
+    "description": "Review and keep your account information up to date.",
+    "fields": {
+      "name": "Name",
+      "firstName": "First name",
+      "lastName": "Last name",
+      "email": "Email",
+      "phone": "Phone",
+      "documentType": "Document type",
+      "documentNumber": "Document number",
+      "birthDate": "Birth date",
+      "address": "Address",
+      "district": "District",
+      "province": "Province",
+      "department": "Department",
+      "country": "Country"
+    },
+    "actions": {
+      "edit": "Edit profile",
+      "save": "Save changes",
+      "saving": "Saving...",
+      "cancel": "Cancel"
+    },
+    "documentTypes": {
+      "dni": "National identity document",
+      "foreignCard": "Foreign resident card",
+      "passport": "Passport"
+    },
+    "placeholders": {
+      "documentType": "Select a document"
+    },
+    "validation": {
+      "name": "First and last names must contain at least 2 characters."
+    },
+    "messages": {
+      "updated": "Profile updated successfully."
+    },
+    "errors": {
+      "load": "The profile could not be loaded.",
+      "update": "The profile could not be updated."
+    }
+  }
 }

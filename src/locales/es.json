@@ -13,7 +13,11 @@
     "vehicleClaims": "Siniestros",
     "lifeInsurance": "Vida",
     "lifeApplications": "Solicitudes",
-    "beneficiaries": "Beneficiarios"
+    "beneficiaries": "Beneficiarios",
+    "login": "Iniciar sesión",
+    "register": "Crear cuenta",
+    "profile": "Mi perfil",
+    "logout": "Cerrar sesión"
   },
   "home": {
     "pageTitle": "Inicio",
@@ -367,5 +371,97 @@
   },
   "footer": {
     "copyright": "© {year} Livva Care. Todos los derechos reservados."
+  },
+  "auth": {
+    "register": {
+      "pageTitle": "Crear cuenta",
+      "sectionLabel": "Cuenta de cliente",
+      "title": "Crea tu cuenta en Livva",
+      "description": "Registra tus datos para gestionar tus seguros desde un solo lugar.",
+      "firstName": "Nombres",
+      "lastName": "Apellidos",
+      "email": "Correo electrónico",
+      "password": "Contraseña",
+      "passwordConfirmation": "Confirmar contraseña",
+      "phone": "Teléfono",
+      "submit": "Crear cuenta",
+      "creating": "Creando cuenta...",
+      "alreadyHaveAccount": "¿Ya tienes una cuenta?",
+      "signIn": "Iniciar sesión"
+    },
+    "login": {
+      "pageTitle": "Iniciar sesión",
+      "sectionLabel": "Acceso a Livva",
+      "title": "Inicia sesión en Livva",
+      "description": "Accede a tus vehículos, solicitudes, pólizas y demás servicios.",
+      "email": "Correo electrónico",
+      "password": "Contraseña",
+      "submit": "Iniciar sesión",
+      "signingIn": "Iniciando sesión...",
+      "noAccount": "¿No tienes una cuenta?",
+      "createAccount": "Crear cuenta"
+    },
+    "errors": {
+      "emailAlreadyExists": "Ya existe una cuenta con este correo.",
+      "invalidCredentials": "Correo o contraseña incorrectos.",
+      "register": "No se pudo crear la cuenta.",
+      "login": "No se pudo iniciar sesión."
+    },
+    "validation": {
+      "name": "Ingresa al menos 2 caracteres.",
+      "email": "Ingresa un correo electrónico válido.",
+      "password": "La contraseña debe tener al menos 6 caracteres.",
+      "passwordConfirmation": "Las contraseñas no coinciden.",
+      "phone": "Ingresa un número de teléfono válido."
+    },
+    "messages": {
+      "registered": "Cuenta creada correctamente. Ahora puedes iniciar sesión."
+    }
+  },
+
+  "profile": {
+    "pageTitle": "Mi perfil",
+    "sectionLabel": "Información personal",
+    "title": "Mi perfil",
+    "description": "Consulta y mantén actualizados los datos asociados a tu cuenta.",
+    "fields": {
+      "name": "Nombre",
+      "firstName": "Nombres",
+      "lastName": "Apellidos",
+      "email": "Correo electrónico",
+      "phone": "Teléfono",
+      "documentType": "Tipo de documento",
+      "documentNumber": "Número de documento",
+      "birthDate": "Fecha de nacimiento",
+      "address": "Dirección",
+      "district": "Distrito",
+      "province": "Provincia",
+      "department": "Departamento",
+      "country": "País"
+    },
+    "actions": {
+      "edit": "Editar perfil",
+      "save": "Guardar cambios",
+      "saving": "Guardando...",
+      "cancel": "Cancelar"
+    },
+    "documentTypes": {
+      "dni": "DNI",
+      "foreignCard": "Carné de extranjería",
+      "passport": "Pasaporte"
+    },
+    "placeholders": {
+      "documentType": "Selecciona un documento"
+    },
+    "validation": {
+      "name": "Los nombres y apellidos deben tener al menos 2 caracteres."
+    },
+    "messages": {
+      "updated": "Perfil actualizado correctamente."
+    },
+    "errors": {
+      "load": "No se pudo cargar el perfil.",
+      "update": "No se pudo actualizar el perfil."
+    }
   }
 }
