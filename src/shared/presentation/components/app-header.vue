@@ -1,25 +1,36 @@
 <script setup>
-import { computed, ref } from 'vue';
+import { computed, ref, watch } from 'vue';
 import { useRoute, useRouter } from 'vue-router';
 import { useI18n } from 'vue-i18n';
-import LanguageSwitcher from './language-switcher.vue';
-import { useUserStore } from '../../../identity-and-profile-management/application/user.store.js';
 
+import LanguageSwitcher from './language-switcher.vue';
+
+import { useUserStore } from '../../../identity-and-profile-management/application/user.store.js';
+import { usePolicyStore } from '../../../policy-management/application/policy.store.js';
+import { useNotificationStore } from '../../../notification-management/application/notification.store.js';
 
 const { t } = useI18n();
 const route = useRoute();
 const router = useRouter();
+
 const userStore = useUserStore();
+const policyStore = usePolicyStore();
+const notificationStore = useNotificationStore();
 
 userStore.restoreSession();
 
-const logout = async () => {
-  userStore.logout();
-  await router.push('/login');
-};
-
 const vehicleMenu = ref(null);
 const lifeMenu = ref(null);
+
+const unreadCount = computed(
+    () => notificationStore.unreadCount
+);
+
+const displayedUnreadCount = computed(() =>
+    unreadCount.value > 99
+        ? '99+'
+        : unreadCount.value
+);
 
 const vehicleSectionActive = computed(() =>
     route.path.startsWith('/vehicles') ||
@@ -59,6 +70,40 @@ const closeOtherMenu = (menu) => {
     vehicleMenu.value.open = false;
   }
 };
+
+const loadNotifications = async (userId) => {
+  await policyStore.fetchPolicies();
+
+  if (policyStore.error) {
+    return;
+  }
+
+  await notificationStore
+      .generateExpirationNotifications(
+          policyStore.policies,
+          userId
+      );
+};
+
+const logout = async () => {
+  userStore.logout();
+  closeMenus();
+  await router.push('/login');
+};
+
+watch(
+    () => userStore.currentUser?.id,
+    async (userId) => {
+      if (!userId) {
+        return;
+      }
+
+      await loadNotifications(userId);
+    },
+    {
+      immediate: true
+    }
+);
 </script>
 
 <template>
@@ -77,15 +122,24 @@ const closeOtherMenu = (menu) => {
           class="app-navigation"
           :aria-label="t('navigation.main')"
       >
-        <router-link to="/" @click="closeMenus">
+        <router-link
+            to="/"
+            @click="closeMenus"
+        >
           {{ t('navigation.home') }}
         </router-link>
 
-        <router-link to="/about" @click="closeMenus">
+        <router-link
+            to="/about"
+            @click="closeMenus"
+        >
           {{ t('navigation.about') }}
         </router-link>
 
-        <router-link to="/policies" @click="closeMenus">
+        <router-link
+            to="/policies"
+            @click="closeMenus"
+        >
           {{ t('navigation.policies') }}
         </router-link>
 
@@ -163,6 +217,7 @@ const closeOtherMenu = (menu) => {
           </div>
         </details>
       </nav>
+
       <div class="app-auth">
         <template v-if="!userStore.currentUser">
           <router-link
@@ -182,6 +237,23 @@ const closeOtherMenu = (menu) => {
 
         <template v-else>
           <router-link
+              to="/notifications"
+              class="notification-link"
+              :aria-label="t('navigation.notifications')"
+              :title="t('navigation.notifications')"
+              @click="closeMenus"
+          >
+            <i class="pi pi-bell"></i>
+
+            <span
+                v-if="unreadCount > 0"
+                class="notification-badge"
+            >
+              {{ displayedUnreadCount }}
+            </span>
+          </router-link>
+
+          <router-link
               to="/profile"
               @click="closeMenus"
           >
@@ -197,6 +269,7 @@ const closeOtherMenu = (menu) => {
           </button>
         </template>
       </div>
+
       <language-switcher />
     </div>
   </header>
@@ -209,10 +282,66 @@ const closeOtherMenu = (menu) => {
   gap: 1rem;
 }
 
+.app-auth a {
+  color: #52627a;
+  font-weight: 500;
+  text-decoration: none;
+}
+
+.app-auth a:hover,
+.app-auth a.router-link-active {
+  color: #2563eb;
+}
+
+.notification-link {
+  position: relative;
+  display: inline-grid;
+  width: 2.5rem;
+  height: 2.5rem;
+  place-items: center;
+  border: 1px solid #dbe4f0;
+  border-radius: 50%;
+}
+
+.notification-link .pi {
+  font-size: 1.1rem;
+}
+
+.notification-badge {
+  position: absolute;
+  top: -0.35rem;
+  right: -0.35rem;
+  display: grid;
+  min-width: 1.25rem;
+  height: 1.25rem;
+  padding-inline: 0.25rem;
+  place-items: center;
+  color: #ffffff;
+  background: #ef4444;
+  border: 2px solid #ffffff;
+  border-radius: 999px;
+  font-size: 0.65rem;
+  font-weight: 700;
+  line-height: 1;
+}
+
 .logout-button {
+  padding: 0;
+  color: #52627a;
   border: none;
   background: transparent;
   cursor: pointer;
   font: inherit;
+  font-weight: 500;
+}
+
+.logout-button:hover {
+  color: #2563eb;
+}
+
+@media (max-width: 640px) {
+  .app-auth {
+    margin-left: auto;
+  }
 }
 </style>
