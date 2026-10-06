@@ -407,7 +407,40 @@
   ],
   "indemnity-requests": [],
   "indemnity-status-histories": [],
-  "subscription-plans": [],
+  "subscription-plans": [
+    {
+      "id": 1,
+      "name": "basic",
+      "description": "basicDescription",
+      "monthlyPrice": 19,
+      "annualPrice": 190,
+      "benefits": [
+        "basicFeature1",
+        "basicFeature2",
+        "basicFeature3",
+        "basicFeature4"
+      ],
+      "active": true,
+      "createdAt": "2026-10-05T00:00:00Z",
+      "updatedAt": "2026-10-05T00:00:00Z"
+    },
+    {
+      "id": 2,
+      "name": "pro",
+      "description": "proDescription",
+      "monthlyPrice": 39,
+      "annualPrice": 390,
+      "benefits": [
+        "proFeature1",
+        "proFeature2",
+        "proFeature3",
+        "proFeature4"
+      ],
+      "active": true,
+      "createdAt": "2026-10-05T00:00:00Z",
+      "updatedAt": "2026-10-05T00:00:00Z"
+    }
+  ],
   "user-subscriptions": [],
   "subscription-payments": [],
   "notifications": []
