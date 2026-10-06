@@ -51,5 +51,63 @@ const { t } = useI18n();
         </div>
       </div>
     </section>
+    <section class="home-services">
+      <div class="home-section-heading">
+    <span class="section-label">
+      {{ t('home.services.label') }}
+    </span>
+
+        <h2>{{ t('home.services.title') }}</h2>
+
+        <p>{{ t('home.services.description') }}</p>
+      </div>
+
+      <div class="home-services__grid">
+        <article class="service-card">
+          <div class="service-card__icon">
+            <i class="pi pi-car"></i>
+          </div>
+
+          <h3>{{ t('home.services.vehicle.title') }}</h3>
+
+          <p>{{ t('home.services.vehicle.description') }}</p>
+
+          <router-link to="/vehicles">
+            {{ t('home.services.action') }}
+            <i class="pi pi-arrow-right"></i>
+          </router-link>
+        </article>
+
+        <article class="service-card">
+          <div class="service-card__icon">
+            <i class="pi pi-heart"></i>
+          </div>
+
+          <h3>{{ t('home.services.life.title') }}</h3>
+
+          <p>{{ t('home.services.life.description') }}</p>
+
+          <router-link to="/life-applications">
+            {{ t('home.services.action') }}
+            <i class="pi pi-arrow-right"></i>
+          </router-link>
+        </article>
+
+        <article class="service-card">
+          <div class="service-card__icon">
+            <i class="pi pi-file"></i>
+          </div>
+
+          <h3>{{ t('home.services.policies.title') }}</h3>
+
+          <p>{{ t('home.services.policies.description') }}</p>
+
+          <router-link to="/policies">
+            {{ t('home.services.action') }}
+            <i class="pi pi-arrow-right"></i>
+          </router-link>
+        </article>
+      </div>
+    </section>
   </main>
 </template>
