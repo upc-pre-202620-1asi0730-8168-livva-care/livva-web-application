@@ -14,6 +14,7 @@
     "lifeInsurance": "Life",
     "lifeApplications": "Applications",
     "beneficiaries": "Beneficiaries",
+    "subscription": "My subscription",
     "login": "Sign in",
     "register": "Create account",
     "profile": "My profile",
@@ -500,6 +501,106 @@
       "generate": "Expiration notices could not be generated.",
       "markAsRead": "The notification could not be marked as read.",
       "markAllAsRead": "Notifications could not be marked as read."
+    }
+  },
+  "subscriptions": {
+    "plans": {
+      "pageTitle": "Subscription plans",
+      "sectionLabel": "Livva plans",
+      "title": "Choose the plan that fits you best",
+      "description": "Compare benefits and select the option that best fits your insurance management needs.",
+      "monthly": "Monthly",
+      "annual": "Yearly",
+      "annualSaving": "Save with yearly billing",
+      "recommended": "Recommended",
+      "currency": "S/",
+      "monthPeriod": "/ month",
+      "yearPeriod": "/ year",
+      "choose": "Choose plan",
+      "currentPlan": "Current plan",
+      "basic": {
+        "title": "Basic Plan",
+        "basicDescription": "Ideal for users who want to start managing their insurance in a simple way.",
+        "basicFeature1": "Insurance option comparison",
+        "basicFeature2": "Basic policy management",
+        "basicFeature3": "Access to centralized information",
+        "basicFeature4": "Digital support"
+      },
+      "pro": {
+        "title": "Livva Pro",
+        "proDescription": "For users looking for a more complete and personalized experience.",
+        "proFeature1": "All Basic Plan benefits",
+        "proFeature2": "Advanced policy tracking",
+        "proFeature3": "Personalized recommendations",
+        "proFeature4": "Priority support"
+      }
+    },
+    "mySubscription": {
+      "pageTitle": "My subscription",
+      "sectionLabel": "Subscription management",
+      "title": "My subscription",
+      "description": "Review your selected plan, its status, and your payment history.",
+      "noSubscription": "You do not have a Livva subscription yet.",
+      "browsePlans": "View plans",
+      "currentPlan": "Selected plan",
+      "status": "Status",
+      "billingCycle": "Billing cycle",
+      "startDate": "Start date",
+      "nextBillingDate": "Next payment",
+      "cancelledAt": "Cancellation date",
+      "monthly": "Monthly",
+      "annual": "Yearly",
+      "statuses": {
+        "active": "Active",
+        "cancelled": "Cancelled",
+        "pending": "Pending"
+      },
+      "actions": {
+        "cancel": "Cancel subscription",
+        "confirmCancel": "Confirm cancellation",
+        "keep": "Keep subscription"
+      },
+      "cancellation": {
+        "title": "Cancel subscription",
+        "description": "Your subscription will no longer be active. This action does not delete your payment history."
+      },
+      "payments": {
+        "title": "Payment history",
+        "empty": "There are no registered payments yet.",
+        "date": "Date",
+        "provider": "Provider",
+        "amount": "Amount",
+        "status": "Status",
+        "approved": "Approved",
+        "rejected": "Rejected",
+        "pending": "Pending"
+      }
+    },
+    "payment": {
+      "title": "Activate subscription",
+      "description": "Review the selected plan before continuing with the test payment.",
+      "selectedPlan": "Selected plan",
+      "billingCycle": "Billing cycle",
+      "total": "Total",
+      "sandboxNotice": "This payment uses a sandbox environment and will not make a real charge.",
+      "continue": "Continue to sandbox payment",
+      "cancel": "Cancel",
+      "processing": "Processing payment..."
+    },
+    "messages": {
+      "activated": "The subscription was activated successfully.",
+      "cancelled": "The subscription was cancelled successfully."
+    },
+    "errors": {
+      "loadPlans": "Subscription plans could not be loaded.",
+      "loadSubscription": "The subscription could not be loaded.",
+      "loadPayments": "Payment history could not be loaded.",
+      "activeExists": "You already have an active subscription.",
+      "paymentNotApproved": "The payment was not approved.",
+      "planNotFound": "The selected plan does not exist.",
+      "activate": "The subscription could not be activated.",
+      "cancel": "The subscription could not be cancelled.",
+      "payment": "The sandbox payment could not be completed."
     }
   }
 }
