@@ -23,14 +23,63 @@
   },
   "home": {
     "pageTitle": "Home",
-    "title": "Insurance made simple",
-    "description": "Access, apply for, and manage vehicle and life insurance through one digital platform."
+    "heroLabel": "Digital protection for you",
+    "title": "Simple insurance for every stage of your life",
+    "description": "Manage your vehicle and life insurance through a fast, clear platform designed to support you.",
+    "protectedTitle": "Active protection",
+    "protectedDescription": "Manage your insurance from one place.",
+    "actions": {
+      "policies": "View my policies",
+      "about": "Discover Livva"
+    },
+    "services": {
+      "label": "Our services",
+      "title": "Everything you need in one place",
+      "description": "Quickly access the main tools you need to manage your protection.",
+      "action": "Learn more",
+      "vehicle": {
+        "title": "Vehicle insurance",
+        "description": "Manage your vehicles, applications and claims through a digital experience."
+      },
+      "life": {
+        "title": "Life insurance",
+        "description": "Request protection for yourself and easily manage your beneficiaries."
+      },
+      "policies": {
+        "title": "My policies",
+        "description": "Review coverage, expiration dates, renewals and your policy status."
+      }
+    }
+  },"about": {
+  "pageTitle": "About",
+  "sectionLabel": "Meet Livva",
+  "title": "Simple, clear and digital protection",
+  "description": "Livva facilitates the digital intermediation and management of vehicle and life insurance, helping people access protection more easily.",
+  "values": {
+    "security": {
+      "title": "Trust",
+      "description": "We design clear experiences so you can manage your protection with confidence."
+    },
+    "digital": {
+      "title": "Digital experience",
+      "description": "We centralize your main operations to reduce unnecessary processes."
+    },
+    "people": {
+      "title": "People first",
+      "description": "We build solutions around the real needs of our users."
+    }
   },
-  "about": {
-    "pageTitle": "About",
-    "title": "About Livva",
-    "description": "Livva facilitates the digital intermediation and management of vehicle and life insurance without assuming the responsibilities of an insurance company."
+  "mission": {
+    "label": "Our mission",
+    "title": "Simplify access to insurance",
+    "description": "Bring protection closer to more people through clear, accessible and easy-to-use digital tools."
   },
+  "vision": {
+    "label": "Our vision",
+    "title": "A more approachable insurance experience",
+    "description": "Become a trusted digital platform that simplifies the relationship between people and their insurance."
+  }
+},
   "notFound": {
     "pageTitle": "Page not found",
     "title": "Page not found",
@@ -373,6 +422,8 @@
     }
   },
   "footer": {
+    "description": "Simple digital protection designed to support you at every stage.",
+    "navigationLabel": "Footer navigation",
     "copyright": "© {year} Livva Care. All rights reserved."
   },
   "auth": {
