@@ -11,18 +11,6 @@
       "active": true,
       "createdAt": "2026-09-01T10:00:00Z",
       "updatedAt": "2026-09-01T10:00:00Z"
-    },
-    {
-      "firstName": "Rolando",
-      "lastName": "Torres",
-      "email": "rolando@test.com",
-      "passwordHash": "123456",
-      "phone": "999999999",
-      "role": "CUSTOMER",
-      "active": true,
-      "createdAt": "2026-10-05T21:44:49.385Z",
-      "updatedAt": "2026-10-05T21:44:49.385Z",
-      "id": 2
     }
   ],
   "user-profiles": [

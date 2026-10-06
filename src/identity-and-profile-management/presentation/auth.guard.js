@@ -1,9 +1,20 @@
 export const authenticationGuard = (to) => {
     const storedUser = localStorage.getItem('livva-user');
+    const publicRoutes = new Set([
+        'home',
+        'about',
+        'login',
+        'register',
+        'page-not-found'
+    ]);
+    const requiresAuthentication = !publicRoutes.has(to.name);
 
-    if (to.meta.requiresAuth && !storedUser) {
+    if (requiresAuthentication && !storedUser) {
         return {
-            name: 'login'
+            name: 'login',
+            query: {
+                redirect: to.fullPath
+            }
         };
     }
 

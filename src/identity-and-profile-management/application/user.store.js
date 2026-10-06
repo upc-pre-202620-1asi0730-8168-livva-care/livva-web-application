@@ -22,7 +22,13 @@ export const useUserStore = defineStore(
             error.value = null;
 
             try {
-                const existingUsers = await usersApi.getByEmail(userData.email);
+                const normalizedEmail = userData.email
+                    .trim()
+                    .toLowerCase();
+
+                const existingUsers = await usersApi.getByEmail(
+                    normalizedEmail
+                );
 
                 if (existingUsers.data.length > 0) {
                     error.value = 'auth.errors.emailAlreadyExists';
@@ -32,11 +38,11 @@ export const useUserStore = defineStore(
                 const now = new Date().toISOString();
 
                 const resource = {
-                    firstName: userData.firstName,
-                    lastName: userData.lastName,
-                    email: userData.email,
+                    firstName: userData.firstName.trim(),
+                    lastName: userData.lastName.trim(),
+                    email: normalizedEmail,
                     passwordHash: userData.passwordHash,
-                    phone: userData.phone,
+                    phone: userData.phone.trim(),
                     role: 'CUSTOMER',
                     active: true,
                     createdAt: now,
@@ -44,10 +50,7 @@ export const useUserStore = defineStore(
                 };
 
                 const response = await usersApi.create(resource);
-
-                currentUser.value = UserAssembler.toEntity(response.data);
-
-                return currentUser.value;
+                return UserAssembler.toEntity(response.data);
             } catch {
                 error.value = 'auth.errors.register';
                 return null;
@@ -61,7 +64,9 @@ export const useUserStore = defineStore(
             error.value = null;
 
             try {
-                const response = await usersApi.getByEmail(email);
+                const response = await usersApi.getByEmail(
+                    email.trim().toLowerCase()
+                );
 
                 if (response.data.length === 0) {
                     error.value = 'auth.errors.invalidCredentials';
@@ -106,9 +111,14 @@ export const useUserStore = defineStore(
 
             if (!storedUser) return;
 
-            currentUser.value = UserAssembler.toEntity(
-                JSON.parse(storedUser)
-            );
+            try {
+                currentUser.value = UserAssembler.toEntity(
+                    JSON.parse(storedUser)
+                );
+            } catch {
+                localStorage.removeItem('livva-user');
+                currentUser.value = null;
+            }
         };
 
         const fetchProfile = async (userId) => {
