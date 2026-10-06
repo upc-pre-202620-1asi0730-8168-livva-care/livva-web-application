@@ -236,6 +236,14 @@ watch(
         </template>
 
         <template v-else>
+
+          <router-link
+              to="/my-subscription"
+              @click="closeMenus"
+          >
+            {{ t('navigation.subscription') }}
+          </router-link>
+
           <router-link
               to="/notifications"
               class="notification-link"

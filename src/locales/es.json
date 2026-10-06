@@ -14,6 +14,7 @@
     "lifeInsurance": "Vida",
     "lifeApplications": "Solicitudes",
     "beneficiaries": "Beneficiarios",
+    "subscription": "Mi suscripción",
     "login": "Iniciar sesión",
     "register": "Crear cuenta",
     "profile": "Mi perfil",
@@ -499,6 +500,106 @@
       "generate": "No se pudieron generar los avisos de vencimiento.",
       "markAsRead": "No se pudo marcar la notificación como leída.",
       "markAllAsRead": "No se pudieron marcar las notificaciones como leídas."
+    }
+  },
+  "subscriptions": {
+    "plans": {
+      "pageTitle": "Planes de suscripción",
+      "sectionLabel": "Planes Livva",
+      "title": "Elige el plan que mejor se adapta a ti",
+      "description": "Compara beneficios y selecciona la opción que mejor se adapte a tus necesidades de gestión de seguros.",
+      "monthly": "Mensual",
+      "annual": "Anual",
+      "annualSaving": "Ahorra con el pago anual",
+      "recommended": "Recomendado",
+      "currency": "S/",
+      "monthPeriod": "/ mes",
+      "yearPeriod": "/ año",
+      "choose": "Elegir plan",
+      "currentPlan": "Plan actual",
+      "basic": {
+        "title": "Plan Básico",
+        "basicDescription": "Ideal para usuarios que desean comenzar a gestionar sus seguros de manera sencilla.",
+        "basicFeature1": "Comparación de opciones de seguros",
+        "basicFeature2": "Gestión básica de pólizas",
+        "basicFeature3": "Acceso a información centralizada",
+        "basicFeature4": "Soporte digital"
+      },
+      "pro": {
+        "title": "Livva Pro",
+        "proDescription": "Para usuarios que buscan una experiencia más completa y personalizada.",
+        "proFeature1": "Todos los beneficios del Plan Básico",
+        "proFeature2": "Seguimiento avanzado de pólizas",
+        "proFeature3": "Recomendaciones personalizadas",
+        "proFeature4": "Soporte prioritario"
+      }
+    },
+    "mySubscription": {
+      "pageTitle": "Mi suscripción",
+      "sectionLabel": "Gestión de suscripción",
+      "title": "Mi suscripción",
+      "description": "Consulta el plan contratado, su estado y el historial de pagos.",
+      "noSubscription": "Todavía no tienes una suscripción de Livva.",
+      "browsePlans": "Consultar planes",
+      "currentPlan": "Plan contratado",
+      "status": "Estado",
+      "billingCycle": "Modalidad de pago",
+      "startDate": "Fecha de inicio",
+      "nextBillingDate": "Próximo pago",
+      "cancelledAt": "Fecha de cancelación",
+      "monthly": "Mensual",
+      "annual": "Anual",
+      "statuses": {
+        "active": "Activa",
+        "cancelled": "Cancelada",
+        "pending": "Pendiente"
+      },
+      "actions": {
+        "cancel": "Cancelar suscripción",
+        "confirmCancel": "Confirmar cancelación",
+        "keep": "Mantener suscripción"
+      },
+      "cancellation": {
+        "title": "Cancelar suscripción",
+        "description": "Tu suscripción dejará de estar activa. Esta acción no elimina el historial de pagos."
+      },
+      "payments": {
+        "title": "Historial de pagos",
+        "empty": "Todavía no existen pagos registrados.",
+        "date": "Fecha",
+        "provider": "Proveedor",
+        "amount": "Monto",
+        "status": "Estado",
+        "approved": "Aprobado",
+        "rejected": "Rechazado",
+        "pending": "Pendiente"
+      }
+    },
+    "payment": {
+      "title": "Activar suscripción",
+      "description": "Revisa el plan seleccionado antes de continuar con el pago de prueba.",
+      "selectedPlan": "Plan seleccionado",
+      "billingCycle": "Modalidad",
+      "total": "Total",
+      "sandboxNotice": "Este pago utiliza un entorno sandbox y no realizará ningún cobro real.",
+      "continue": "Continuar al pago sandbox",
+      "cancel": "Cancelar",
+      "processing": "Procesando pago..."
+    },
+    "messages": {
+      "activated": "La suscripción fue activada correctamente.",
+      "cancelled": "La suscripción fue cancelada correctamente."
+    },
+    "errors": {
+      "loadPlans": "No se pudieron cargar los planes.",
+      "loadSubscription": "No se pudo cargar la suscripción.",
+      "loadPayments": "No se pudo cargar el historial de pagos.",
+      "activeExists": "Ya tienes una suscripción activa.",
+      "paymentNotApproved": "El pago no fue aprobado.",
+      "planNotFound": "El plan seleccionado no existe.",
+      "activate": "No se pudo activar la suscripción.",
+      "cancel": "No se pudo cancelar la suscripción.",
+      "payment": "No se pudo completar el pago sandbox."
     }
   }
 }

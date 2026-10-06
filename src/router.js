@@ -13,6 +13,7 @@ import { vehicleClaimRoutes } from './claims-and-indemnities/presentation/vehicl
 import { identityRoutes } from './identity-and-profile-management/presentation/identity.routes.js';
 import { notificationRoutes } from './notification-management/presentation/notification.routes.js';
 import { authenticationGuard } from './identity-and-profile-management/presentation/auth.guard.js';
+import { subscriptionRoutes } from './subscription-management/presentation/subscription.routes.js';
 
 const routes = [
     {
@@ -39,6 +40,7 @@ const routes = [
     ...vehicleClaimRoutes,
     ...policyRoutes,
     ...notificationRoutes,
+    ...subscriptionRoutes,
 
     {
         path: '/:pathMatch(.*)*',

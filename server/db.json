@@ -407,8 +407,80 @@
   ],
   "indemnity-requests": [],
   "indemnity-status-histories": [],
-  "subscription-plans": [],
-  "user-subscriptions": [],
-  "subscription-payments": [],
-  "notifications": []
+  "subscription-plans": [
+    {
+      "id": 1,
+      "name": "basic",
+      "description": "basicDescription",
+      "monthlyPrice": 19,
+      "annualPrice": 190,
+      "benefits": [
+        "basicFeature1",
+        "basicFeature2",
+        "basicFeature3",
+        "basicFeature4"
+      ],
+      "active": true,
+      "createdAt": "2026-10-05T00:00:00Z",
+      "updatedAt": "2026-10-05T00:00:00Z"
+    },
+    {
+      "id": 2,
+      "name": "pro",
+      "description": "proDescription",
+      "monthlyPrice": 39,
+      "annualPrice": 390,
+      "benefits": [
+        "proFeature1",
+        "proFeature2",
+        "proFeature3",
+        "proFeature4"
+      ],
+      "active": true,
+      "createdAt": "2026-10-05T00:00:00Z",
+      "updatedAt": "2026-10-05T00:00:00Z"
+    }
+  ],
+  "user-subscriptions": [
+    {
+      "userId": 1,
+      "planId": 1,
+      "billingCycle": "monthly",
+      "status": "active",
+      "startDate": "2026-10-06T04:42:40.549Z",
+      "nextBillingDate": "2026-11-06T04:42:40.549Z",
+      "cancelledAt": null,
+      "createdAt": "2026-10-06T04:42:40.549Z",
+      "updatedAt": "2026-10-06T04:42:40.549Z",
+      "id": 1
+    }
+  ],
+  "subscription-payments": [
+    {
+      "userSubscriptionId": 1,
+      "userId": 1,
+      "planId": 1,
+      "provider": "mercado-pago-sandbox",
+      "providerPaymentId": "PAY01M47RAPA41A2BAHYHJ99BTE81",
+      "amount": 19,
+      "currency": "PEN",
+      "status": "approved",
+      "paidAt": "2026-10-06T04:42:41.133Z",
+      "createdAt": "2026-10-06T04:42:40.549Z",
+      "id": 1
+    }
+  ],
+  "notifications": [
+    {
+      "userId": 1,
+      "type": "policy_expiration",
+      "policyId": 1,
+      "policyNumber": "LIV-VEH-0001",
+      "expirationDate": "2027-01-14",
+      "isRead": false,
+      "readAt": null,
+      "createdAt": "2026-10-06T03:29:53.326Z",
+      "id": 1
+    }
+  ]
 }
