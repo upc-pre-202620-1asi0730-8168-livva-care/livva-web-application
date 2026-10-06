@@ -183,8 +183,17 @@ p {
 
 .default-layout__content {
   flex: 1;
+  background-image:
+          linear-gradient(
+                  rgb(247 249 252 / 70%),
+                  rgb(247 249 252 / 70%)
+          ),
+          url("./assets/fondo-general.JPEG");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
 }
-
 .default-layout .page-container {
   min-height: calc(100vh - 152px);
 }
