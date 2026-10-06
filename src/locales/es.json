@@ -17,6 +17,7 @@
     "login": "Iniciar sesión",
     "register": "Crear cuenta",
     "profile": "Mi perfil",
+    "notifications": "Notificaciones",
     "logout": "Cerrar sesión"
   },
   "home": {
@@ -462,6 +463,42 @@
     "errors": {
       "load": "No se pudo cargar el perfil.",
       "update": "No se pudo actualizar el perfil."
+    }
+  },
+
+  "notifications": {
+    "pageTitle": "Notificaciones",
+    "sectionLabel": "Centro de notificaciones",
+    "title": "Mis notificaciones",
+    "description": "Consulta los avisos importantes relacionados con tus seguros.",
+    "unreadSummary": "Notificaciones sin leer: {count}",
+    "empty": "No tienes notificaciones.",
+    "fields": {
+      "status": "Estado",
+      "message": "Notificación",
+      "createdAt": "Fecha"
+    },
+    "statuses": {
+      "read": "Leída",
+      "unread": "Sin leer"
+    },
+    "actions": {
+      "column": "Acciones",
+      "view": "Ver detalle",
+      "markAllAsRead": "Marcar todas como leídas"
+    },
+    "types": {
+      "policyExpiration": "La póliza {policyNumber} vencerá el {expirationDate}. Revisa su información y solicita la renovación si corresponde.",
+      "default": "Tienes una nueva notificación."
+    },
+    "messages": {
+      "allMarkedAsRead": "Todas las notificaciones fueron marcadas como leídas."
+    },
+    "errors": {
+      "load": "No se pudieron cargar las notificaciones.",
+      "generate": "No se pudieron generar los avisos de vencimiento.",
+      "markAsRead": "No se pudo marcar la notificación como leída.",
+      "markAllAsRead": "No se pudieron marcar las notificaciones como leídas."
     }
   }
 }

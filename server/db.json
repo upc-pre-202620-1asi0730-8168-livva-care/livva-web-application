@@ -409,5 +409,6 @@
   "indemnity-status-histories": [],
   "subscription-plans": [],
   "user-subscriptions": [],
-  "subscription-payments": []
+  "subscription-payments": [],
+  "notifications": []
 }

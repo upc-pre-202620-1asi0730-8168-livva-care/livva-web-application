@@ -17,6 +17,7 @@
     "login": "Sign in",
     "register": "Create account",
     "profile": "My profile",
+    "notifications": "Notifications",
     "logout": "Sign out"
   },
   "home": {
@@ -463,6 +464,42 @@
     "errors": {
       "load": "The profile could not be loaded.",
       "update": "The profile could not be updated."
+    }
+  },
+
+  "notifications": {
+    "pageTitle": "Notifications",
+    "sectionLabel": "Notification center",
+    "title": "My notifications",
+    "description": "Review important notices related to your insurance policies.",
+    "unreadSummary": "Unread notifications: {count}",
+    "empty": "You have no notifications.",
+    "fields": {
+      "status": "Status",
+      "message": "Notification",
+      "createdAt": "Date"
+    },
+    "statuses": {
+      "read": "Read",
+      "unread": "Unread"
+    },
+    "actions": {
+      "column": "Actions",
+      "view": "View details",
+      "markAllAsRead": "Mark all as read"
+    },
+    "types": {
+      "policyExpiration": "Policy {policyNumber} will expire on {expirationDate}. Review its information and request a renewal if necessary.",
+      "default": "You have a new notification."
+    },
+    "messages": {
+      "allMarkedAsRead": "All notifications were marked as read."
+    },
+    "errors": {
+      "load": "Notifications could not be loaded.",
+      "generate": "Expiration notices could not be generated.",
+      "markAsRead": "The notification could not be marked as read.",
+      "markAllAsRead": "Notifications could not be marked as read."
     }
   }
 }
