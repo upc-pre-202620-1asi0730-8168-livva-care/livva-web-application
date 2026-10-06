@@ -53,8 +53,33 @@
   },
   "about": {
     "pageTitle": "Nosotros",
-    "title": "Acerca de Livva",
-    "description": "Livva facilita la intermediación y gestión digital de seguros vehiculares y seguros de vida sin asumir las responsabilidades de una compañía aseguradora."
+    "sectionLabel": "Conoce Livva",
+    "title": "Protección simple, clara y digital",
+    "description": "Livva facilita la intermediación y gestión digital de seguros vehiculares y de vida, ayudando a las personas a acceder a su protección de una forma más sencilla.",
+    "values": {
+      "security": {
+        "title": "Confianza",
+        "description": "Diseñamos experiencias claras para que puedas gestionar tu protección con tranquilidad."
+      },
+      "digital": {
+        "title": "Experiencia digital",
+        "description": "Centralizamos tus principales operaciones para reducir procesos innecesarios."
+      },
+      "people": {
+        "title": "Enfoque en personas",
+        "description": "Creamos soluciones pensando en las necesidades reales de nuestros usuarios."
+      }
+    },
+    "mission": {
+      "label": "Nuestra misión",
+      "title": "Simplificar el acceso a los seguros",
+      "description": "Acercar la protección a más personas mediante herramientas digitales claras, accesibles y fáciles de utilizar."
+    },
+    "vision": {
+      "label": "Nuestra visión",
+      "title": "Una experiencia de seguros más cercana",
+      "description": "Ser una plataforma digital confiable que facilite la relación de las personas con sus seguros."
+    }
   },
   "notFound": {
     "pageTitle": "Página no encontrada",
@@ -397,6 +422,8 @@
     }
   },
   "footer": {
+    "description": "Protección digital sencilla para acompañarte en cada etapa.",
+    "navigationLabel": "Enlaces del pie de página",
     "copyright": "© {year} Livva Care. Todos los derechos reservados."
   },
   "auth": {
