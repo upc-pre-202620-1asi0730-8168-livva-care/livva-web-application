@@ -122,6 +122,12 @@ const clearErrors = () => {
   });
 };
 
+const handleDocumentTypeChange = () => {
+  form.documentNumber = '';
+  errors.documentNumber = '';
+};
+
+
 const prepareForm = () => {
   clearErrors();
 
@@ -254,6 +260,7 @@ const submitForm = () => {
               t('beneficiaries.form.selectPolicy')
             "
             :invalid="Boolean(errors.policyId)"
+
         />
 
         <small
@@ -299,6 +306,8 @@ const submitForm = () => {
               t('beneficiaries.form.selectDocumentType')
             "
             :invalid="Boolean(errors.documentType)"
+            @change="handleDocumentTypeChange"
+
         />
 
         <small

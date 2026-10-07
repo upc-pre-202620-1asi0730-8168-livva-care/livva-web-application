@@ -216,6 +216,38 @@ export const useVehicleInsuranceApplicationStore = defineStore(
             }
         };
 
+        const cancelApplication = async (applicationId) => {
+            const application = applications.value.find(
+                (item) => item.id === applicationId
+            );
+
+            if (
+                !application ||
+                !['pending', 'under_review'].includes(application.status)
+            ) {
+                return false;
+            }
+
+            saving.value = true;
+            error.value = null;
+
+            try {
+                await insuranceApplicationsApi.patch(applicationId, {
+                    status: 'cancelled',
+                    updatedAt: new Date().toISOString()
+                });
+
+                await fetchApplications();
+
+                return true;
+            } catch {
+                error.value = 'vehicleApplications.errors.cancel';
+                return false;
+            } finally {
+                saving.value = false;
+            }
+        };
+
         const clearError = () => {
             error.value = null;
         };
@@ -230,6 +262,7 @@ export const useVehicleInsuranceApplicationStore = defineStore(
             error,
             fetchApplications,
             createApplication,
+            cancelApplication,
             clearError
         };
     }

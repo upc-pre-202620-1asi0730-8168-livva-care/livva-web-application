@@ -7,9 +7,11 @@ import { useToast } from 'primevue/usetoast';
 import { useVehicleClaimStore } from '../../application/vehicle-claim.store.js';
 import { usePolicyStore } from '../../../policy-management/application/policy.store.js';
 import VehicleClaimFormDialog from '../components/vehicle-claim-form-dialog.vue';
+import { useConfirm } from 'primevue/useconfirm';
 
 const { t, locale } = useI18n();
 const toast = useToast();
+const confirm = useConfirm();
 
 const vehicleClaimStore = useVehicleClaimStore();
 const policyStore = usePolicyStore();
@@ -184,6 +186,49 @@ const closeHistory = () => {
   vehicleClaimStore.clearStatusHistories();
 };
 
+const confirmCancelClaim = (vehicleClaim) => {
+  confirm.require({
+    header: t('vehicleClaims.confirmation.cancelTitle'),
+    message: t('vehicleClaims.confirmation.cancelMessage'),
+    icon: 'pi pi-exclamation-triangle',
+    rejectProps: {
+      label: t('vehicleClaims.actions.keep'),
+      severity: 'secondary',
+      outlined: true
+    },
+    acceptProps: {
+      label: t('vehicleClaims.actions.cancelClaim'),
+      severity: 'danger'
+    },
+    accept: async () => {
+      const cancelled =
+          await vehicleClaimStore.cancelVehicleClaim(
+              vehicleClaim.id
+          );
+
+      if (!cancelled) {
+        toast.add({
+          severity: 'error',
+          summary: t(
+              claimError.value ??
+              'vehicleClaims.errors.cancel'
+          ),
+          life: 3500
+        });
+
+        vehicleClaimStore.clearError();
+        return;
+      }
+
+      toast.add({
+        severity: 'success',
+        summary: t('vehicleClaims.messages.cancelled'),
+        life: 3500
+      });
+    }
+  });
+};
+
 onMounted(async () => {
   await policyStore.fetchPolicies();
 
@@ -200,6 +245,7 @@ onMounted(async () => {
 <template>
   <main class="vehicles-page beneficiaries-page">
     <pv-toast />
+    <pv-confirm-dialog />
 
     <header class="vehicles-page__heading">
       <div class="vehicles-page__header">
@@ -337,6 +383,16 @@ onMounted(async () => {
               "
               @click="openHistory(data)"
           />
+          <pv-button
+              v-if="['reported', 'under_review'].includes(data.status)"
+              :label="t('vehicleClaims.actions.cancelClaim')"
+              icon="pi pi-times"
+              severity="danger"
+              text
+              :disabled="saving"
+              @click="confirmCancelClaim(data)"
+          />
+
         </template>
       </pv-column>
     </pv-data-table>

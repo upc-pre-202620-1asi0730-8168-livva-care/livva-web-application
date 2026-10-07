@@ -147,12 +147,16 @@
       "premiumAmount": "Premium amount",
       "requestedCoverage": "Requested coverage",
       "status": "Status",
-      "createdAt": "Application date"
+      "createdAt": "Application date",
+      "actions": "Actions"
+
     },
     "actions": {
       "create": "New application",
       "cancel": "Cancel",
-      "submit": "Submit application"
+      "submit": "Submit application",
+      "cancelApplication": "Cancel application"
+
     },
     "form": {
       "title": "Apply for vehicle insurance",
@@ -173,7 +177,9 @@
       "coverageMaximum": "Coverage cannot exceed {amount}."
     },
     "messages": {
-      "created": "Application submitted successfully."
+      "created": "Application submitted successfully.",
+      "cancelled": "Application cancelled successfully."
+
     },
     "errors": {
       "load": "Applications could not be loaded.",
@@ -195,12 +201,14 @@
       "premiumAmount": "Premium amount",
       "requestedCoverage": "Requested coverage",
       "status": "Status",
-      "createdAt": "Application date"
+      "createdAt": "Application date",
+      "actions": "Actions"
     },
     "actions": {
       "create": "New application",
       "cancel": "Cancel",
-      "submit": "Submit application"
+      "submit": "Submit application",
+      "cancelApplication": "Cancel application"
     },
     "form": {
       "title": "Apply for life insurance",
@@ -219,12 +227,14 @@
       "coverageMaximum": "Coverage cannot exceed {amount}."
     },
     "messages": {
-      "created": "Life insurance application submitted successfully."
+      "created": "Life insurance application submitted successfully.",
+      "cancelled": "Application cancelled successfully."
     },
     "errors": {
       "load": "Life insurance applications could not be loaded.",
       "create": "The life insurance application could not be submitted.",
-      "invalidData": "The application data is invalid."
+      "invalidData": "The application data is invalid.",
+      "cancel": "The application could not be cancelled."
     }
   },
   "beneficiaries": {
@@ -379,13 +389,20 @@
       "estimatedDamageAmount": "Estimated damage",
       "status": "Status"
     },
+
+    "confirmation": {
+      "cancelTitle": "Cancel claim",
+      "cancelMessage": "Are you sure you want to cancel this claim?"
+    },
+
     "statuses": {
       "reported": "Reported",
       "under_review": "Under review",
       "information_required": "Information required",
       "approved": "Approved",
       "rejected": "Rejected",
-      "closed": "Closed"
+      "closed": "Closed",
+      "cancelled": "Cancelled"
     },
     "form": {
       "createTitle": "Report vehicle claim",
@@ -397,7 +414,9 @@
       "viewStatus": "View status",
       "cancel": "Cancel",
       "save": "Submit",
-      "close": "Close"
+      "close": "Close",
+      "cancelClaim": "Cancel claim",
+      "keep": "Keep claim"
     },
     "history": {
       "title": "Claim history",
@@ -413,12 +432,15 @@
       "damageAmount": "Enter an estimated amount greater than zero."
     },
     "messages": {
-      "created": "Vehicle claim reported successfully."
+      "created": "Vehicle claim reported successfully.",
+      "cancelled": "Claim cancelled successfully."
+
     },
     "errors": {
       "load": "Vehicle claims could not be loaded.",
       "historyLoad": "The claim history could not be loaded.",
-      "create": "The vehicle claim could not be reported."
+      "create": "The vehicle claim could not be reported.",
+      "cancel": "The claim could not be cancelled."
     }
   },
   "footer": {

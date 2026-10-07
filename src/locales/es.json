@@ -106,7 +106,8 @@
       "cancel": "Cancelar",
       "save": "Guardar",
       "column": "Acciones",
-      "delete": "Eliminar"
+      "delete": "Eliminar",
+      "cancelApplication": "Cancelar solicitud"
     },
     "form": {
       "createTitle": "Registrar vehículo",
@@ -124,13 +125,15 @@
     "messages": {
       "created": "Vehículo registrado correctamente.",
       "updated": "Vehículo actualizado correctamente.",
-      "deleted": "Vehículo eliminado correctamente."
+      "deleted": "Vehículo eliminado correctamente.",
+      "cancelled": "Solicitud cancelada correctamente."
     },
     "errors": {
       "load": "No se pudieron cargar los vehículos.",
       "create": "No se pudo registrar el vehículo.",
       "update": "No se pudo actualizar el vehículo.",
-      "delete": "No se pudo eliminar el vehículo."
+      "delete": "No se pudo eliminar el vehículo.",
+      "cancel": "No se pudo cancelar la solicitud."
     }
   },
   "vehicleApplications": {
@@ -148,12 +151,15 @@
       "premiumAmount": "Monto de la prima",
       "requestedCoverage": "Cobertura solicitada",
       "status": "Estado",
-      "createdAt": "Fecha de solicitud"
+      "createdAt": "Fecha de solicitud",
+      "actions": "Acciones"
     },
     "actions": {
       "create": "Nueva solicitud",
       "cancel": "Cancelar",
-      "submit": "Enviar solicitud"
+      "submit": "Enviar solicitud",
+      "cancelApplication": "Cancelar solicitud"
+
     },
     "form": {
       "title": "Solicitar seguro vehicular",
@@ -174,12 +180,16 @@
       "coverageMaximum": "La cobertura no puede superar {amount}."
     },
     "messages": {
-      "created": "Solicitud registrada correctamente."
+      "created": "Solicitud registrada correctamente.",
+      "cancelled": "Solicitud cancelada correctamente."
+
     },
     "errors": {
       "load": "No se pudieron cargar las solicitudes.",
       "create": "No se pudo registrar la solicitud.",
-      "invalidData": "Los datos de la solicitud no son válidos."
+      "invalidData": "Los datos de la solicitud no son válidos.",
+      "cancel": "No se pudo cancelar la solicitud."
+
     }
   },
   "lifeApplications": {
@@ -196,12 +206,14 @@
       "premiumAmount": "Monto de la prima",
       "requestedCoverage": "Cobertura solicitada",
       "status": "Estado",
-      "createdAt": "Fecha de solicitud"
+      "createdAt": "Fecha de solicitud",
+      "actions": "Acciones"
     },
     "actions": {
       "create": "Nueva solicitud",
       "cancel": "Cancelar",
-      "submit": "Enviar solicitud"
+      "submit": "Enviar solicitud",
+      "cancelApplication": "Cancelar solicitud"
     },
     "form": {
       "title": "Solicitar seguro de vida",
@@ -220,12 +232,14 @@
       "coverageMaximum": "La cobertura no puede superar {amount}."
     },
     "messages": {
-      "created": "Solicitud de vida registrada correctamente."
+      "created": "Solicitud de vida registrada correctamente.",
+      "cancelled": "Solicitud de vida cancelada correctamente."
     },
     "errors": {
       "load": "No se pudieron cargar las solicitudes de vida.",
       "create": "No se pudo registrar la solicitud de vida.",
-      "invalidData": "Los datos de la solicitud no son válidos."
+      "invalidData": "Los datos de la solicitud no son válidos.",
+      "cancel": "No se pudo cancelar la solicitud de vida."
     }
   },
   "beneficiaries": {
@@ -309,6 +323,7 @@
       "expirationDate": "Fecha de vencimiento",
       "premiumAmount": "Monto de la prima",
       "coverageAmount": "Monto de cobertura"
+
     },
     "actions": {
       "viewDetails": "Ver detalle",
@@ -385,7 +400,9 @@
       "information_required": "Información requerida",
       "approved": "Aprobado",
       "rejected": "Rechazado",
-      "closed": "Cerrado"
+      "closed": "Cerrado",
+      "cancelled": "Cancelado"
+
     },
     "form": {
       "createTitle": "Registrar siniestro vehicular",
@@ -397,7 +414,9 @@
       "viewStatus": "Consultar estado",
       "cancel": "Cancelar",
       "save": "Registrar",
-      "close": "Cerrar"
+      "close": "Cerrar",
+      "cancelClaim": "Cancelar siniestro",
+      "keep": "Mantener siniestro"
     },
     "history": {
       "title": "Historial del siniestro",
@@ -413,12 +432,19 @@
       "damageAmount": "Ingresa un monto estimado mayor que cero."
     },
     "messages": {
-      "created": "Siniestro vehicular registrado correctamente."
+      "created": "Siniestro vehicular registrado correctamente.",
+      "cancelled": "Siniestro cancelado correctamente."
+
     },
     "errors": {
       "load": "No se pudieron cargar los siniestros vehiculares.",
       "historyLoad": "No se pudo cargar el historial del siniestro.",
-      "create": "No se pudo registrar el siniestro vehicular."
+      "create": "No se pudo registrar el siniestro vehicular.",
+      "cancel": "No se pudo cancelar el siniestro."
+    },
+    "confirmation": {
+      "cancelTitle": "Cancelar siniestro",
+      "cancelMessage": "¿Estás seguro de que deseas cancelar este siniestro?"
     }
   },
   "footer": {
