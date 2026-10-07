@@ -6,13 +6,25 @@
   "scripts": {
     "dev": "vite",
     "build": "vite build",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "server": "node server/index.cjs"
   },
   "dependencies": {
-    "vue": "^3.5.42"
+    "@mercadopago/sdk-js": "^0.0.3",
+    "@primevue/themes": "^4.5.4",
+    "axios": "^1.20.0",
+    "dotenv": "^18.0.5",
+    "pinia": "^4.0.3",
+    "primeflex": "^4.0.0",
+    "primeicons": "^8.0.2",
+    "primevue": "^4.5.5",
+    "vue": "^3.5.42",
+    "vue-i18n": "^11.4.13",
+    "vue-router": "^5.3.1"
   },
   "devDependencies": {
     "@vitejs/plugin-vue": "^6.0.8",
+    "json-server": "^0.17.4",
     "vite": "^8.3.0"
   }
 }

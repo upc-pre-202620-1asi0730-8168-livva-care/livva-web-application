@@ -1,0 +1,683 @@
+{
+  "app": {
+    "name": "Livva"
+  },
+  "navigation": {
+    "main": "Navegación principal",
+    "home": "Inicio",
+    "about": "Nosotros",
+    "policies": "Pólizas",
+    "vehicleInsurance": "Vehicular",
+    "vehicles": "Mis vehículos",
+    "applications": "Solicitudes",
+    "vehicleClaims": "Siniestros",
+    "lifeInsurance": "Vida",
+    "lifeApplications": "Solicitudes",
+    "beneficiaries": "Beneficiarios",
+    "subscription": "Mi suscripción",
+    "login": "Iniciar sesión",
+    "register": "Crear cuenta",
+    "profile": "Mi perfil",
+    "notifications": "Notificaciones",
+    "logout": "Cerrar sesión"
+  },
+  "home": {
+    "pageTitle": "Inicio",
+    "heroLabel": "Protección digital para ti",
+    "title": "Seguros simples para cada etapa de tu vida",
+    "description": "Gestiona tus seguros vehiculares y de vida desde una plataforma rápida, clara y diseñada para acompañarte.",
+    "protectedTitle": "Protección activa",
+    "protectedDescription": "Gestiona tus seguros desde un solo lugar.",
+    "actions": {
+      "policies": "Ver mis pólizas",
+      "about": "Conocer Livva"
+    },
+    "services": {
+      "label": "Nuestros servicios",
+      "title": "Todo lo que necesitas en un solo lugar",
+      "description": "Accede fácilmente a las principales herramientas para gestionar tu protección.",
+      "action": "Conocer más",
+      "vehicle": {
+        "title": "Seguro vehicular",
+        "description": "Gestiona tus vehículos, solicitudes y siniestros desde una experiencia digital."
+      },
+      "life": {
+        "title": "Seguro de vida",
+        "description": "Solicita protección para ti y administra fácilmente a tus beneficiarios."
+      },
+      "policies": {
+        "title": "Mis pólizas",
+        "description": "Consulta coberturas, vigencias, renovaciones y el estado de tus pólizas."
+      }
+    }
+  },
+  "about": {
+    "pageTitle": "Nosotros",
+    "sectionLabel": "Conoce Livva",
+    "title": "Protección simple, clara y digital",
+    "description": "Livva facilita la intermediación y gestión digital de seguros vehiculares y de vida, ayudando a las personas a acceder a su protección de una forma más sencilla.",
+    "values": {
+      "security": {
+        "title": "Confianza",
+        "description": "Diseñamos experiencias claras para que puedas gestionar tu protección con tranquilidad."
+      },
+      "digital": {
+        "title": "Experiencia digital",
+        "description": "Centralizamos tus principales operaciones para reducir procesos innecesarios."
+      },
+      "people": {
+        "title": "Enfoque en personas",
+        "description": "Creamos soluciones pensando en las necesidades reales de nuestros usuarios."
+      }
+    },
+    "mission": {
+      "label": "Nuestra misión",
+      "title": "Simplificar el acceso a los seguros",
+      "description": "Acercar la protección a más personas mediante herramientas digitales claras, accesibles y fáciles de utilizar."
+    },
+    "vision": {
+      "label": "Nuestra visión",
+      "title": "Una experiencia de seguros más cercana",
+      "description": "Ser una plataforma digital confiable que facilite la relación de las personas con sus seguros."
+    }
+  },
+  "notFound": {
+    "pageTitle": "Página no encontrada",
+    "title": "Página no encontrada",
+    "description": "La página solicitada no existe.",
+    "action": "Volver al inicio"
+  },
+  "vehicles": {
+    "pageTitle": "Vehículos",
+    "sectionLabel": "Gestión de vehículos",
+    "title": "Mis vehículos",
+    "description": "Consulta los vehículos registrados en tu cuenta.",
+    "empty": "No hay vehículos registrados.",
+    "fields": {
+      "licensePlate": "Placa",
+      "brand": "Marca",
+      "model": "Modelo",
+      "manufactureYear": "Año de fabricación",
+      "estimatedValue": "Valor estimado"
+    },
+    "actions": {
+      "add": "Agregar vehículo",
+      "edit": "Editar",
+      "cancel": "Cancelar",
+      "save": "Guardar",
+      "column": "Acciones",
+      "delete": "Eliminar",
+      "cancelApplication": "Cancelar solicitud"
+    },
+    "form": {
+      "createTitle": "Registrar vehículo",
+      "editTitle": "Editar vehículo"
+    },
+    "confirmation": {
+      "deleteTitle": "Eliminar vehículo",
+      "deleteMessage": "¿Deseas eliminar el vehículo con placa {licensePlate}?"
+    },
+    "validation": {
+      "required": "Este campo es obligatorio.",
+      "year": "Ingresa un año entre 1900 y {year}.",
+      "value": "Ingresa un valor mayor que cero."
+    },
+    "messages": {
+      "created": "Vehículo registrado correctamente.",
+      "updated": "Vehículo actualizado correctamente.",
+      "deleted": "Vehículo eliminado correctamente.",
+      "cancelled": "Solicitud cancelada correctamente."
+    },
+    "errors": {
+      "load": "No se pudieron cargar los vehículos.",
+      "create": "No se pudo registrar el vehículo.",
+      "update": "No se pudo actualizar el vehículo.",
+      "delete": "No se pudo eliminar el vehículo.",
+      "cancel": "No se pudo cancelar la solicitud."
+    }
+  },
+  "vehicleApplications": {
+    "pageTitle": "Solicitudes vehiculares",
+    "sectionLabel": "Seguro vehicular",
+    "title": "Solicitudes de seguro",
+    "description": "Registra una solicitud de seguro para uno de tus vehículos y consulta su estado.",
+    "empty": "No hay solicitudes de seguro vehicular registradas.",
+    "creationUnavailable": "Necesitas al menos un vehículo y un producto vehicular activo para registrar una solicitud.",
+    "fields": {
+      "number": "Solicitud",
+      "vehicle": "Vehículo",
+      "product": "Producto",
+      "maximumCoverage": "Cobertura máxima",
+      "premiumAmount": "Monto de la prima",
+      "requestedCoverage": "Cobertura solicitada",
+      "status": "Estado",
+      "createdAt": "Fecha de solicitud",
+      "actions": "Acciones"
+    },
+    "actions": {
+      "create": "Nueva solicitud",
+      "cancel": "Cancelar",
+      "submit": "Enviar solicitud",
+      "cancelApplication": "Cancelar solicitud"
+
+    },
+    "form": {
+      "title": "Solicitar seguro vehicular",
+      "selectVehicle": "Selecciona un vehículo",
+      "selectProduct": "Selecciona un producto"
+    },
+    "statuses": {
+      "pending": "Pendiente",
+      "under_review": "En revisión",
+      "approved": "Aprobada",
+      "rejected": "Rechazada",
+      "cancelled": "Cancelada"
+    },
+    "validation": {
+      "vehicleRequired": "Selecciona un vehículo.",
+      "productRequired": "Selecciona un producto.",
+      "coverageRequired": "Ingresa una cobertura mayor que cero.",
+      "coverageMaximum": "La cobertura no puede superar {amount}."
+    },
+    "messages": {
+      "created": "Solicitud registrada correctamente.",
+      "cancelled": "Solicitud cancelada correctamente."
+
+    },
+    "errors": {
+      "load": "No se pudieron cargar las solicitudes.",
+      "create": "No se pudo registrar la solicitud.",
+      "invalidData": "Los datos de la solicitud no son válidos.",
+      "cancel": "No se pudo cancelar la solicitud."
+
+    }
+  },
+  "lifeApplications": {
+    "pageTitle": "Solicitudes de vida",
+    "sectionLabel": "Seguro de vida",
+    "title": "Solicitudes de seguro de vida",
+    "description": "Solicita protección financiera y consulta el estado de tus solicitudes.",
+    "empty": "No hay solicitudes de seguro de vida registradas.",
+    "creationUnavailable": "No hay productos de seguro de vida activos disponibles.",
+    "fields": {
+      "number": "Solicitud",
+      "product": "Producto",
+      "maximumCoverage": "Cobertura máxima",
+      "premiumAmount": "Monto de la prima",
+      "requestedCoverage": "Cobertura solicitada",
+      "status": "Estado",
+      "createdAt": "Fecha de solicitud",
+      "actions": "Acciones"
+    },
+    "actions": {
+      "create": "Nueva solicitud",
+      "cancel": "Cancelar",
+      "submit": "Enviar solicitud",
+      "cancelApplication": "Cancelar solicitud"
+    },
+    "form": {
+      "title": "Solicitar seguro de vida",
+      "selectProduct": "Selecciona un producto"
+    },
+    "statuses": {
+      "pending": "Pendiente",
+      "under_review": "En revisión",
+      "approved": "Aprobada",
+      "rejected": "Rechazada",
+      "cancelled": "Cancelada"
+    },
+    "validation": {
+      "productRequired": "Selecciona un producto.",
+      "coverageRequired": "Ingresa una cobertura mayor que cero.",
+      "coverageMaximum": "La cobertura no puede superar {amount}."
+    },
+    "messages": {
+      "created": "Solicitud de vida registrada correctamente.",
+      "cancelled": "Solicitud de vida cancelada correctamente."
+    },
+    "errors": {
+      "load": "No se pudieron cargar las solicitudes de vida.",
+      "create": "No se pudo registrar la solicitud de vida.",
+      "invalidData": "Los datos de la solicitud no son válidos.",
+      "cancel": "No se pudo cancelar la solicitud de vida."
+    }
+  },
+  "beneficiaries": {
+      "pageTitle": "Beneficiarios",
+      "sectionLabel": "Gestión de beneficiarios",
+      "title": "Mis beneficiarios",
+      "description": "Consulta y mantén actualizada la información de los beneficiarios de tus pólizas de vida.",
+      "empty": "No hay beneficiarios registrados.",
+      "noLifePolicies": "Necesitas una póliza de vida activa para registrar beneficiarios.",
+      "fields": {
+        "policy": "Póliza de vida",
+        "fullName": "Nombre completo",
+        "documentType": "Tipo de documento",
+        "documentNumber": "Número de documento",
+        "document": "Documento",
+        "relationship": "Parentesco",
+        "birthDate": "Fecha de nacimiento",
+        "percentage": "Porcentaje de participación"
+      },
+      "documentTypes": {
+        "dni": "DNI",
+        "foreignCard": "Carné de extranjería",
+        "passport": "Pasaporte"
+      },
+      "relationships": {
+        "spouse": "Cónyuge",
+        "child": "Hijo/a",
+        "parent": "Padre o madre",
+        "sibling": "Hermano/a",
+        "other": "Otro"
+      },
+      "form": {
+        "createTitle": "Registrar beneficiario",
+        "editTitle": "Editar beneficiario",
+        "selectPolicy": "Selecciona una póliza",
+        "selectDocumentType": "Selecciona un documento",
+        "selectRelationship": "Selecciona el parentesco"
+      },
+      "actions": {
+        "add": "Agregar beneficiario",
+        "edit": "Editar",
+        "column": "Acciones",
+        "cancel": "Cancelar",
+        "save": "Guardar"
+      },
+      "validation": {
+        "required": "Este campo es obligatorio.",
+        "document": "Ingresa un documento válido de 8 a 12 caracteres.",
+        "birthDate": "Ingresa una fecha de nacimiento válida.",
+        "percentage": "El porcentaje debe estar entre 1 y 100.",
+        "totalPercentage": "Solo queda disponible un {available}% para esta póliza."
+      },
+      "messages": {
+        "created": "Beneficiario registrado correctamente.",
+        "updated": "Beneficiario actualizado correctamente."
+      },
+      "errors": {
+        "load": "No se pudieron cargar los beneficiarios.",
+        "create": "No se pudo registrar el beneficiario.",
+        "update": "No se pudo actualizar el beneficiario.",
+        "notFound": "No se encontró el beneficiario."
+      }
+    },
+  "policies": {
+    "pageTitle": "Pólizas",
+    "detailPageTitle": "Detalle de póliza",
+    "sectionLabel": "Gestión de pólizas",
+    "title": "Mis pólizas",
+    "description": "Consulta las pólizas de seguro asociadas a tu cuenta.",
+    "empty": "No hay pólizas disponibles.",
+    "types": {
+      "vehicle": "Seguro vehicular",
+      "life": "Seguro de vida"
+    },
+    "statuses": {
+      "active": "Activa",
+      "expired": "Vencida"
+    },
+    "fields": {
+      "startDate": "Fecha de inicio",
+      "expirationDate": "Fecha de vencimiento",
+      "premiumAmount": "Monto de la prima",
+      "coverageAmount": "Monto de cobertura"
+
+    },
+    "actions": {
+      "viewDetails": "Ver detalle",
+      "backToPolicies": "Volver a pólizas",
+      "openDocument": "Abrir documento"
+    },
+    "detail": {
+      "generalInformation": "Información general",
+      "coverages": "Coberturas",
+      "documents": "Documentos",
+      "noCoverages": "Esta póliza no tiene coberturas registradas.",
+      "noDocuments": "Esta póliza no tiene documentos registrados.",
+      "documentUnavailable": "Documento no disponible"
+    },
+    "errors": {
+      "loadList": "No se pudieron cargar las pólizas.",
+      "loadDetail": "No se pudo cargar el detalle de la póliza."
+    }
+  },
+  "renewals": {
+    "title": "Renovación de póliza",
+    "description": "Solicita la renovación para mantener la continuidad de tu cobertura.",
+    "empty": "Todavía no existen solicitudes de renovación para esta póliza.",
+    "fields": {
+      "requestedAt": "Fecha de solicitud",
+      "status": "Estado"
+    },
+    "statuses": {
+      "pending": "Pendiente",
+      "under_review": "En revisión",
+      "approved": "Aprobada",
+      "rejected": "Rechazada",
+      "cancelled": "Cancelada"
+    },
+    "actions": {
+      "request": "Solicitar renovación",
+      "pending": "Renovación pendiente",
+      "cancel": "Cancelar",
+      "confirm": "Confirmar solicitud"
+    },
+    "confirmation": {
+      "title": "Solicitar renovación",
+      "message": "¿Deseas solicitar la renovación de la póliza {policyNumber}?"
+    },
+    "messages": {
+      "created": "Solicitud de renovación registrada correctamente."
+    },
+    "errors": {
+      "load": "No se pudieron cargar las renovaciones.",
+      "create": "No se pudo registrar la renovación.",
+      "duplicate": "Esta póliza ya tiene una renovación pendiente."
+    }
+  },
+  "vehicleClaims": {
+    "pageTitle": "Siniestros vehiculares",
+    "sectionLabel": "Gestión de siniestros",
+    "title": "Mis siniestros",
+    "description": "Registra un siniestro vehicular y consulta el estado de su evaluación.",
+    "empty": "No hay siniestros vehiculares registrados.",
+    "noActivePolicies": "Necesitas una póliza vehicular activa para registrar un nuevo siniestro.",
+    "fields": {
+      "number": "Número",
+      "claim": "Siniestro",
+      "policy": "Póliza vehicular",
+      "incidentDate": "Fecha del incidente",
+      "location": "Lugar del incidente",
+      "description": "Descripción del incidente",
+      "estimatedDamageAmount": "Daño estimado",
+      "status": "Estado"
+    },
+    "statuses": {
+      "reported": "Reportado",
+      "under_review": "En revisión",
+      "information_required": "Información requerida",
+      "approved": "Aprobado",
+      "rejected": "Rechazado",
+      "closed": "Cerrado",
+      "cancelled": "Cancelado"
+
+    },
+    "form": {
+      "createTitle": "Registrar siniestro vehicular",
+      "selectPolicy": "Selecciona una póliza activa"
+    },
+    "actions": {
+      "add": "Registrar siniestro",
+      "column": "Acciones",
+      "viewStatus": "Consultar estado",
+      "cancel": "Cancelar",
+      "save": "Registrar",
+      "close": "Cerrar",
+      "cancelClaim": "Cancelar siniestro",
+      "keep": "Mantener siniestro"
+    },
+    "history": {
+      "title": "Historial del siniestro",
+      "empty": "No hay cambios de estado registrados.",
+      "changedAt": "Fecha de actualización",
+      "comment": "Observación"
+    },
+    "validation": {
+      "required": "Este campo es obligatorio.",
+      "incidentDate": "Ingresa una fecha válida que no sea posterior a hoy.",
+      "location": "Ingresa un lugar válido de al menos 3 caracteres.",
+      "description": "Describe el incidente utilizando al menos 10 caracteres.",
+      "damageAmount": "Ingresa un monto estimado mayor que cero."
+    },
+    "messages": {
+      "created": "Siniestro vehicular registrado correctamente.",
+      "cancelled": "Siniestro cancelado correctamente."
+
+    },
+    "errors": {
+      "load": "No se pudieron cargar los siniestros vehiculares.",
+      "historyLoad": "No se pudo cargar el historial del siniestro.",
+      "create": "No se pudo registrar el siniestro vehicular.",
+      "cancel": "No se pudo cancelar el siniestro."
+    },
+    "confirmation": {
+      "cancelTitle": "Cancelar siniestro",
+      "cancelMessage": "¿Estás seguro de que deseas cancelar este siniestro?"
+    }
+  },
+  "footer": {
+    "description": "Protección digital sencilla para acompañarte en cada etapa.",
+    "navigationLabel": "Enlaces del pie de página",
+    "copyright": "© {year} Livva Care. Todos los derechos reservados."
+  },
+  "auth": {
+    "register": {
+      "pageTitle": "Crear cuenta",
+      "sectionLabel": "Cuenta de cliente",
+      "title": "Crea tu cuenta en Livva",
+      "description": "Registra tus datos para gestionar tus seguros desde un solo lugar.",
+      "firstName": "Nombres",
+      "lastName": "Apellidos",
+      "email": "Correo electrónico",
+      "password": "Contraseña",
+      "passwordConfirmation": "Confirmar contraseña",
+      "phone": "Teléfono",
+      "submit": "Crear cuenta",
+      "creating": "Creando cuenta...",
+      "alreadyHaveAccount": "¿Ya tienes una cuenta?",
+      "signIn": "Iniciar sesión"
+    },
+    "login": {
+      "pageTitle": "Iniciar sesión",
+      "sectionLabel": "Acceso a Livva",
+      "title": "Inicia sesión en Livva",
+      "description": "Accede a tus vehículos, solicitudes, pólizas y demás servicios.",
+      "email": "Correo electrónico",
+      "password": "Contraseña",
+      "submit": "Iniciar sesión",
+      "signingIn": "Iniciando sesión...",
+      "noAccount": "¿No tienes una cuenta?",
+      "createAccount": "Crear cuenta"
+    },
+    "errors": {
+      "emailAlreadyExists": "Ya existe una cuenta con este correo.",
+      "invalidCredentials": "Correo o contraseña incorrectos.",
+      "register": "No se pudo crear la cuenta.",
+      "login": "No se pudo iniciar sesión."
+    },
+    "validation": {
+      "name": "Ingresa al menos 2 caracteres.",
+      "email": "Ingresa un correo electrónico válido.",
+      "password": "La contraseña debe tener al menos 6 caracteres.",
+      "passwordConfirmation": "Las contraseñas no coinciden.",
+      "phone": "Ingresa un número de teléfono válido."
+    },
+    "messages": {
+      "registered": "Cuenta creada correctamente. Ahora puedes iniciar sesión."
+    }
+  },
+
+  "profile": {
+    "pageTitle": "Mi perfil",
+    "sectionLabel": "Información personal",
+    "title": "Mi perfil",
+    "description": "Consulta y mantén actualizados los datos asociados a tu cuenta.",
+    "fields": {
+      "name": "Nombre",
+      "firstName": "Nombres",
+      "lastName": "Apellidos",
+      "email": "Correo electrónico",
+      "phone": "Teléfono",
+      "documentType": "Tipo de documento",
+      "documentNumber": "Número de documento",
+      "birthDate": "Fecha de nacimiento",
+      "address": "Dirección",
+      "district": "Distrito",
+      "province": "Provincia",
+      "department": "Departamento",
+      "country": "País"
+    },
+    "actions": {
+      "edit": "Editar perfil",
+      "save": "Guardar cambios",
+      "saving": "Guardando...",
+      "cancel": "Cancelar"
+    },
+    "documentTypes": {
+      "dni": "DNI",
+      "foreignCard": "Carné de extranjería",
+      "passport": "Pasaporte"
+    },
+    "placeholders": {
+      "documentType": "Selecciona un documento"
+    },
+    "validation": {
+      "name": "Los nombres y apellidos deben tener al menos 2 caracteres."
+    },
+    "messages": {
+      "updated": "Perfil actualizado correctamente."
+    },
+    "errors": {
+      "load": "No se pudo cargar el perfil.",
+      "update": "No se pudo actualizar el perfil."
+    }
+  },
+
+  "notifications": {
+    "pageTitle": "Notificaciones",
+    "sectionLabel": "Centro de notificaciones",
+    "title": "Mis notificaciones",
+    "description": "Consulta los avisos importantes relacionados con tus seguros.",
+    "unreadSummary": "Notificaciones sin leer: {count}",
+    "empty": "No tienes notificaciones.",
+    "fields": {
+      "status": "Estado",
+      "message": "Notificación",
+      "createdAt": "Fecha"
+    },
+    "statuses": {
+      "read": "Leída",
+      "unread": "Sin leer"
+    },
+    "actions": {
+      "column": "Acciones",
+      "view": "Ver detalle",
+      "markAllAsRead": "Marcar todas como leídas"
+    },
+    "types": {
+      "policyExpiration": "La póliza {policyNumber} vencerá el {expirationDate}. Revisa su información y solicita la renovación si corresponde.",
+      "default": "Tienes una nueva notificación."
+    },
+    "messages": {
+      "allMarkedAsRead": "Todas las notificaciones fueron marcadas como leídas."
+    },
+    "errors": {
+      "load": "No se pudieron cargar las notificaciones.",
+      "generate": "No se pudieron generar los avisos de vencimiento.",
+      "markAsRead": "No se pudo marcar la notificación como leída.",
+      "markAllAsRead": "No se pudieron marcar las notificaciones como leídas."
+    }
+  },
+  "subscriptions": {
+    "plans": {
+      "pageTitle": "Planes de suscripción",
+      "sectionLabel": "Planes Livva",
+      "title": "Elige el plan que mejor se adapta a ti",
+      "description": "Compara beneficios y selecciona la opción que mejor se adapte a tus necesidades de gestión de seguros.",
+      "monthly": "Mensual",
+      "annual": "Anual",
+      "annualSaving": "Ahorra con el pago anual",
+      "recommended": "Recomendado",
+      "currency": "S/",
+      "monthPeriod": "/ mes",
+      "yearPeriod": "/ año",
+      "choose": "Elegir plan",
+      "currentPlan": "Plan actual",
+      "basic": {
+        "title": "Plan Básico",
+        "basicDescription": "Ideal para usuarios que desean comenzar a gestionar sus seguros de manera sencilla.",
+        "basicFeature1": "Comparación de opciones de seguros",
+        "basicFeature2": "Gestión básica de pólizas",
+        "basicFeature3": "Acceso a información centralizada",
+        "basicFeature4": "Soporte digital"
+      },
+      "pro": {
+        "title": "Livva Pro",
+        "proDescription": "Para usuarios que buscan una experiencia más completa y personalizada.",
+        "proFeature1": "Todos los beneficios del Plan Básico",
+        "proFeature2": "Seguimiento avanzado de pólizas",
+        "proFeature3": "Recomendaciones personalizadas",
+        "proFeature4": "Soporte prioritario"
+      }
+    },
+    "mySubscription": {
+      "pageTitle": "Mi suscripción",
+      "sectionLabel": "Gestión de suscripción",
+      "title": "Mi suscripción",
+      "description": "Consulta el plan contratado, su estado y el historial de pagos.",
+      "noSubscription": "Todavía no tienes una suscripción de Livva.",
+      "browsePlans": "Consultar planes",
+      "currentPlan": "Plan contratado",
+      "status": "Estado",
+      "billingCycle": "Modalidad de pago",
+      "startDate": "Fecha de inicio",
+      "nextBillingDate": "Próximo pago",
+      "cancelledAt": "Fecha de cancelación",
+      "monthly": "Mensual",
+      "annual": "Anual",
+      "statuses": {
+        "active": "Activa",
+        "cancelled": "Cancelada",
+        "pending": "Pendiente"
+      },
+      "actions": {
+        "cancel": "Cancelar suscripción",
+        "confirmCancel": "Confirmar cancelación",
+        "keep": "Mantener suscripción"
+      },
+      "cancellation": {
+        "title": "Cancelar suscripción",
+        "description": "Tu suscripción dejará de estar activa. Esta acción no elimina el historial de pagos."
+      },
+      "payments": {
+        "title": "Historial de pagos",
+        "empty": "Todavía no existen pagos registrados.",
+        "date": "Fecha",
+        "provider": "Proveedor",
+        "amount": "Monto",
+        "status": "Estado",
+        "approved": "Aprobado",
+        "rejected": "Rechazado",
+        "pending": "Pendiente"
+      }
+    },
+    "payment": {
+      "title": "Activar suscripción",
+      "description": "Revisa el plan seleccionado antes de continuar con el pago de prueba.",
+      "selectedPlan": "Plan seleccionado",
+      "billingCycle": "Modalidad",
+      "total": "Total",
+      "sandboxNotice": "Este pago utiliza un entorno sandbox y no realizará ningún cobro real.",
+      "continue": "Continuar al pago sandbox",
+      "cancel": "Cancelar",
+      "processing": "Procesando pago..."
+    },
+    "messages": {
+      "activated": "La suscripción fue activada correctamente.",
+      "cancelled": "La suscripción fue cancelada correctamente."
+    },
+    "errors": {
+      "loadPlans": "No se pudieron cargar los planes.",
+      "loadSubscription": "No se pudo cargar la suscripción.",
+      "loadPayments": "No se pudo cargar el historial de pagos.",
+      "activeExists": "Ya tienes una suscripción activa.",
+      "paymentNotApproved": "El pago no fue aprobado.",
+      "planNotFound": "El plan seleccionado no existe.",
+      "activate": "No se pudo activar la suscripción.",
+      "cancel": "No se pudo cancelar la suscripción.",
+      "payment": "No se pudo completar el pago sandbox."
+    }
+  }
+}

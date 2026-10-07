@@ -1,5 +1,61 @@
-import { createApp } from 'vue'
-import './style.css'
-import App from './App.vue'
+import { createApp } from 'vue';
+import PrimeVue from 'primevue/config';
+import Material from '@primevue/themes/material';
+import ConfirmationService from 'primevue/confirmationservice';
+import ToastService from 'primevue/toastservice';
+import Button from 'primevue/button';
+import Card from 'primevue/card';
+import Column from 'primevue/column';
+import DataTable from 'primevue/datatable';
+import Message from 'primevue/message';
+import ProgressSpinner from 'primevue/progressspinner';
+import Tag from 'primevue/tag';
+import ConfirmDialog from 'primevue/confirmdialog';
+import Select from 'primevue/select';
 
-createApp(App).mount('#app')
+import App from './app.vue';
+import router from './router.js';
+import pinia from './pinia.js';
+import i18n from './i18n.js';
+
+import 'primeicons/primeicons.css';
+import 'primeflex/primeflex.css';
+import './style.css';
+
+import Dialog from 'primevue/dialog';
+import InputNumber from 'primevue/inputnumber';
+import InputText from 'primevue/inputtext';
+import Toast from 'primevue/toast';
+
+const app = createApp(App);
+
+app.use(PrimeVue, {
+    theme: {
+        preset: Material,
+        options: {
+            darkModeSelector: false
+        }
+    }
+});
+
+app.use(ConfirmationService);
+app.use(ToastService);
+app.use(router);
+app.use(pinia);
+app.use(i18n);
+
+app.component('pv-button', Button);
+app.component('pv-card', Card);
+app.component('pv-column', Column);
+app.component('pv-data-table', DataTable);
+app.component('pv-message', Message);
+app.component('pv-progress-spinner', ProgressSpinner);
+app.component('pv-tag', Tag);
+app.component('pv-dialog', Dialog);
+app.component('pv-input-number', InputNumber);
+app.component('pv-input-text', InputText);
+app.component('pv-toast', Toast);
+app.component('pv-confirm-dialog', ConfirmDialog);
+app.component('pv-select', Select);
+
+app.mount('#app');

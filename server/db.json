@@ -1,0 +1,486 @@
+{
+  "users": [
+    {
+      "id": 1,
+      "firstName": "Cliente",
+      "lastName": "Livva",
+      "email": "cliente@livva.pe",
+      "passwordHash": "development-only-hash",
+      "phone": "+51 999 999 999",
+      "role": "CUSTOMER",
+      "active": true,
+      "createdAt": "2026-09-01T10:00:00Z",
+      "updatedAt": "2026-09-01T10:00:00Z"
+    }
+  ],
+  "user-profiles": [
+    {
+      "id": 1,
+      "userId": 1,
+      "documentType": "DNI",
+      "documentNumber": "12345678",
+      "birthDate": "2002-05-15",
+      "address": "Av. Primavera 123",
+      "district": "Miraflores",
+      "province": "Lima",
+      "department": "Lima",
+      "country": "Peru",
+      "createdAt": "2026-09-01T10:00:00Z",
+      "updatedAt": "2026-10-05T21:43:34.447Z"
+    }
+  ],
+  "insurers": [
+    {
+      "id": 1,
+      "externalReference": "INS-ANDINA",
+      "name": "Protección Andina",
+      "active": true,
+      "createdAt": "2026-09-01T10:00:00Z",
+      "updatedAt": "2026-09-01T10:00:00Z"
+    },
+    {
+      "id": 2,
+      "externalReference": "INS-HORIZONTE",
+      "name": "Horizonte Seguros",
+      "active": true,
+      "createdAt": "2026-09-01T10:00:00Z",
+      "updatedAt": "2026-09-01T10:00:00Z"
+    },
+    {
+      "id": 3,
+      "externalReference": "INS-CONFIANZA",
+      "name": "Confianza Vida",
+      "active": true,
+      "createdAt": "2026-09-01T10:00:00Z",
+      "updatedAt": "2026-09-01T10:00:00Z"
+    }
+  ],
+  "insurance-products": [
+    {
+      "id": 1,
+      "insurerId": 1,
+      "name": "Auto Esencial",
+      "insuranceType": "vehicle",
+      "coverageAmount": 35000,
+      "premiumAmount": 650,
+      "active": true,
+      "createdAt": "2026-09-01T10:00:00Z",
+      "updatedAt": "2026-09-01T10:00:00Z"
+    },
+    {
+      "id": 2,
+      "insurerId": 1,
+      "name": "Auto Integral",
+      "insuranceType": "vehicle",
+      "coverageAmount": 70000,
+      "premiumAmount": 1100,
+      "active": true,
+      "createdAt": "2026-09-01T10:00:00Z",
+      "updatedAt": "2026-09-01T10:00:00Z"
+    },
+    {
+      "id": 3,
+      "insurerId": 2,
+      "name": "Vehículo Total",
+      "insuranceType": "vehicle",
+      "coverageAmount": 100000,
+      "premiumAmount": 1450,
+      "active": true,
+      "createdAt": "2026-09-01T10:00:00Z",
+      "updatedAt": "2026-09-01T10:00:00Z"
+    },
+    {
+      "id": 4,
+      "insurerId": 2,
+      "name": "Vida Familiar",
+      "insuranceType": "life",
+      "coverageAmount": 80000,
+      "premiumAmount": 780,
+      "active": true,
+      "createdAt": "2026-09-01T10:00:00Z",
+      "updatedAt": "2026-09-01T10:00:00Z"
+    },
+    {
+      "id": 5,
+      "insurerId": 3,
+      "name": "Vida Protección",
+      "insuranceType": "life",
+      "coverageAmount": 120000,
+      "premiumAmount": 1050,
+      "active": true,
+      "createdAt": "2026-09-01T10:00:00Z",
+      "updatedAt": "2026-09-01T10:00:00Z"
+    },
+    {
+      "id": 6,
+      "insurerId": 3,
+      "name": "Vida Plus",
+      "insuranceType": "life",
+      "coverageAmount": 200000,
+      "premiumAmount": 1600,
+      "active": true,
+      "createdAt": "2026-09-01T10:00:00Z",
+      "updatedAt": "2026-09-01T10:00:00Z"
+    }
+  ],
+  "vehicles": [
+    {
+      "id": 1,
+      "userId": 1,
+      "licensePlate": "ABC-123",
+      "brand": "Toyota",
+      "model": "Corolla",
+      "manufactureYear": 2022,
+      "estimatedValue": 65000,
+      "createdAt": "2026-09-15T10:00:00Z",
+      "updatedAt": "2026-09-15T10:00:00Z"
+    },
+    {
+      "userId": 1,
+      "licensePlate": "67SIX-SE",
+      "brand": "Ferrari",
+      "model": "PuraSangre",
+      "manufactureYear": 2026,
+      "estimatedValue": 100000,
+      "createdAt": "2026-10-03T22:51:44.075Z",
+      "updatedAt": "2026-10-03T22:51:44.075Z",
+      "id": 2
+    },
+    {
+      "userId": 1,
+      "licensePlate": "SIXSEVEN",
+      "brand": "Mitsubishi",
+      "model": "Eclipse",
+      "manufactureYear": 1999,
+      "estimatedValue": 500,
+      "createdAt": "2026-10-03T23:25:40.891Z",
+      "updatedAt": "2026-10-03T23:25:40.891Z",
+      "id": 3
+    }
+  ],
+  "insurance-applications": [
+    {
+      "userId": 1,
+      "productId": 3,
+      "requestedCoverage": 100000,
+      "status": "pending",
+      "createdAt": "2026-10-03T23:46:08.672Z",
+      "updatedAt": "2026-10-03T23:46:08.672Z",
+      "id": 1
+    },
+    {
+      "userId": 1,
+      "productId": 6,
+      "requestedCoverage": 10000,
+      "status": "pending",
+      "createdAt": "2026-10-04T00:28:34.493Z",
+      "updatedAt": "2026-10-04T00:28:34.493Z",
+      "id": 2
+    },
+    {
+      "userId": 1,
+      "productId": 4,
+      "requestedCoverage": 80000,
+      "status": "pending",
+      "createdAt": "2026-10-04T00:32:24.414Z",
+      "updatedAt": "2026-10-04T00:32:24.414Z",
+      "id": 3
+    }
+  ],
+  "vehicle-insurance-applications": [
+    {
+      "applicationId": 1,
+      "vehicleId": 3,
+      "id": 1
+    }
+  ],
+  "life-insurance-applications": [
+    {
+      "applicationId": 2,
+      "id": 1
+    },
+    {
+      "applicationId": 3,
+      "id": 2
+    }
+  ],
+  "beneficiaries": [
+    {
+      "id": 1,
+      "policyId": 2,
+      "fullName": "María Fernanda López",
+      "documentType": "DNI",
+      "documentNumber": "45871236",
+      "relationship": "spouse",
+      "birthDate": "1988-06-15",
+      "participationPercentage": 50,
+      "createdAt": "2026-03-01T10:00:00Z",
+      "updatedAt": "2026-10-05T15:47:09.410Z"
+    },
+    {
+      "id": 2,
+      "policyId": 2,
+      "fullName": "Diego Ramírez López",
+      "documentType": "DNI",
+      "documentNumber": "73458129",
+      "relationship": "child",
+      "birthDate": "2012-09-20",
+      "participationPercentage": 40,
+      "createdAt": "2026-03-01T10:00:00Z",
+      "updatedAt": "2026-03-01T10:00:00Z"
+    },
+    {
+      "policyId": 2,
+      "fullName": "Helton Emilio Ramos Herrera",
+      "documentType": "DNI",
+      "documentNumber": "12345678",
+      "relationship": "child",
+      "birthDate": "2007-03-19",
+      "participationPercentage": 10,
+      "createdAt": "2026-10-05T15:48:14.736Z",
+      "updatedAt": "2026-10-05T15:48:14.736Z",
+      "id": 3
+    }
+  ],
+  "policies": [
+    {
+      "id": 1,
+      "userId": 1,
+      "applicationId": 1,
+      "policyNumber": "LIV-VEH-0001",
+      "insuranceType": "vehicle",
+      "startDate": "2026-01-15",
+      "expirationDate": "2027-01-14",
+      "premiumAmount": 1200,
+      "coverageAmount": 60000,
+      "status": "active",
+      "createdAt": "2026-01-15T10:00:00Z",
+      "updatedAt": "2026-01-15T10:00:00Z"
+    },
+    {
+      "id": 2,
+      "userId": 1,
+      "applicationId": 2,
+      "policyNumber": "LIV-LIF-0002",
+      "insuranceType": "life",
+      "startDate": "2026-03-01",
+      "expirationDate": "2027-02-28",
+      "premiumAmount": 960,
+      "coverageAmount": 100000,
+      "status": "active",
+      "createdAt": "2026-03-01T10:00:00Z",
+      "updatedAt": "2026-03-01T10:00:00Z"
+    },
+    {
+      "id": 3,
+      "userId": 1,
+      "applicationId": 3,
+      "policyNumber": "LIV-VEH-0003",
+      "insuranceType": "vehicle",
+      "startDate": "2025-08-01",
+      "expirationDate": "2026-07-31",
+      "premiumAmount": 1080,
+      "coverageAmount": 45000,
+      "status": "expired",
+      "createdAt": "2025-08-01T10:00:00Z",
+      "updatedAt": "2026-07-31T10:00:00Z"
+    }
+  ],
+  "policy-coverages": [
+    {
+      "id": 1,
+      "policyId": 1,
+      "name": "Vehicle damage",
+      "description": "Coverage for damage to the insured vehicle.",
+      "coverageLimit": 60000,
+      "createdAt": "2026-01-15T10:00:00Z",
+      "updatedAt": "2026-01-15T10:00:00Z"
+    },
+    {
+      "id": 2,
+      "policyId": 1,
+      "name": "Third-party liability",
+      "description": "Coverage for damage caused to third parties.",
+      "coverageLimit": 30000,
+      "createdAt": "2026-01-15T10:00:00Z",
+      "updatedAt": "2026-01-15T10:00:00Z"
+    },
+    {
+      "id": 3,
+      "policyId": 2,
+      "name": "Life coverage",
+      "description": "Financial protection for registered beneficiaries.",
+      "coverageLimit": 100000,
+      "createdAt": "2026-03-01T10:00:00Z",
+      "updatedAt": "2026-03-01T10:00:00Z"
+    }
+  ],
+  "policy-documents": [
+    {
+      "id": 1,
+      "policyId": 1,
+      "documentType": "policy",
+      "name": "Vehicle policy document",
+      "fileUrl": "",
+      "createdAt": "2026-01-15T10:00:00Z",
+      "updatedAt": "2026-01-15T10:00:00Z"
+    },
+    {
+      "id": 2,
+      "policyId": 2,
+      "documentType": "policy",
+      "name": "Life policy document",
+      "fileUrl": "",
+      "createdAt": "2026-03-01T10:00:00Z",
+      "updatedAt": "2026-03-01T10:00:00Z"
+    }
+  ],
+  "renewals": [
+    {
+      "id": 1,
+      "policyId": 3,
+      "requestedAt": "2026-07-15T10:00:00Z",
+      "status": "rejected",
+      "createdAt": "2026-07-15T10:00:00Z",
+      "updatedAt": "2026-07-18T15:30:00Z"
+    },
+    {
+      "policyId": 3,
+      "requestedAt": "2026-10-05T19:56:14.796Z",
+      "status": "pending",
+      "createdAt": "2026-10-05T19:56:14.796Z",
+      "updatedAt": "2026-10-05T19:56:14.796Z",
+      "id": 2
+    }
+  ],
+  "vehicle-claims": [
+    {
+      "id": 1,
+      "policyId": 1,
+      "incidentDate": "2026-09-28",
+      "incidentLocation": "Av. Javier Prado, San Isidro",
+      "description": "Colisión leve con otro vehículo durante el tránsito.",
+      "estimatedDamageAmount": 4800,
+      "status": "under_review",
+      "reportedAt": "2026-09-28T18:30:00Z",
+      "createdAt": "2026-09-28T18:30:00Z",
+      "updatedAt": "2026-09-29T14:00:00Z"
+    },
+    {
+      "policyId": 1,
+      "incidentDate": "2026-10-05",
+      "incidentLocation": "Av. Arequipa, Lima",
+      "description": "El vehículo sufrió un impacto leve en la parte posterior.",
+      "estimatedDamageAmount": 2500,
+      "status": "reported",
+      "reportedAt": "2026-10-05T20:42:33.291Z",
+      "createdAt": "2026-10-05T20:42:33.291Z",
+      "updatedAt": "2026-10-05T20:42:33.291Z",
+      "id": 2
+    }
+  ],
+  "claim-status-histories": [
+    {
+      "id": 1,
+      "claimId": 1,
+      "status": "reported",
+      "comment": "Siniestro registrado por el asegurado.",
+      "changedAt": "2026-09-28T18:30:00Z",
+      "createdAt": "2026-09-28T18:30:00Z"
+    },
+    {
+      "id": 2,
+      "claimId": 1,
+      "status": "under_review",
+      "comment": "La información fue enviada a la compañía aseguradora para su revisión.",
+      "changedAt": "2026-09-29T14:00:00Z",
+      "createdAt": "2026-09-29T14:00:00Z"
+    },
+    {
+      "claimId": 2,
+      "status": "reported",
+      "comment": "",
+      "changedAt": "2026-10-05T20:42:33.291Z",
+      "createdAt": "2026-10-05T20:42:33.291Z",
+      "id": 3
+    }
+  ],
+  "indemnity-requests": [],
+  "indemnity-status-histories": [],
+  "subscription-plans": [
+    {
+      "id": 1,
+      "name": "basic",
+      "description": "basicDescription",
+      "monthlyPrice": 19,
+      "annualPrice": 190,
+      "benefits": [
+        "basicFeature1",
+        "basicFeature2",
+        "basicFeature3",
+        "basicFeature4"
+      ],
+      "active": true,
+      "createdAt": "2026-10-05T00:00:00Z",
+      "updatedAt": "2026-10-05T00:00:00Z"
+    },
+    {
+      "id": 2,
+      "name": "pro",
+      "description": "proDescription",
+      "monthlyPrice": 39,
+      "annualPrice": 390,
+      "benefits": [
+        "proFeature1",
+        "proFeature2",
+        "proFeature3",
+        "proFeature4"
+      ],
+      "active": true,
+      "createdAt": "2026-10-05T00:00:00Z",
+      "updatedAt": "2026-10-05T00:00:00Z"
+    }
+  ],
+  "user-subscriptions": [
+    {
+      "userId": 1,
+      "planId": 1,
+      "billingCycle": "monthly",
+      "status": "active",
+      "startDate": "2026-10-06T04:42:40.549Z",
+      "nextBillingDate": "2026-11-06T04:42:40.549Z",
+      "cancelledAt": null,
+      "createdAt": "2026-10-06T04:42:40.549Z",
+      "updatedAt": "2026-10-06T04:42:40.549Z",
+      "id": 1
+    }
+  ],
+  "subscription-payments": [
+    {
+      "userSubscriptionId": 1,
+      "userId": 1,
+      "planId": 1,
+      "provider": "mercado-pago-sandbox",
+      "providerPaymentId": "PAY01M47RAPA41A2BAHYHJ99BTE81",
+      "amount": 19,
+      "currency": "PEN",
+      "status": "approved",
+      "paidAt": "2026-10-06T04:42:41.133Z",
+      "createdAt": "2026-10-06T04:42:40.549Z",
+      "id": 1
+    }
+  ],
+  "notifications": [
+    {
+      "userId": 1,
+      "type": "policy_expiration",
+      "policyId": 1,
+      "policyNumber": "LIV-VEH-0001",
+      "expirationDate": "2027-01-14",
+      "isRead": false,
+      "readAt": null,
+      "createdAt": "2026-10-06T03:29:53.326Z",
+      "id": 1
+    }
+  ]
+}

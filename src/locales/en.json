@@ -1,0 +1,679 @@
+{
+  "app": {
+    "name": "Livva"
+  },
+  "navigation": {
+    "main": "Main navigation",
+    "home": "Home",
+    "about": "About",
+    "policies": "Policies",
+    "vehicleInsurance": "Vehicle",
+    "vehicles": "My vehicles",
+    "applications": "Applications",
+    "vehicleClaims": "Claims",
+    "lifeInsurance": "Life",
+    "lifeApplications": "Applications",
+    "beneficiaries": "Beneficiaries",
+    "subscription": "My subscription",
+    "login": "Sign in",
+    "register": "Create account",
+    "profile": "My profile",
+    "notifications": "Notifications",
+    "logout": "Sign out"
+  },
+  "home": {
+    "pageTitle": "Home",
+    "heroLabel": "Digital protection for you",
+    "title": "Simple insurance for every stage of your life",
+    "description": "Manage your vehicle and life insurance through a fast, clear platform designed to support you.",
+    "protectedTitle": "Active protection",
+    "protectedDescription": "Manage your insurance from one place.",
+    "actions": {
+      "policies": "View my policies",
+      "about": "Discover Livva"
+    },
+    "services": {
+      "label": "Our services",
+      "title": "Everything you need in one place",
+      "description": "Quickly access the main tools you need to manage your protection.",
+      "action": "Learn more",
+      "vehicle": {
+        "title": "Vehicle insurance",
+        "description": "Manage your vehicles, applications and claims through a digital experience."
+      },
+      "life": {
+        "title": "Life insurance",
+        "description": "Request protection for yourself and easily manage your beneficiaries."
+      },
+      "policies": {
+        "title": "My policies",
+        "description": "Review coverage, expiration dates, renewals and your policy status."
+      }
+    }
+  },"about": {
+  "pageTitle": "About",
+  "sectionLabel": "Meet Livva",
+  "title": "Simple, clear and digital protection",
+  "description": "Livva facilitates the digital intermediation and management of vehicle and life insurance, helping people access protection more easily.",
+  "values": {
+    "security": {
+      "title": "Trust",
+      "description": "We design clear experiences so you can manage your protection with confidence."
+    },
+    "digital": {
+      "title": "Digital experience",
+      "description": "We centralize your main operations to reduce unnecessary processes."
+    },
+    "people": {
+      "title": "People first",
+      "description": "We build solutions around the real needs of our users."
+    }
+  },
+  "mission": {
+    "label": "Our mission",
+    "title": "Simplify access to insurance",
+    "description": "Bring protection closer to more people through clear, accessible and easy-to-use digital tools."
+  },
+  "vision": {
+    "label": "Our vision",
+    "title": "A more approachable insurance experience",
+    "description": "Become a trusted digital platform that simplifies the relationship between people and their insurance."
+  }
+},
+  "notFound": {
+    "pageTitle": "Page not found",
+    "title": "Page not found",
+    "description": "The page you requested does not exist.",
+    "action": "Return home"
+  },
+  "vehicles": {
+    "pageTitle": "Vehicles",
+    "sectionLabel": "Vehicle management",
+    "title": "My vehicles",
+    "description": "Review the vehicles registered in your account.",
+    "empty": "There are no registered vehicles.",
+    "fields": {
+      "licensePlate": "License plate",
+      "brand": "Brand",
+      "model": "Model",
+      "manufactureYear": "Manufacture year",
+      "estimatedValue": "Estimated value"
+    },
+    "actions": {
+      "add": "Add vehicle",
+      "edit": "Edit",
+      "cancel": "Cancel",
+      "save": "Save",
+      "column": "Actions",
+      "delete": "Delete"
+    },
+    "form": {
+      "createTitle": "Register vehicle",
+      "editTitle": "Edit vehicle"
+    },
+    "confirmation": {
+      "deleteTitle": "Delete vehicle",
+      "deleteMessage": "Do you want to delete the vehicle with license plate {licensePlate}?"
+    },
+    "validation": {
+      "required": "This field is required.",
+      "year": "Enter a year between 1900 and {year}.",
+      "value": "Enter a value greater than zero."
+    },
+    "messages": {
+      "created": "Vehicle registered successfully.",
+      "updated": "Vehicle updated successfully.",
+      "deleted": "Vehicle deleted successfully."
+    },
+    "errors": {
+      "load": "Vehicles could not be loaded.",
+      "create": "The vehicle could not be registered.",
+      "update": "The vehicle could not be updated.",
+      "delete": "The vehicle could not be deleted."
+    }
+  },
+  "vehicleApplications": {
+    "pageTitle": "Vehicle applications",
+    "sectionLabel": "Vehicle insurance",
+    "title": "Insurance applications",
+    "description": "Submit an insurance application for one of your vehicles and review its status.",
+    "empty": "There are no vehicle insurance applications.",
+    "creationUnavailable": "You need at least one vehicle and one active vehicle product to submit an application.",
+    "fields": {
+      "number": "Application",
+      "vehicle": "Vehicle",
+      "product": "Product",
+      "maximumCoverage": "Maximum coverage",
+      "premiumAmount": "Premium amount",
+      "requestedCoverage": "Requested coverage",
+      "status": "Status",
+      "createdAt": "Application date",
+      "actions": "Actions"
+
+    },
+    "actions": {
+      "create": "New application",
+      "cancel": "Cancel",
+      "submit": "Submit application",
+      "cancelApplication": "Cancel application"
+
+    },
+    "form": {
+      "title": "Apply for vehicle insurance",
+      "selectVehicle": "Select a vehicle",
+      "selectProduct": "Select a product"
+    },
+    "statuses": {
+      "pending": "Pending",
+      "under_review": "Under review",
+      "approved": "Approved",
+      "rejected": "Rejected",
+      "cancelled": "Cancelled"
+    },
+    "validation": {
+      "vehicleRequired": "Select a vehicle.",
+      "productRequired": "Select a product.",
+      "coverageRequired": "Enter coverage greater than zero.",
+      "coverageMaximum": "Coverage cannot exceed {amount}."
+    },
+    "messages": {
+      "created": "Application submitted successfully.",
+      "cancelled": "Application cancelled successfully."
+
+    },
+    "errors": {
+      "load": "Applications could not be loaded.",
+      "create": "The application could not be submitted.",
+      "invalidData": "The application data is invalid."
+    }
+  },
+  "lifeApplications": {
+    "pageTitle": "Life applications",
+    "sectionLabel": "Life insurance",
+    "title": "Life insurance applications",
+    "description": "Apply for financial protection and review the status of your applications.",
+    "empty": "There are no life insurance applications.",
+    "creationUnavailable": "There are no active life insurance products available.",
+    "fields": {
+      "number": "Application",
+      "product": "Product",
+      "maximumCoverage": "Maximum coverage",
+      "premiumAmount": "Premium amount",
+      "requestedCoverage": "Requested coverage",
+      "status": "Status",
+      "createdAt": "Application date",
+      "actions": "Actions"
+    },
+    "actions": {
+      "create": "New application",
+      "cancel": "Cancel",
+      "submit": "Submit application",
+      "cancelApplication": "Cancel application"
+    },
+    "form": {
+      "title": "Apply for life insurance",
+      "selectProduct": "Select a product"
+    },
+    "statuses": {
+      "pending": "Pending",
+      "under_review": "Under review",
+      "approved": "Approved",
+      "rejected": "Rejected",
+      "cancelled": "Cancelled"
+    },
+    "validation": {
+      "productRequired": "Select a product.",
+      "coverageRequired": "Enter coverage greater than zero.",
+      "coverageMaximum": "Coverage cannot exceed {amount}."
+    },
+    "messages": {
+      "created": "Life insurance application submitted successfully.",
+      "cancelled": "Application cancelled successfully."
+    },
+    "errors": {
+      "load": "Life insurance applications could not be loaded.",
+      "create": "The life insurance application could not be submitted.",
+      "invalidData": "The application data is invalid.",
+      "cancel": "The application could not be cancelled."
+    }
+  },
+  "beneficiaries": {
+      "pageTitle": "Beneficiaries",
+      "sectionLabel": "Beneficiary management",
+      "title": "My beneficiaries",
+      "description": "Review and keep the beneficiary information of your life insurance policies up to date.",
+      "empty": "There are no beneficiaries registered.",
+      "noLifePolicies": "You need an active life insurance policy to register beneficiaries.",
+      "fields": {
+        "policy": "Life insurance policy",
+        "fullName": "Full name",
+        "documentType": "Document type",
+        "documentNumber": "Document number",
+        "document": "Document",
+        "relationship": "Relationship",
+        "birthDate": "Birth date",
+        "percentage": "Participation percentage"
+      },
+      "documentTypes": {
+        "dni": "National ID",
+        "foreignCard": "Foreigner identity card",
+        "passport": "Passport"
+      },
+      "relationships": {
+        "spouse": "Spouse",
+        "child": "Child",
+        "parent": "Parent",
+        "sibling": "Sibling",
+        "other": "Other"
+      },
+      "form": {
+        "createTitle": "Register beneficiary",
+        "editTitle": "Edit beneficiary",
+        "selectPolicy": "Select a policy",
+        "selectDocumentType": "Select a document",
+        "selectRelationship": "Select the relationship"
+      },
+      "actions": {
+        "add": "Add beneficiary",
+        "edit": "Edit",
+        "column": "Actions",
+        "cancel": "Cancel",
+        "save": "Save"
+      },
+      "validation": {
+        "required": "This field is required.",
+        "document": "Enter a valid document containing 8 to 12 characters.",
+        "birthDate": "Enter a valid birth date.",
+        "percentage": "The percentage must be between 1 and 100.",
+        "totalPercentage": "Only {available}% remains available for this policy."
+      },
+      "messages": {
+        "created": "Beneficiary registered successfully.",
+        "updated": "Beneficiary updated successfully."
+      },
+      "errors": {
+        "load": "Beneficiaries could not be loaded.",
+        "create": "The beneficiary could not be registered.",
+        "update": "The beneficiary could not be updated.",
+        "notFound": "The beneficiary could not be found."
+      }
+    },
+  "policies": {
+    "pageTitle": "Policies",
+    "detailPageTitle": "Policy details",
+    "sectionLabel": "Policy management",
+    "title": "My policies",
+    "description": "Review the insurance policies associated with your account.",
+    "empty": "There are no policies available.",
+    "types": {
+      "vehicle": "Vehicle insurance",
+      "life": "Life insurance"
+    },
+    "statuses": {
+      "active": "Active",
+      "expired": "Expired"
+    },
+    "fields": {
+      "startDate": "Start date",
+      "expirationDate": "Expiration date",
+      "premiumAmount": "Premium amount",
+      "coverageAmount": "Coverage amount"
+    },
+
+    "actions": {
+      "viewDetails": "View details",
+      "backToPolicies": "Back to policies",
+      "openDocument": "Open document"
+    },
+    "detail": {
+      "generalInformation": "General information",
+      "coverages": "Coverages",
+      "documents": "Documents",
+      "noCoverages": "No coverages are registered for this policy.",
+      "noDocuments": "No documents are registered for this policy.",
+      "documentUnavailable": "Document unavailable"
+    },
+    "errors": {
+      "loadList": "Policies could not be loaded.",
+      "loadDetail": "Policy details could not be loaded."
+    }
+  },
+  "renewals": {
+    "title": "Policy renewal",
+    "description": "Request a renewal to maintain the continuity of your coverage.",
+    "empty": "There are no renewal requests for this policy yet.",
+    "fields": {
+      "requestedAt": "Request date",
+      "status": "Status"
+    },
+    "statuses": {
+      "pending": "Pending",
+      "under_review": "Under review",
+      "approved": "Approved",
+      "rejected": "Rejected",
+      "cancelled": "Cancelled"
+    },
+    "actions": {
+      "request": "Request renewal",
+      "pending": "Renewal pending",
+      "cancel": "Cancel",
+      "confirm": "Confirm request"
+    },
+    "confirmation": {
+      "title": "Request renewal",
+      "message": "Do you want to request the renewal of policy {policyNumber}?"
+    },
+    "messages": {
+      "created": "Renewal request submitted successfully."
+    },
+    "errors": {
+      "load": "Renewals could not be loaded.",
+      "create": "The renewal request could not be submitted.",
+      "duplicate": "This policy already has a pending renewal."
+    }
+  },
+  "vehicleClaims": {
+    "pageTitle": "Vehicle claims",
+    "sectionLabel": "Claim management",
+    "title": "My vehicle claims",
+    "description": "Report a vehicle incident and review the progress of its evaluation.",
+    "empty": "There are no vehicle claims registered.",
+    "noActivePolicies": "You need an active vehicle policy to report a new claim.",
+    "fields": {
+      "number": "Number",
+      "claim": "Claim",
+      "policy": "Vehicle policy",
+      "incidentDate": "Incident date",
+      "location": "Incident location",
+      "description": "Incident description",
+      "estimatedDamageAmount": "Estimated damage",
+      "status": "Status"
+    },
+
+    "confirmation": {
+      "cancelTitle": "Cancel claim",
+      "cancelMessage": "Are you sure you want to cancel this claim?"
+    },
+
+    "statuses": {
+      "reported": "Reported",
+      "under_review": "Under review",
+      "information_required": "Information required",
+      "approved": "Approved",
+      "rejected": "Rejected",
+      "closed": "Closed",
+      "cancelled": "Cancelled"
+    },
+    "form": {
+      "createTitle": "Report vehicle claim",
+      "selectPolicy": "Select an active policy"
+    },
+    "actions": {
+      "add": "Report claim",
+      "column": "Actions",
+      "viewStatus": "View status",
+      "cancel": "Cancel",
+      "save": "Submit",
+      "close": "Close",
+      "cancelClaim": "Cancel claim",
+      "keep": "Keep claim"
+    },
+    "history": {
+      "title": "Claim history",
+      "empty": "There are no status changes registered.",
+      "changedAt": "Update date",
+      "comment": "Comment"
+    },
+    "validation": {
+      "required": "This field is required.",
+      "incidentDate": "Enter a valid date that is not later than today.",
+      "location": "Enter a valid location containing at least 3 characters.",
+      "description": "Describe the incident using at least 10 characters.",
+      "damageAmount": "Enter an estimated amount greater than zero."
+    },
+    "messages": {
+      "created": "Vehicle claim reported successfully.",
+      "cancelled": "Claim cancelled successfully."
+
+    },
+    "errors": {
+      "load": "Vehicle claims could not be loaded.",
+      "historyLoad": "The claim history could not be loaded.",
+      "create": "The vehicle claim could not be reported.",
+      "cancel": "The claim could not be cancelled."
+    }
+  },
+  "footer": {
+    "description": "Simple digital protection designed to support you at every stage.",
+    "navigationLabel": "Footer navigation",
+    "copyright": "© {year} Livva Care. All rights reserved."
+  },
+  "auth": {
+    "register": {
+      "pageTitle": "Create account",
+      "sectionLabel": "Customer account",
+      "title": "Create your Livva account",
+      "description": "Register your details to manage your insurance in one place.",
+      "firstName": "First name",
+      "lastName": "Last name",
+      "email": "Email",
+      "password": "Password",
+      "passwordConfirmation": "Confirm password",
+      "phone": "Phone",
+      "submit": "Create account",
+      "creating": "Creating account...",
+      "alreadyHaveAccount": "Already have an account?",
+      "signIn": "Sign in"
+    },
+    "login": {
+      "pageTitle": "Sign in",
+      "sectionLabel": "Livva access",
+      "title": "Sign in to Livva",
+      "description": "Access your vehicles, applications, policies, and other services.",
+      "email": "Email",
+      "password": "Password",
+      "submit": "Sign in",
+      "signingIn": "Signing in...",
+      "noAccount": "Don't have an account?",
+      "createAccount": "Create account"
+    },
+    "errors": {
+      "emailAlreadyExists": "An account with this email already exists.",
+      "invalidCredentials": "Invalid email or password.",
+      "register": "The account could not be created.",
+      "login": "Unable to sign in."
+    },
+    "validation": {
+      "name": "Enter at least 2 characters.",
+      "email": "Enter a valid email address.",
+      "password": "The password must contain at least 6 characters.",
+      "passwordConfirmation": "The passwords do not match.",
+      "phone": "Enter a valid phone number."
+    },
+    "messages": {
+      "registered": "Account created successfully. You can now sign in."
+    }
+  },
+
+  "profile": {
+    "pageTitle": "My profile",
+    "sectionLabel": "Personal information",
+    "title": "My profile",
+    "description": "Review and keep your account information up to date.",
+    "fields": {
+      "name": "Name",
+      "firstName": "First name",
+      "lastName": "Last name",
+      "email": "Email",
+      "phone": "Phone",
+      "documentType": "Document type",
+      "documentNumber": "Document number",
+      "birthDate": "Birth date",
+      "address": "Address",
+      "district": "District",
+      "province": "Province",
+      "department": "Department",
+      "country": "Country"
+    },
+    "actions": {
+      "edit": "Edit profile",
+      "save": "Save changes",
+      "saving": "Saving...",
+      "cancel": "Cancel"
+    },
+    "documentTypes": {
+      "dni": "National identity document",
+      "foreignCard": "Foreign resident card",
+      "passport": "Passport"
+    },
+    "placeholders": {
+      "documentType": "Select a document"
+    },
+    "validation": {
+      "name": "First and last names must contain at least 2 characters."
+    },
+    "messages": {
+      "updated": "Profile updated successfully."
+    },
+    "errors": {
+      "load": "The profile could not be loaded.",
+      "update": "The profile could not be updated."
+    }
+  },
+
+  "notifications": {
+    "pageTitle": "Notifications",
+    "sectionLabel": "Notification center",
+    "title": "My notifications",
+    "description": "Review important notices related to your insurance policies.",
+    "unreadSummary": "Unread notifications: {count}",
+    "empty": "You have no notifications.",
+    "fields": {
+      "status": "Status",
+      "message": "Notification",
+      "createdAt": "Date"
+    },
+    "statuses": {
+      "read": "Read",
+      "unread": "Unread"
+    },
+    "actions": {
+      "column": "Actions",
+      "view": "View details",
+      "markAllAsRead": "Mark all as read"
+    },
+    "types": {
+      "policyExpiration": "Policy {policyNumber} will expire on {expirationDate}. Review its information and request a renewal if necessary.",
+      "default": "You have a new notification."
+    },
+    "messages": {
+      "allMarkedAsRead": "All notifications were marked as read."
+    },
+    "errors": {
+      "load": "Notifications could not be loaded.",
+      "generate": "Expiration notices could not be generated.",
+      "markAsRead": "The notification could not be marked as read.",
+      "markAllAsRead": "Notifications could not be marked as read."
+    }
+  },
+  "subscriptions": {
+    "plans": {
+      "pageTitle": "Subscription plans",
+      "sectionLabel": "Livva plans",
+      "title": "Choose the plan that fits you best",
+      "description": "Compare benefits and select the option that best fits your insurance management needs.",
+      "monthly": "Monthly",
+      "annual": "Yearly",
+      "annualSaving": "Save with yearly billing",
+      "recommended": "Recommended",
+      "currency": "S/",
+      "monthPeriod": "/ month",
+      "yearPeriod": "/ year",
+      "choose": "Choose plan",
+      "currentPlan": "Current plan",
+      "basic": {
+        "title": "Basic Plan",
+        "basicDescription": "Ideal for users who want to start managing their insurance in a simple way.",
+        "basicFeature1": "Insurance option comparison",
+        "basicFeature2": "Basic policy management",
+        "basicFeature3": "Access to centralized information",
+        "basicFeature4": "Digital support"
+      },
+      "pro": {
+        "title": "Livva Pro",
+        "proDescription": "For users looking for a more complete and personalized experience.",
+        "proFeature1": "All Basic Plan benefits",
+        "proFeature2": "Advanced policy tracking",
+        "proFeature3": "Personalized recommendations",
+        "proFeature4": "Priority support"
+      }
+    },
+    "mySubscription": {
+      "pageTitle": "My subscription",
+      "sectionLabel": "Subscription management",
+      "title": "My subscription",
+      "description": "Review your selected plan, its status, and your payment history.",
+      "noSubscription": "You do not have a Livva subscription yet.",
+      "browsePlans": "View plans",
+      "currentPlan": "Selected plan",
+      "status": "Status",
+      "billingCycle": "Billing cycle",
+      "startDate": "Start date",
+      "nextBillingDate": "Next payment",
+      "cancelledAt": "Cancellation date",
+      "monthly": "Monthly",
+      "annual": "Yearly",
+      "statuses": {
+        "active": "Active",
+        "cancelled": "Cancelled",
+        "pending": "Pending"
+      },
+      "actions": {
+        "cancel": "Cancel subscription",
+        "confirmCancel": "Confirm cancellation",
+        "keep": "Keep subscription"
+      },
+      "cancellation": {
+        "title": "Cancel subscription",
+        "description": "Your subscription will no longer be active. This action does not delete your payment history."
+      },
+      "payments": {
+        "title": "Payment history",
+        "empty": "There are no registered payments yet.",
+        "date": "Date",
+        "provider": "Provider",
+        "amount": "Amount",
+        "status": "Status",
+        "approved": "Approved",
+        "rejected": "Rejected",
+        "pending": "Pending"
+      }
+    },
+    "payment": {
+      "title": "Activate subscription",
+      "description": "Review the selected plan before continuing with the test payment.",
+      "selectedPlan": "Selected plan",
+      "billingCycle": "Billing cycle",
+      "total": "Total",
+      "sandboxNotice": "This payment uses a sandbox environment and will not make a real charge.",
+      "continue": "Continue to sandbox payment",
+      "cancel": "Cancel",
+      "processing": "Processing payment..."
+    },
+    "messages": {
+      "activated": "The subscription was activated successfully.",
+      "cancelled": "The subscription was cancelled successfully."
+    },
+    "errors": {
+      "loadPlans": "Subscription plans could not be loaded.",
+      "loadSubscription": "The subscription could not be loaded.",
+      "loadPayments": "Payment history could not be loaded.",
+      "activeExists": "You already have an active subscription.",
+      "paymentNotApproved": "The payment was not approved.",
+      "planNotFound": "The selected plan does not exist.",
+      "activate": "The subscription could not be activated.",
+      "cancel": "The subscription could not be cancelled.",
+      "payment": "The sandbox payment could not be completed."
+    }
+  }
+}
