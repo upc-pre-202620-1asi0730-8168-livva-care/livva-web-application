@@ -90,6 +90,30 @@ const submitApplication = async (applicationData) => {
   });
 };
 
+const cancelApplication = async (application) => {
+  const cancelled =
+      await applicationStore.cancelApplication(application.id);
+
+  if (!cancelled) {
+    toast.add({
+      severity: 'error',
+      summary: t(
+          error.value ?? 'vehicleApplications.errors.cancel'
+      ),
+      life: 3500
+    });
+
+    applicationStore.clearError();
+    return;
+  }
+
+  toast.add({
+    severity: 'success',
+    summary: t('vehicleApplications.messages.cancelled'),
+    life: 3500
+  });
+};
+
 onMounted(() => {
   applicationStore.fetchApplications();
 });
@@ -209,6 +233,22 @@ onMounted(() => {
           {{ formatDate(data.createdAt) }}
         </template>
       </pv-column>
+
+      <pv-column :header="t('vehicleApplications.fields.actions')">
+        <template #body="{ data }">
+          <pv-button
+              v-if="['pending', 'under_review'].includes(data.status)"
+              icon="pi pi-times"
+              :label="t('vehicleApplications.actions.cancelApplication')"
+              severity="danger"
+              outlined
+              size="small"
+              :disabled="saving"
+              @click="cancelApplication(data)"
+          />
+        </template>
+      </pv-column>
+
     </pv-data-table>
 
     <vehicle-application-form-dialog

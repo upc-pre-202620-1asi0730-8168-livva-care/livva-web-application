@@ -119,6 +119,63 @@ export const useVehicleClaimStore = defineStore(
             }
         };
 
+        const cancelVehicleClaim = async (vehicleClaimId) => {
+            const vehicleClaim = vehicleClaims.value.find(
+                (claim) => claim.id === vehicleClaimId
+            );
+
+            if (
+                !vehicleClaim ||
+                !['reported', 'under_review'].includes(vehicleClaim.status)
+            ) {
+                return false;
+            }
+
+            saving.value = true;
+            error.value = null;
+
+            try {
+                const now = new Date().toISOString();
+
+                const response = await vehicleClaimsApi.patch(
+                    vehicleClaimId,
+                    {
+                        status: 'cancelled',
+                        updatedAt: now
+                    }
+                );
+
+                const cancelledVehicleClaim =
+                    VehicleClaimAssembler.toEntity(response.data);
+
+                vehicleClaims.value = vehicleClaims.value.map(
+                    (claim) =>
+                        claim.id === vehicleClaimId
+                            ? cancelledVehicleClaim
+                            : claim
+                );
+
+                const historyResource =
+                    ClaimStatusHistoryAssembler.toResource({
+                        claimId: vehicleClaimId,
+                        status: 'cancelled',
+                        comment: 'Siniestro cancelado por el asegurado.',
+                        changedAt: now,
+                        createdAt: now
+                    });
+
+                await claimStatusHistoriesApi.create(historyResource);
+
+                return true;
+            } catch {
+                error.value = 'vehicleClaims.errors.cancel';
+                return false;
+            } finally {
+                saving.value = false;
+            }
+        };
+
+
         const clearStatusHistories = () => {
             statusHistories.value = [];
         };
@@ -136,6 +193,7 @@ export const useVehicleClaimStore = defineStore(
             fetchVehicleClaims,
             fetchClaimStatusHistory,
             createVehicleClaim,
+            cancelVehicleClaim,
             clearStatusHistories,
             clearError
         };
