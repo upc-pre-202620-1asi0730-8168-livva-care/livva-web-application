@@ -4,6 +4,7 @@ import { storeToRefs } from 'pinia';
 import { useI18n } from 'vue-i18n';
 import { useToast } from 'primevue/usetoast';
 import { useVehicleStore } from '../../application/vehicle.store.js';
+import { useUserStore } from '../../../identity-and-profile-management/application/user.store.js';
 import VehicleFormDialog from '../components/vehicle-form-dialog.vue';
 import { useConfirm } from 'primevue/useconfirm';
 
@@ -74,7 +75,7 @@ const saveVehicle = async (vehicleData) => {
   } else {
     savedVehicle = await vehicleStore.createVehicle({
       ...vehicleData,
-      userId: 1,
+      userId: useUserStore().currentUser?.id,
       createdAt: timestamp,
       updatedAt: timestamp
     });

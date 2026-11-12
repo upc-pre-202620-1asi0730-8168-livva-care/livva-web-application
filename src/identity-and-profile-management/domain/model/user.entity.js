@@ -4,7 +4,6 @@ export class User {
                     firstName,
                     lastName,
                     email,
-                    passwordHash,
                     phone,
                     role,
                     active,
@@ -15,7 +14,6 @@ export class User {
         this.firstName = firstName;
         this.lastName = lastName;
         this.email = email;
-        this.passwordHash = passwordHash;
         this.phone = phone;
         this.role = role;
         this.active = active;

@@ -1,5 +1,6 @@
 import { ref } from 'vue';
 import { defineStore } from 'pinia';
+import { useUserStore } from '../../identity-and-profile-management/application/user.store.js';
 import vehiclesApi from '../infrastructure/vehicles-api.js';
 import { VehicleAssembler } from '../infrastructure/vehicle.assembler.js';
 
@@ -15,7 +16,8 @@ export const useVehicleStore = defineStore('vehicle-management', () => {
         error.value = null;
 
         try {
-            const response = await vehiclesApi.getAll();
+            const userId = useUserStore().currentUser?.id;
+            const response = await vehiclesApi.getAll(userId ? { userId } : {});
             vehicles.value = VehicleAssembler.toEntities(response.data);
         } catch {
             error.value = 'vehicles.errors.load';
