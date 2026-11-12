@@ -90,25 +90,13 @@ export const useVehicleClaimStore = defineStore(
 
                 vehicleClaims.value.unshift(createdVehicleClaim);
 
-                const historyResource =
-                    ClaimStatusHistoryAssembler.toResource({
-                        claimId: createdVehicleClaim.id,
-                        status: createdVehicleClaim.status,
-                        comment: '',
-                        changedAt: now,
-                        createdAt: now
-                    });
+                // The Livva Platform API records the initial status history entry automatically.
+                const historyResponse = await claimStatusHistoriesApi.getAll({
+                    claimId: createdVehicleClaim.id
+                });
 
-                const historyResponse =
-                    await claimStatusHistoriesApi.create(
-                        historyResource
-                    );
-
-                statusHistories.value.unshift(
-                    ClaimStatusHistoryAssembler.toEntity(
-                        historyResponse.data
-                    )
-                );
+                statusHistories.value = ClaimStatusHistoryAssembler
+                    .toEntities(historyResponse.data);
 
                 return createdVehicleClaim;
             } catch {
@@ -141,7 +129,7 @@ export const useVehicleClaimStore = defineStore(
                     vehicleClaimId,
                     {
                         status: 'cancelled',
-                        updatedAt: now
+                        comment: 'Siniestro cancelado por el asegurado.'
                     }
                 );
 
@@ -155,17 +143,7 @@ export const useVehicleClaimStore = defineStore(
                             : claim
                 );
 
-                const historyResource =
-                    ClaimStatusHistoryAssembler.toResource({
-                        claimId: vehicleClaimId,
-                        status: 'cancelled',
-                        comment: 'Siniestro cancelado por el asegurado.',
-                        changedAt: now,
-                        createdAt: now
-                    });
-
-                await claimStatusHistoriesApi.create(historyResource);
-
+                // The Livva Platform API records the status change in the history automatically.
                 return true;
             } catch {
                 error.value = 'vehicleClaims.errors.cancel';

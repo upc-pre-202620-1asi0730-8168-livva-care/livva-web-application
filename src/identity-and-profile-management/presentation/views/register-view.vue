@@ -67,7 +67,7 @@ const submitRegister = async () => {
     firstName: form.firstName,
     lastName: form.lastName,
     email: form.email,
-    passwordHash: form.password,
+    password: form.password,
     phone: form.phone
   });
 

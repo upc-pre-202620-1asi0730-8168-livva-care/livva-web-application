@@ -1,5 +1,6 @@
 export const authenticationGuard = (to) => {
-    const storedUser = localStorage.getItem('livva-user');
+    const storedUser = localStorage.getItem('livva-user') &&
+        localStorage.getItem('livva-token');
     const publicRoutes = new Set([
         'home',
         'about',
