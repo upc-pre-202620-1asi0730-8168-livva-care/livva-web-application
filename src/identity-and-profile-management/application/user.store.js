@@ -2,6 +2,8 @@ import { ref } from 'vue';
 import { defineStore } from 'pinia';
 
 import usersApi from '../infrastructure/users-api.js';
+import authenticationApi from '../infrastructure/authentication-api.js';
+import authToken from '../../shared/infrastructure/auth-token.js';
 import userProfilesApi from '../infrastructure/user-profiles-api.js';
 
 import { UserAssembler } from '../infrastructure/user.assembler.js';
@@ -22,67 +24,40 @@ export const useUserStore = defineStore(
             error.value = null;
 
             try {
-                const normalizedEmail = userData.email
-                    .trim()
-                    .toLowerCase();
-
-                const existingUsers = await usersApi.getByEmail(
-                    normalizedEmail
-                );
-
-                if (existingUsers.data.length > 0) {
-                    error.value = 'auth.errors.emailAlreadyExists';
-                    return null;
-                }
-
-                const now = new Date().toISOString();
-
                 const resource = {
                     firstName: userData.firstName.trim(),
                     lastName: userData.lastName.trim(),
-                    email: normalizedEmail,
-                    passwordHash: userData.passwordHash,
-                    phone: userData.phone.trim(),
-                    role: 'CUSTOMER',
-                    active: true,
-                    createdAt: now,
-                    updatedAt: now
+                    email: userData.email.trim().toLowerCase(),
+                    password: userData.password,
+                    phone: userData.phone?.trim() || null
                 };
 
-                const response = await usersApi.create(resource);
+                const response = await authenticationApi.signUp(resource);
                 return UserAssembler.toEntity(response.data);
-            } catch {
-                error.value = 'auth.errors.register';
+            } catch (requestError) {
+                error.value = requestError?.response?.status === 409
+                    ? 'auth.errors.emailAlreadyExists'
+                    : 'auth.errors.register';
                 return null;
             } finally {
                 saving.value = false;
             }
         };
 
-        const login = async (email, passwordHash) => {
+        const login = async (email, password) => {
             loading.value = true;
             error.value = null;
 
             try {
-                const response = await usersApi.getByEmail(
-                    email.trim().toLowerCase()
-                );
+                const response = await authenticationApi.signIn({
+                    email: email.trim().toLowerCase(),
+                    password
+                });
 
-                if (response.data.length === 0) {
-                    error.value = 'auth.errors.invalidCredentials';
-                    return false;
-                }
+                const { token, ...userResource } = response.data;
+                const user = UserAssembler.toEntity(userResource);
 
-                const user = UserAssembler.toEntity(response.data[0]);
-
-                if (
-                    user.passwordHash !== passwordHash ||
-                    !user.active
-                ) {
-                    error.value = 'auth.errors.invalidCredentials';
-                    return false;
-                }
-
+                authToken.set(token);
                 currentUser.value = user;
 
                 localStorage.setItem(
@@ -91,8 +66,10 @@ export const useUserStore = defineStore(
                 );
 
                 return true;
-            } catch {
-                error.value = 'auth.errors.login';
+            } catch (requestError) {
+                error.value = requestError?.response?.status === 401
+                    ? 'auth.errors.invalidCredentials'
+                    : 'auth.errors.login';
                 return false;
             } finally {
                 loading.value = false;
@@ -104,12 +81,17 @@ export const useUserStore = defineStore(
             currentProfile.value = null;
 
             localStorage.removeItem('livva-user');
+            authToken.clear();
         };
 
         const restoreSession = () => {
             const storedUser = localStorage.getItem('livva-user');
 
-            if (!storedUser) return;
+            if (!storedUser || !authToken.get()) {
+                localStorage.removeItem('livva-user');
+                authToken.clear();
+                return;
+            }
 
             try {
                 currentUser.value = UserAssembler.toEntity(

@@ -1,4 +1,5 @@
 <script setup>
+import authToken from '../../../shared/infrastructure/auth-token.js';
 import {
   computed,
   nextTick,
@@ -133,7 +134,8 @@ const processPayment = async (
         {
           method: 'POST',
           headers: {
-            'Content-Type': 'application/json'
+            'Content-Type': 'application/json',
+            ...authToken.authorizationHeader()
           },
           body: JSON.stringify(order)
         }

@@ -1,5 +1,6 @@
 import { ref } from 'vue';
 import { defineStore } from 'pinia';
+import { useUserStore } from '../../identity-and-profile-management/application/user.store.js';
 
 import insurersApi from '../infrastructure/insurers-api.js';
 import insuranceProductsApi from '../infrastructure/insurance-products-api.js';
@@ -11,7 +12,8 @@ import { InsuranceProductAssembler } from '../infrastructure/insurance-product.a
 import { InsuranceApplicationAssembler } from '../infrastructure/insurance-application.assembler.js';
 import { LifeInsuranceApplicationAssembler } from '../infrastructure/life-insurance-application.assembler.js';
 
-const CURRENT_USER_ID = 1;
+// The applicant is the authenticated user.
+const currentUserId = () => useUserStore().currentUser?.id;
 
 export const useLifeInsuranceApplicationStore = defineStore(
     'life-insurance-applications',
@@ -76,7 +78,7 @@ export const useLifeInsuranceApplicationStore = defineStore(
                     insurersApi.getAll(),
                     insuranceProductsApi.getAll(),
                     insuranceApplicationsApi.getAll({
-                        userId: CURRENT_USER_ID
+                        userId: currentUserId()
                     }),
                     lifeInsuranceApplicationsApi.getAll()
                 ]);
@@ -141,7 +143,7 @@ export const useLifeInsuranceApplicationStore = defineStore(
 
                 const applicationResource =
                     InsuranceApplicationAssembler.toResource({
-                        userId: CURRENT_USER_ID,
+                        userId: currentUserId(),
                         productId,
                         requestedCoverage,
                         status: 'pending',
