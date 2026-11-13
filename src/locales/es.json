@@ -534,7 +534,8 @@
       "documentType": "Selecciona un documento"
     },
     "validation": {
-      "name": "Los nombres y apellidos deben tener al menos 2 caracteres."
+      "name": "Los nombres y apellidos deben tener al menos 2 caracteres.",
+      "document": "Selecciona el tipo de documento e ingresa el número de documento."
     },
     "messages": {
       "updated": "Perfil actualizado correctamente."

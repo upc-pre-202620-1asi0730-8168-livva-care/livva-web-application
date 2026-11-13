@@ -530,7 +530,8 @@
       "documentType": "Select a document"
     },
     "validation": {
-      "name": "First and last names must contain at least 2 characters."
+      "name": "First and last names must contain at least 2 characters.",
+      "document": "Select a document type and enter the document number."
     },
     "messages": {
       "updated": "Profile updated successfully."
