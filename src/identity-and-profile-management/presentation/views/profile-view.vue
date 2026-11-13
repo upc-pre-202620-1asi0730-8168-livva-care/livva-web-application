@@ -83,6 +83,15 @@ const saveProfile = async () => {
     return;
   }
 
+  if (!form.documentType || !form.documentNumber.trim()) {
+    toast.add({
+      severity: 'warn',
+      summary: t('profile.validation.document'),
+      life: 3000
+    });
+    return;
+  }
+
   const updatedUser = await userStore.updateUser(
       userStore.currentUser.id,
       {
@@ -99,7 +108,7 @@ const saveProfile = async () => {
       {
         documentType: form.documentType,
         documentNumber: form.documentNumber.trim().toUpperCase(),
-        birthDate: form.birthDate,
+        birthDate: form.birthDate || null,
         address: form.address.trim(),
         district: form.district.trim(),
         province: form.province.trim(),
