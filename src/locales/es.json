@@ -19,7 +19,8 @@
     "register": "Crear cuenta",
     "profile": "Mi perfil",
     "notifications": "Notificaciones",
-    "logout": "Cerrar sesión"
+    "logout": "Cerrar sesión",
+    "indemnities": "Indemnizaciones"
   },
   "home": {
     "pageTitle": "Inicio",
@@ -674,6 +675,71 @@
       "activate": "No se pudo activar la suscripción.",
       "cancel": "No se pudo cancelar la suscripción.",
       "payment": "No se pudo completar el pago sandbox."
+    }
+  },
+  "indemnities": {
+    "pageTitle": "Indemnizaciones de seguro de vida",
+    "sectionLabel": "Gestión de indemnizaciones",
+    "title": "Indemnizaciones de seguro de vida",
+    "description": "Solicita la indemnización de una póliza de vida para uno de sus beneficiarios y sigue cada etapa de su evaluación.",
+    "empty": "No hay solicitudes de indemnización registradas para tus pólizas de vida.",
+    "loading": "Cargando solicitudes de indemnización",
+    "noActivePolicies": "Necesitas una póliza de vida activa con beneficiarios registrados para solicitar una indemnización.",
+    "fields": {
+      "number": "Número",
+      "request": "Solicitud",
+      "policy": "Póliza de vida",
+      "beneficiary": "Beneficiario",
+      "requestDate": "Fecha de solicitud",
+      "amount": "Monto solicitado",
+      "description": "Motivo de la solicitud",
+      "status": "Estado",
+      "resolvedAt": "Resuelta el"
+    },
+    "statuses": {
+      "submitted": "Enviada",
+      "under_review": "En revisión",
+      "approved": "Aprobada",
+      "rejected": "Rechazada",
+      "paid": "Pagada"
+    },
+    "form": {
+      "createTitle": "Solicitar indemnización",
+      "hint": "La aseguradora revisará la solicitud y verás cada cambio de estado en su historial.",
+      "selectPolicy": "Selecciona una póliza de vida activa",
+      "selectBeneficiary": "Selecciona un beneficiario de la póliza",
+      "optional": "opcional"
+    },
+    "actions": {
+      "add": "Solicitar indemnización",
+      "column": "Acciones",
+      "viewStatus": "Ver estado",
+      "cancel": "Cancelar",
+      "save": "Enviar solicitud",
+      "close": "Cerrar"
+    },
+    "history": {
+      "title": "Historial de la solicitud",
+      "empty": "No hay cambios de estado registrados.",
+      "changedAt": "Fecha de actualización",
+      "comment": "Comentario"
+    },
+    "validation": {
+      "required": "Este campo es obligatorio.",
+      "noBeneficiaries": "Esta póliza no tiene beneficiarios. Registra uno primero en Vida > Beneficiarios.",
+      "requestDate": "Ingresa una fecha válida que no sea posterior a hoy.",
+      "description": "Describe el motivo con entre 5 y 1000 caracteres.",
+      "amount": "Ingresa un monto mayor a cero o deja el campo vacío."
+    },
+    "messages": {
+      "created": "Solicitud de indemnización enviada.",
+      "createdDetail": "Tu solicitud #{number} ya está en revisión por la aseguradora. Puedes seguirla desde esta página."
+    },
+    "errors": {
+      "load": "No se pudieron cargar las solicitudes de indemnización.",
+      "create": "No se pudo enviar la solicitud de indemnización.",
+      "notFound": "La póliza o el beneficiario seleccionado ya no existe.",
+      "retryHint": "Revisa la información e inténtalo de nuevo. Si el problema continúa, vuelve a iniciar sesión."
     }
   }
 }
