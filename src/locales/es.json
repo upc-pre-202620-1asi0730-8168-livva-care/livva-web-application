@@ -8,7 +8,8 @@
     "languages": {
       "en": "Inglés",
       "es": "Español"
-    }
+    },
+    "apiErrorSummary": "Motivo"
   },
   "navigation": {
     "main": "Navegación principal",
