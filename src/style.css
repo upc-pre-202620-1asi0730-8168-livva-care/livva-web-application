@@ -1299,3 +1299,7 @@ p {
   white-space: nowrap;
   border: 0;
 }
+
+.auth-card__notice {
+  margin-bottom: 1.25rem;
+}

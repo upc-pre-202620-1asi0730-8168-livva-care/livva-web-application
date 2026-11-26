@@ -41,6 +41,16 @@ const submitLogin = async () => {
       <h1>{{ t('auth.login.title') }}</h1>
       <p>{{ t('auth.login.description') }}</p>
 
+      <pv-message
+          v-if="route.query.reason === 'session-expired'"
+          class="auth-card__notice"
+          severity="warn"
+          :closable="false"
+          role="status"
+      >
+        {{ t('auth.login.sessionExpired') }}
+      </pv-message>
+
       <form class="auth-form" @submit.prevent="submitLogin">
         <div class="auth-form__field">
           <label for="login-email">

@@ -474,7 +474,8 @@
       "submit": "Sign in",
       "signingIn": "Signing in...",
       "noAccount": "Don't have an account?",
-      "createAccount": "Create account"
+      "createAccount": "Create account",
+      "sessionExpired": "Your session has expired. Sign in again to continue where you left off."
     },
     "errors": {
       "emailAlreadyExists": "An account with this email already exists.",
