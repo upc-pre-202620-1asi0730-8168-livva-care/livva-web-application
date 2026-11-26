@@ -1,4 +1,5 @@
 <script setup>
+import { formatDisplayDate } from '../../../shared/presentation/utils/date-format.js';
 import { computed, onBeforeUnmount, onMounted } from 'vue';
 import { storeToRefs } from 'pinia';
 import { useI18n } from 'vue-i18n';
@@ -50,9 +51,7 @@ const canRequestRenewal = computed(() =>
 );
 
 const formatDate = (date) =>
-    new Intl.DateTimeFormat(localeCode.value).format(
-        new Date(`${date}T00:00:00`)
-    );
+    formatDisplayDate(date, localeCode.value);
 
 const formatDateTime = (date) =>
     new Intl.DateTimeFormat(localeCode.value, {

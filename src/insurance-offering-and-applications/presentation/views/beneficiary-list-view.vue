@@ -1,4 +1,5 @@
 <script setup>
+import { formatDisplayDate } from '../../../shared/presentation/utils/date-format.js';
 import { computed, onMounted, ref } from 'vue';
 import { storeToRefs } from 'pinia';
 import { useI18n } from 'vue-i18n';
@@ -54,9 +55,7 @@ const getRelationshipLabel = (relationship) =>
     t(`beneficiaries.relationships.${relationship}`);
 
 const formatDate = (date) =>
-    new Intl.DateTimeFormat(
-        locale.value === 'es' ? 'es-PE' : 'en-US'
-    ).format(new Date(`${date}T00:00:00`));
+    formatDisplayDate(date, locale.value === 'es' ? 'es-PE' : 'en-US');
 
 const setFormVisibility = (visible) => {
   formVisible.value = visible;
