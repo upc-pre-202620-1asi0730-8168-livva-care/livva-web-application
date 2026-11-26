@@ -1,5 +1,7 @@
 import axios from 'axios';
+import ToastEventBus from 'primevue/toasteventbus';
 import authToken from './auth-token.js';
+import i18n from '../../i18n.js';
 
 const baseApi = axios.create({
     baseURL: import.meta.env.VITE_API_BASE_URL,
@@ -15,6 +17,9 @@ baseApi.interceptors.request.use((config) => {
     if (token) {
         config.headers.Authorization = `Bearer ${token}`;
     }
+
+    // The API localizes its validation and business messages with this header.
+    config.headers['Accept-Language'] = i18n.global.locale.value;
 
     return config;
 });
@@ -59,9 +64,54 @@ const handleExpiredSession = async () => {
     }
 };
 
+const EXPLAINED_STATUSES = new Set([400, 404, 409, 422]);
+
+// Extracts the reason sent by the API as RFC 7807 ProblemDetails, preferring the
+// first field validation message over the generic title.
+export const getApiErrorMessage = (error) => {
+    const problem = error.response?.data;
+
+    if (!problem || typeof problem !== 'object') {
+        return null;
+    }
+
+    const validationMessages = Object.values(problem.errors ?? {}).flat();
+
+    return validationMessages[0] ?? problem.detail ?? problem.title ?? null;
+};
+
+// Every view already reports that an action failed; this adds why it failed, so the
+// user knows how to fix it (for example, a license plate that is already registered).
+const explainRejectedChange = (error) => {
+    const method = error.config?.method?.toLowerCase();
+
+    if (
+        !method ||
+        method === 'get' ||
+        !EXPLAINED_STATUSES.has(error.response?.status)
+    ) {
+        return;
+    }
+
+    const message = getApiErrorMessage(error);
+
+    if (!message) {
+        return;
+    }
+
+    ToastEventBus.emit('add', {
+        severity: 'warn',
+        summary: i18n.global.t('app.apiErrorSummary'),
+        detail: message,
+        life: 6000
+    });
+};
+
 baseApi.interceptors.response.use(
     (response) => response,
     (error) => {
+        explainRejectedChange(error);
+
         const isAuthenticationRequest =
             error.config?.url?.startsWith(AUTHENTICATION_PATH);
 
