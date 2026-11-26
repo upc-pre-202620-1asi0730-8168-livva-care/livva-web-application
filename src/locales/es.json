@@ -576,7 +576,8 @@
     },
     "types": {
       "policyExpiration": "La póliza {policyNumber} vencerá el {expirationDate}. Revisa su información y solicita la renovación si corresponde.",
-      "default": "Tienes una nueva notificación."
+      "default": "Tienes una nueva notificación.",
+      "applicationApproved": "Tu solicitud fue aprobada. La póliza {policyNumber} ya está activa y puedes revisarla en Pólizas."
     },
     "messages": {
       "allMarkedAsRead": "Todas las notificaciones fueron marcadas como leídas."
@@ -804,6 +805,16 @@
     },
     "errors": {
       "load": "No se pudo cargar el catálogo de seguros. Revisa tu conexión e inténtalo de nuevo."
+    }
+  },
+  "demoReview": {
+    "approved": {
+      "summary": "Solicitud #{number} aprobada",
+      "detail": "La aseguradora aprobó tu solicitud. La póliza {policyNumber} ya está activa."
+    },
+    "failed": {
+      "summary": "La solicitud #{number} sigue en revisión",
+      "detail": "La aseguradora no pudo completar la revisión. Revisa su estado en unos minutos."
     }
   }
 }

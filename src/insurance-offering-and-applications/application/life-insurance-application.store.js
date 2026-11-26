@@ -1,5 +1,6 @@
 import { ref } from 'vue';
 import { defineStore } from 'pinia';
+import { scheduleDemoInsurerReview } from './demo-insurer-review.service.js';
 import { useUserStore } from '../../identity-and-profile-management/application/user.store.js';
 
 import insurersApi from '../infrastructure/insurers-api.js';
@@ -171,6 +172,13 @@ export const useLifeInsuranceApplicationStore = defineStore(
                 );
 
                 await fetchApplications();
+
+                scheduleDemoInsurerReview({
+                    application: createdApplication,
+                    product,
+                    insuranceType: 'life',
+                    onReviewed: fetchApplications
+                });
 
                 return createdApplication;
             } catch {

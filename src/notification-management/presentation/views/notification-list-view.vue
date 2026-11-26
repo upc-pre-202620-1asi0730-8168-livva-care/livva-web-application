@@ -82,6 +82,12 @@ const getNotificationMessage = (notification) => {
     );
   }
 
+  if (notification.type === 'application_approved') {
+    return t('notifications.types.applicationApproved', {
+      policyNumber: notification.policyNumber
+    });
+  }
+
   return t('notifications.types.default');
 };
 
@@ -106,7 +112,7 @@ const openNotification = async (notification) => {
   }
 
   if (
-      notification.type === 'policy_expiration' &&
+      ['policy_expiration', 'application_approved'].includes(notification.type) &&
       notification.policyId
   ) {
     await router.push({

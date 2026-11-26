@@ -100,6 +100,7 @@ const explainRejectedChange = (error) => {
     }
 
     ToastEventBus.emit('add', {
+        group: 'global',
         severity: 'warn',
         summary: i18n.global.t('app.apiErrorSummary'),
         detail: message,
