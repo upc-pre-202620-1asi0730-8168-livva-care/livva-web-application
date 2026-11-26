@@ -1303,3 +1303,37 @@ p {
 .auth-card__notice {
   margin-bottom: 1.25rem;
 }
+
+/* Keyboard users can jump straight to the page content. */
+.skip-link {
+  position: absolute;
+  z-index: 100;
+  top: 0.75rem;
+  left: 0.75rem;
+  padding: 0.75rem 1.25rem;
+  color: #ffffff;
+  font-weight: 600;
+  text-decoration: none;
+  border-radius: 8px;
+  background: #0f172a;
+  transform: translateY(-200%);
+}
+
+.skip-link:focus {
+  transform: translateY(0);
+}
+
+.default-layout__content:focus {
+  outline: none;
+}
+
+/* Visible focus indicator for every interactive element reached with the keyboard. */
+a:focus-visible,
+button:focus-visible,
+summary:focus-visible,
+input:focus-visible,
+textarea:focus-visible,
+select:focus-visible {
+  outline: 3px solid #2563eb;
+  outline-offset: 2px;
+}

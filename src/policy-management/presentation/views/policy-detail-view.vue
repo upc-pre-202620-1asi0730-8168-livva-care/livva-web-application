@@ -173,7 +173,7 @@ onBeforeUnmount(() => {
     <div v-if="loading" class="policies-state">
       <pv-progress-spinner
           stroke-width="4"
-          aria-label="Loading policy details"
+          :aria-label="t('app.loading')"
       />
     </div>
 
@@ -275,7 +275,7 @@ onBeforeUnmount(() => {
         >
           <pv-progress-spinner
               stroke-width="4"
-              aria-label="Loading renewals"
+              :aria-label="t('app.loading')"
           />
         </div>
 

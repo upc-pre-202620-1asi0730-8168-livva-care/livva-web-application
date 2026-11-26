@@ -1,6 +1,14 @@
 {
   "app": {
-    "name": "Livva"
+    "name": "Livva",
+    "loading": "Cargando contenido",
+    "skipToContent": "Saltar al contenido principal",
+    "languageSelector": "Selector de idioma",
+    "homeLabel": "Inicio de Livva",
+    "languages": {
+      "en": "Inglés",
+      "es": "Español"
+    }
   },
   "navigation": {
     "main": "Navegación principal",

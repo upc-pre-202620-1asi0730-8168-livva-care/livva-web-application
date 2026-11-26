@@ -30,7 +30,7 @@ onMounted(() => {
     <div v-if="loading" class="policies-state">
       <pv-progress-spinner
           stroke-width="4"
-          aria-label="Loading policies"
+          :aria-label="t('app.loading')"
       />
     </div>
 
