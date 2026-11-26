@@ -1,4 +1,5 @@
 <script setup>
+import { formatDisplayDate } from '../../../shared/presentation/utils/date-format.js';
 import { computed } from 'vue';
 import { useI18n } from 'vue-i18n';
 
@@ -16,9 +17,7 @@ const localeCode = computed(() =>
 );
 
 const formatDate = (date) =>
-    new Intl.DateTimeFormat(localeCode.value).format(
-        new Date(`${date}T00:00:00`)
-    );
+    formatDisplayDate(date, localeCode.value);
 
 const formatAmount = (amount) =>
     new Intl.NumberFormat(localeCode.value, {
