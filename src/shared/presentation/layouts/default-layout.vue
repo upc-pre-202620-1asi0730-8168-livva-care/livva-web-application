@@ -23,5 +23,8 @@ const { t } = useI18n();
     </div>
 
     <app-footer />
+
+    <!-- Notices raised outside a view (API reasons, insurer reviews) use this group. -->
+    <pv-toast group="global" />
   </div>
 </template>

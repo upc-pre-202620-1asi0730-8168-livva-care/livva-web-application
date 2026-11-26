@@ -572,7 +572,8 @@
     },
     "types": {
       "policyExpiration": "Policy {policyNumber} will expire on {expirationDate}. Review its information and request a renewal if necessary.",
-      "default": "You have a new notification."
+      "default": "You have a new notification.",
+      "applicationApproved": "Your application was approved. Policy {policyNumber} is now active and you can review it in Policies."
     },
     "messages": {
       "allMarkedAsRead": "All notifications were marked as read."
@@ -800,6 +801,16 @@
     },
     "errors": {
       "load": "The insurance catalog could not be loaded. Check your connection and try again."
+    }
+  },
+  "demoReview": {
+    "approved": {
+      "summary": "Application #{number} approved",
+      "detail": "The insurer approved your application. Policy {policyNumber} is now active."
+    },
+    "failed": {
+      "summary": "Application #{number} is still under review",
+      "detail": "The insurer could not complete the review. Check its status in a few minutes."
     }
   }
 }
