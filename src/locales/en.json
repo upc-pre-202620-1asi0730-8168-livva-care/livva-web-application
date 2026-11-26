@@ -19,7 +19,8 @@
     "register": "Create account",
     "profile": "My profile",
     "notifications": "Notifications",
-    "logout": "Sign out"
+    "logout": "Sign out",
+    "indemnities": "Indemnities"
   },
   "home": {
     "pageTitle": "Home",
@@ -670,6 +671,71 @@
       "activate": "The subscription could not be activated.",
       "cancel": "The subscription could not be cancelled.",
       "payment": "The sandbox payment could not be completed."
+    }
+  },
+  "indemnities": {
+    "pageTitle": "Life insurance indemnities",
+    "sectionLabel": "Indemnity management",
+    "title": "Life insurance indemnities",
+    "description": "Request the indemnity of a life insurance policy for one of its beneficiaries and follow each step of its evaluation.",
+    "empty": "There are no indemnity requests registered for your life policies.",
+    "loading": "Loading indemnity requests",
+    "noActivePolicies": "You need an active life insurance policy with registered beneficiaries to request an indemnity.",
+    "fields": {
+      "number": "Number",
+      "request": "Request",
+      "policy": "Life policy",
+      "beneficiary": "Beneficiary",
+      "requestDate": "Request date",
+      "amount": "Requested amount",
+      "description": "Reason for the request",
+      "status": "Status",
+      "resolvedAt": "Resolved on"
+    },
+    "statuses": {
+      "submitted": "Submitted",
+      "under_review": "Under review",
+      "approved": "Approved",
+      "rejected": "Rejected",
+      "paid": "Paid"
+    },
+    "form": {
+      "createTitle": "Request indemnity",
+      "hint": "The insurer will review the request and you will see every status change in its history.",
+      "selectPolicy": "Select an active life policy",
+      "selectBeneficiary": "Select a beneficiary of the policy",
+      "optional": "optional"
+    },
+    "actions": {
+      "add": "Request indemnity",
+      "column": "Actions",
+      "viewStatus": "View status",
+      "cancel": "Cancel",
+      "save": "Submit request",
+      "close": "Close"
+    },
+    "history": {
+      "title": "Indemnity request history",
+      "empty": "There are no status changes registered.",
+      "changedAt": "Update date",
+      "comment": "Comment"
+    },
+    "validation": {
+      "required": "This field is required.",
+      "noBeneficiaries": "This policy has no beneficiaries. Register one in Life > Beneficiaries first.",
+      "requestDate": "Enter a valid date that is not later than today.",
+      "description": "Describe the reason using between 5 and 1000 characters.",
+      "amount": "Enter an amount greater than zero or leave the field empty."
+    },
+    "messages": {
+      "created": "Indemnity request submitted.",
+      "createdDetail": "Your request #{number} is now under the insurer review. You can follow it from this page."
+    },
+    "errors": {
+      "load": "Indemnity requests could not be loaded.",
+      "create": "The indemnity request could not be submitted.",
+      "notFound": "The selected policy or beneficiary no longer exists.",
+      "retryHint": "Check the information and try again. If the problem continues, sign in again."
     }
   }
 }

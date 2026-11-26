@@ -10,6 +10,7 @@ import { vehicleRoutes } from './insurance-offering-and-applications/presentatio
 import { lifeRoutes } from './insurance-offering-and-applications/presentation/life.routes.js';
 import { beneficiaryRoutes } from './insurance-offering-and-applications/presentation/beneficiary.routes.js';
 import { vehicleClaimRoutes } from './claims-and-indemnities/presentation/vehicle-claim.routes.js';
+import { indemnityRequestRoutes } from './claims-and-indemnities/presentation/indemnity-request.routes.js';
 import { identityRoutes } from './identity-and-profile-management/presentation/identity.routes.js';
 import { notificationRoutes } from './notification-management/presentation/notification.routes.js';
 import { authenticationGuard } from './identity-and-profile-management/presentation/auth.guard.js';
@@ -38,6 +39,7 @@ const routes = [
     ...lifeRoutes,
     ...beneficiaryRoutes,
     ...vehicleClaimRoutes,
+    ...indemnityRequestRoutes,
     ...policyRoutes,
     ...notificationRoutes,
     ...subscriptionRoutes,

@@ -40,7 +40,8 @@ const vehicleSectionActive = computed(() =>
 
 const lifeSectionActive = computed(() =>
     route.path.startsWith('/life-applications') ||
-    route.path.startsWith('/beneficiaries')
+    route.path.startsWith('/beneficiaries') ||
+    route.path.startsWith('/indemnity-requests')
 );
 
 const closeMenus = () => {
@@ -213,6 +214,14 @@ watch(
             >
               <i class="pi pi-users"></i>
               {{ t('navigation.beneficiaries') }}
+            </router-link>
+
+            <router-link
+                to="/indemnity-requests"
+                @click="closeMenus"
+            >
+              <i class="pi pi-wallet"></i>
+              {{ t('navigation.indemnities') }}
             </router-link>
           </div>
         </details>
