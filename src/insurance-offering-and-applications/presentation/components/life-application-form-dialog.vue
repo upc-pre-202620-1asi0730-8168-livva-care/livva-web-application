@@ -7,6 +7,10 @@ const props = defineProps({
     type: Boolean,
     default: false
   },
+  initialProductId: {
+    type: Number,
+    default: null
+  },
   saving: {
     type: Boolean,
     default: false
@@ -73,7 +77,7 @@ const clearErrors = () => {
 };
 
 const resetForm = () => {
-  form.productId = null;
+  form.productId = props.initialProductId ?? null;
   form.requestedCoverage = null;
   clearErrors();
 };

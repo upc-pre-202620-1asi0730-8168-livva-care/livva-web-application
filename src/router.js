@@ -7,6 +7,7 @@ import PageNotFoundView from './shared/presentation/views/page-not-found-view.vu
 
 import { policyRoutes } from './policy-management/presentation/policy.routes.js';
 import { vehicleRoutes } from './insurance-offering-and-applications/presentation/vehicle.routes.js';
+import { catalogRoutes } from './insurance-offering-and-applications/presentation/catalog.routes.js';
 import { lifeRoutes } from './insurance-offering-and-applications/presentation/life.routes.js';
 import { beneficiaryRoutes } from './insurance-offering-and-applications/presentation/beneficiary.routes.js';
 import { vehicleClaimRoutes } from './claims-and-indemnities/presentation/vehicle-claim.routes.js';
@@ -35,6 +36,7 @@ const routes = [
     },
 
     ...identityRoutes,
+    ...catalogRoutes,
     ...vehicleRoutes,
     ...lifeRoutes,
     ...beneficiaryRoutes,
