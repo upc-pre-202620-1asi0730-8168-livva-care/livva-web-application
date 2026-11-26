@@ -5,6 +5,13 @@ import { useI18n } from 'vue-i18n';
 const { t } = useI18n();
 
 const currentYear = computed(() => new Date().getFullYear());
+
+// Legal documents are published on the Livva landing page and shared by every product.
+const landingPageUrl = import.meta.env.VITE_LANDING_PAGE_URL ??
+    'https://upc-pre-202620-1asi0730-8168-livva-care.github.io/livva-landing-page';
+
+const termsUrl = `${landingPageUrl}/terms.html`;
+const privacyUrl = `${landingPageUrl}/privacy.html`;
 </script>
 
 <template>
@@ -43,6 +50,27 @@ const currentYear = computed(() => new Date().getFullYear());
       <p>
         {{ t('footer.copyright', { year: currentYear }) }}
       </p>
+
+      <nav
+          class="app-footer__legal"
+          :aria-label="t('footer.legalLabel')"
+      >
+        <a
+            :href="termsUrl"
+            target="_blank"
+            rel="noopener noreferrer"
+        >
+          {{ t('footer.terms') }}
+        </a>
+
+        <a
+            :href="privacyUrl"
+            target="_blank"
+            rel="noopener noreferrer"
+        >
+          {{ t('footer.privacy') }}
+        </a>
+      </nav>
     </div>
   </footer>
 </template>

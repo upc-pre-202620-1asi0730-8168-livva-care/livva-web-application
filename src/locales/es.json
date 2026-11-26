@@ -444,7 +444,10 @@
   "footer": {
     "description": "Protección digital sencilla para acompañarte en cada etapa.",
     "navigationLabel": "Enlaces del pie de página",
-    "copyright": "© {year} Livva Care. Todos los derechos reservados."
+    "copyright": "© {year} Livva Care. Todos los derechos reservados.",
+    "legalLabel": "Información legal",
+    "terms": "Términos y Condiciones",
+    "privacy": "Política de Privacidad"
   },
   "auth": {
     "register": {

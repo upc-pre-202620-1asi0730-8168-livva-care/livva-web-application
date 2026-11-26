@@ -440,7 +440,10 @@
   "footer": {
     "description": "Simple digital protection designed to support you at every stage.",
     "navigationLabel": "Footer navigation",
-    "copyright": "© {year} Livva Care. All rights reserved."
+    "copyright": "© {year} Livva Care. All rights reserved.",
+    "legalLabel": "Legal information",
+    "terms": "Terms and Conditions",
+    "privacy": "Privacy Policy"
   },
   "auth": {
     "register": {
