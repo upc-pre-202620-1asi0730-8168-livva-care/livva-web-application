@@ -20,7 +20,8 @@
     "profile": "Mi perfil",
     "notifications": "Notificaciones",
     "logout": "Cerrar sesión",
-    "indemnities": "Indemnizaciones"
+    "indemnities": "Indemnizaciones",
+    "catalog": "Comparar seguros"
   },
   "home": {
     "pageTitle": "Inicio",
@@ -740,6 +741,59 @@
       "create": "No se pudo enviar la solicitud de indemnización.",
       "notFound": "La póliza o el beneficiario seleccionado ya no existe.",
       "retryHint": "Revisa la información e inténtalo de nuevo. Si el problema continúa, vuelve a iniciar sesión."
+    }
+  },
+  "catalog": {
+    "pageTitle": "Catálogo de seguros",
+    "sectionLabel": "Catálogo de seguros",
+    "title": "Encuentra y compara seguros",
+    "description": "Revisa los seguros vehiculares y de vida que ofrecen nuestras aseguradoras aliadas, compara hasta tres productos lado a lado y solicita el que mejor se ajuste a ti.",
+    "typeLabel": "Tipo de seguro",
+    "types": {
+      "vehicle": "Seguro vehicular",
+      "life": "Seguro de vida"
+    },
+    "loading": "Cargando productos de seguro",
+    "empty": "Por ahora no hay productos activos de este tipo.",
+    "fields": {
+      "insurer": "Aseguradora",
+      "premium": "Prima",
+      "coverage": "Cobertura",
+      "coveragePerSol": "Cobertura por S/ 1 de prima"
+    },
+    "glossary": {
+      "title": "¿Qué significan estos términos?",
+      "premium": "El monto que pagas para mantener el seguro activo.",
+      "coverage": "El monto máximo que paga la aseguradora si ocurre el evento asegurado.",
+      "coveragePerSol": "Cuánta cobertura obtienes por cada sol que pagas. Un valor más alto significa más protección por tu dinero.",
+      "claimTerm": "Siniestro",
+      "claim": "El reporte que registras cuando ocurre un evento asegurado, por ejemplo un accidente vehicular.",
+      "beneficiaryTerm": "Beneficiario",
+      "beneficiary": "La persona que recibe la indemnización del seguro de vida."
+    },
+    "actions": {
+      "compare": "Agregar a la comparación",
+      "request": "Solicitar este seguro",
+      "clear": "Limpiar",
+      "openComparison": "Comparar",
+      "close": "Cerrar"
+    },
+    "comparison": {
+      "title": "Comparación de seguros",
+      "description": "Compara las cifras principales de los productos seleccionados. Las etiquetas destacan la mejor opción en cada criterio.",
+      "attribute": "Criterio",
+      "next": "Siguiente paso",
+      "remove": "Quitar {name} de la comparación",
+      "lowestPremium": "Prima más baja",
+      "highestCoverage": "Mayor cobertura",
+      "bestValue": "Mejor relación",
+      "selected": "{count} de {max} productos seleccionados",
+      "barLabel": "Productos seleccionados para comparar",
+      "limitReached": "Puedes comparar hasta {max} productos a la vez.",
+      "differentType": "Solo puedes comparar productos del mismo tipo de seguro."
+    },
+    "errors": {
+      "load": "No se pudo cargar el catálogo de seguros. Revisa tu conexión e inténtalo de nuevo."
     }
   }
 }

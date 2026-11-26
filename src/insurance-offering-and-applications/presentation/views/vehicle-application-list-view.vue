@@ -1,5 +1,6 @@
 <script setup>
-import { computed, onMounted, ref } from 'vue';
+import { computed, onMounted, ref, watch } from 'vue';
+import { useRoute, useRouter } from 'vue-router';
 import { storeToRefs } from 'pinia';
 import { useI18n } from 'vue-i18n';
 import { useToast } from 'primevue/usetoast';
@@ -9,6 +10,8 @@ import VehicleApplicationFormDialog from '../components/vehicle-application-form
 
 const { t, locale } = useI18n();
 const toast = useToast();
+const route = useRoute();
+const router = useRouter();
 const applicationStore = useVehicleInsuranceApplicationStore();
 
 const {
@@ -114,8 +117,34 @@ const cancelApplication = async (application) => {
   });
 };
 
-onMounted(() => {
-  applicationStore.fetchApplications();
+// Product chosen from the insurance catalog, preselected when the form opens.
+const initialProductId = ref(null);
+
+watch(formVisible, (isVisible) => {
+  if (!isVisible) {
+    initialProductId.value = null;
+  }
+});
+
+onMounted(async () => {
+  await applicationStore.fetchApplications();
+
+  const requestedProductId = Number(route.query.productId);
+
+  if (!requestedProductId) {
+    return;
+  }
+
+  await router.replace({ query: {} });
+
+  const productAvailable = products.value.some(
+      (product) => Number(product.id) === requestedProductId
+  );
+
+  if (productAvailable && !creationUnavailable.value) {
+    initialProductId.value = requestedProductId;
+    openForm();
+  }
 });
 </script>
 
@@ -253,6 +282,7 @@ onMounted(() => {
 
     <vehicle-application-form-dialog
         v-model:visible="formVisible"
+        :initial-product-id="initialProductId"
         :saving="saving"
         :vehicles="vehicles"
         :products="products"

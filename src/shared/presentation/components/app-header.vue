@@ -138,6 +138,13 @@ watch(
         </router-link>
 
         <router-link
+            to="/insurance-products"
+            @click="closeMenus"
+        >
+          {{ t('navigation.catalog') }}
+        </router-link>
+
+        <router-link
             to="/policies"
             @click="closeMenus"
         >

@@ -20,7 +20,8 @@
     "profile": "My profile",
     "notifications": "Notifications",
     "logout": "Sign out",
-    "indemnities": "Indemnities"
+    "indemnities": "Indemnities",
+    "catalog": "Compare insurance"
   },
   "home": {
     "pageTitle": "Home",
@@ -736,6 +737,59 @@
       "create": "The indemnity request could not be submitted.",
       "notFound": "The selected policy or beneficiary no longer exists.",
       "retryHint": "Check the information and try again. If the problem continues, sign in again."
+    }
+  },
+  "catalog": {
+    "pageTitle": "Insurance catalog",
+    "sectionLabel": "Insurance catalog",
+    "title": "Find and compare insurance",
+    "description": "Review the vehicle and life insurance offered by our partner insurers, compare up to three products side by side and request the one that fits you best.",
+    "typeLabel": "Insurance type",
+    "types": {
+      "vehicle": "Vehicle insurance",
+      "life": "Life insurance"
+    },
+    "loading": "Loading insurance products",
+    "empty": "There are no active products of this type right now.",
+    "fields": {
+      "insurer": "Insurer",
+      "premium": "Premium",
+      "coverage": "Coverage",
+      "coveragePerSol": "Coverage per S/ 1 of premium"
+    },
+    "glossary": {
+      "title": "What do these terms mean?",
+      "premium": "The amount you pay to keep the insurance active.",
+      "coverage": "The maximum amount the insurer pays if the insured event happens.",
+      "coveragePerSol": "How much coverage you get for each sol you pay. A higher value means more protection for your money.",
+      "claimTerm": "Claim",
+      "claim": "The report you file when an insured event happens, for example a vehicle accident.",
+      "beneficiaryTerm": "Beneficiary",
+      "beneficiary": "The person who receives the life insurance indemnity."
+    },
+    "actions": {
+      "compare": "Add to comparison",
+      "request": "Request this insurance",
+      "clear": "Clear",
+      "openComparison": "Compare",
+      "close": "Close"
+    },
+    "comparison": {
+      "title": "Insurance comparison",
+      "description": "Compare the main figures of the selected products. Tags highlight the best option for each criterion.",
+      "attribute": "Criterion",
+      "next": "Next step",
+      "remove": "Remove {name} from the comparison",
+      "lowestPremium": "Lowest premium",
+      "highestCoverage": "Highest coverage",
+      "bestValue": "Best value",
+      "selected": "{count} of {max} products selected",
+      "barLabel": "Products selected for comparison",
+      "limitReached": "You can compare up to {max} products at a time.",
+      "differentType": "You can only compare products of the same insurance type."
+    },
+    "errors": {
+      "load": "The insurance catalog could not be loaded. Check your connection and try again."
     }
   }
 }
