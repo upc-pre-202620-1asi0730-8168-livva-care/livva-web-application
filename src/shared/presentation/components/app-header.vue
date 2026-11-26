@@ -113,7 +113,7 @@ watch(
       <router-link
           class="app-logo"
           to="/"
-          aria-label="Livva home"
+          :aria-label="t('app.homeLabel')"
           @click="closeMenus"
       >
         Livva<span>.</span>

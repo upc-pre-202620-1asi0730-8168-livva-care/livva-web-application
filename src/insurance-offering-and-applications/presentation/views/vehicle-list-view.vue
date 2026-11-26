@@ -181,7 +181,7 @@ onMounted(() => {
     <div v-if="loading" class="vehicles-state">
       <pv-progress-spinner
           stroke-width="4"
-          aria-label="Loading vehicles"
+          :aria-label="t('app.loading')"
       />
     </div>
 

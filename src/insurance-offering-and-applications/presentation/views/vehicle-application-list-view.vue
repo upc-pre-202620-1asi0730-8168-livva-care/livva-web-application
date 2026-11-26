@@ -183,7 +183,7 @@ onMounted(async () => {
     <div v-if="loading" class="vehicle-applications-state">
       <pv-progress-spinner
           stroke-width="4"
-          aria-label="Loading applications"
+          :aria-label="t('app.loading')"
       />
     </div>
 

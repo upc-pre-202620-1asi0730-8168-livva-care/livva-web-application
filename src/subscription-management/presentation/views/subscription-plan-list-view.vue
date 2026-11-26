@@ -227,7 +227,7 @@ onMounted(async () => {
     >
       <pv-progress-spinner
           stroke-width="4"
-          aria-label="Loading subscription plans"
+          :aria-label="t('app.loading')"
       />
     </div>
 

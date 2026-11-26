@@ -2,7 +2,7 @@
 import { onMounted } from 'vue';
 import { useI18n } from 'vue-i18n';
 
-const { locale } = useI18n();
+const { locale, t } = useI18n();
 
 const supportedLocales = ['en', 'es'];
 
@@ -23,10 +23,12 @@ onMounted(() => {
   <div
       class="language-switcher"
       role="group"
-      aria-label="Language selector"
+      :aria-label="t('app.languageSelector')"
   >
     <pv-button
         label="EN"
+        lang="en"
+        :aria-label="t('app.languages.en')"
         size="small"
         :outlined="locale !== 'en'"
         :aria-pressed="locale === 'en'"
@@ -35,6 +37,8 @@ onMounted(() => {
 
     <pv-button
         label="ES"
+        lang="es"
+        :aria-label="t('app.languages.es')"
         size="small"
         :outlined="locale !== 'es'"
         :aria-pressed="locale === 'es'"

@@ -193,7 +193,7 @@ const markAllNotificationsAsRead = async () => {
     <div v-if="loading" class="vehicles-state">
       <pv-progress-spinner
           stroke-width="4"
-          aria-label="Loading notifications"
+          :aria-label="t('app.loading')"
       />
     </div>
 
