@@ -478,7 +478,8 @@
       "submit": "Iniciar sesión",
       "signingIn": "Iniciando sesión...",
       "noAccount": "¿No tienes una cuenta?",
-      "createAccount": "Crear cuenta"
+      "createAccount": "Crear cuenta",
+      "sessionExpired": "Tu sesión ha expirado. Vuelve a iniciar sesión para continuar donde te quedaste."
     },
     "errors": {
       "emailAlreadyExists": "Ya existe una cuenta con este correo.",
